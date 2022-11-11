@@ -1,0 +1,26 @@
+.bg-second_navbar
+{
+	background-color: #EBEBEB
+}
+@media (max-width: 991px)
+{
+		.navdisappear
+		{
+			display:none;
+		}
+}
+@media (min-width: 991px)
+{
+	.form-control-resposive
+	{
+			width:400px;
+	}
+}
+.page
+{
+	text-allign:center;
+}
+body
+{
+		font-family: 'Poppins';
+}
