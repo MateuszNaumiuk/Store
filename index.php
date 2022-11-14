@@ -69,8 +69,9 @@
 												<div class="col-md-3">
 													<div class="card">
 														<div class="card-img"> 
-															<img src="img/sprzet<?=$i?>.jpg" class="img-fluid" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'" >
+															<img src="img/sprzet<?=$i?>.jpg" class="img-fluid img_carousel">
 														</div>
+														<!-- tutaj dodac tekst ktory zmienia atrybut hidden na hover pobierajacy z bazy cene nazwe i wymiary -->
 													</div>
 												</div>
 											</div>
