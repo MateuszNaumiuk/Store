@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <?php
     // connect to db
-    require("connection.php");
+    require("../connection.php");
     ?>
 </head>
 
@@ -20,11 +20,11 @@
     <?php
     if (isset($_POST['register_in'])) {
         $login = $_POST['login'];
-        $password = $_POST['password'];
-        $email = $_POST['Email'];
+        $password = $_POST['pass'];
+        $email = $_POST['email'];
         $hashPassword = password_hash($password,PASSWORD_BCRYPT);
 
-        $stmt = $conn->query("SELECT * FROM users WHERE logi = '$login'");
+        $stmt = $conn->query("SELECT * FROM users WHERE login = '$login'");
         $stmt->setFetchMode(PDO::FETCH_OBJ);
         $result = $stmt->fetchAll();
 
@@ -32,12 +32,12 @@
             echo "Account with this credentials already exists";
             header("refresh: 5");
         } else {
-            $sql = "INSERT INTO users (`logi`, `pass`,`mail`) VALUES (:login_, :password_,:mail_)";
+            $sql = "INSERT INTO users (`login`, `pass`,`email`) VALUES (:login_, :email_, :password_)";
             $stmt = $conn->prepare($sql);
             $stmt->execute(array(
                 ':login_' => $login,
-                ':password_' => $hashPassword,
-                ':mail_' => $email
+                ':email_' => $email,
+                ':password_' => $hashPassword
             ));
 
             echo "<h3 class='text-center'>Account created successfully</h3>";
@@ -58,13 +58,13 @@
 
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <input type="Email" name="Email" class="form-control" />
+                            <input type="Email" name="email" class="form-control" />
                             <label class="form-label" for="Email">Email</label>
                         </div>
 
                         <!-- Password input -->
                         <div class="form-outline mb-4">
-                            <input type="password" name="password" class="form-control" />
+                            <input type="password" name="pass" class="form-control" />
                             <label class="form-label" for="password">Password</label>
                         </div>
 
