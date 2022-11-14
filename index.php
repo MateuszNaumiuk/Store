@@ -13,7 +13,7 @@
 	<header>
 		<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark border border-secondary">
 			<div class="container-fluid">
-				<a class="navbar-brand order-first" href="index.html"><img src="img/logo.png" width="180" height="60"></a>
+				<a class="navbar-brand order-first" href="index.html"><img src="img/logoblack.png" width="180" height="60"></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
