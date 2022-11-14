@@ -13,7 +13,7 @@
 
     <?php
     // connect to db
-    require("connect.php");
+    require("../connection.php");
     ?>
 
 </head>
