@@ -73,7 +73,7 @@
 
                         <!-- Register buttons -->
                         <div class="text-center">
-                            <p>Already a member? <a href="index.php">Login</a></p>
+                            <p>Already a member? <a href="login.php">Login</a></p>
                         </div>
                     </form>
                 </div>
