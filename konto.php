@@ -5,7 +5,6 @@
 	<?php
 	require("bootstrapConnection.php")
 	?>
-<<<<<<< HEAD
 
 	<title>BetaShop</title>
 </head>
@@ -60,88 +59,6 @@
 						<form class="d-flex me-2">
 							<button class="btn btn-outline-success w-50" type="submit">Zmień dane</button>
 						</form>
-=======
-	
-    <title>BetaShop</title>
-  </head>
-  <body>
-		<header>
-				<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white border border-secondary">
-			  <div class="container-fluid">
-				<a class="navbar-brand order-first" href="index.php"><img src="img/logo.png" width="180" height="60"></a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				  <span class="navbar-toggler-icon"></span>
-				</button>
-				
-				<div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
-				  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					
-					<li class="nav-item">
-					  <a class="nav-link d-block align-middle" href="ulubione.php"><i class="bi bi-heart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i> Ulubione</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link d-block" href="koszyk.php"><i class="bi-cart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Koszyk</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link d-block " href="konto.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Konto</a>
-					</li>
-				  </ul>
-				 
-				  
-				</div>
-				 <form class="d-flex me-2 w" >
-					<input class="form-control me-2 form-control-resposive" type="search" placeholder="Czego szukasz?" aria-label="Search">
-					<button class="btn btn-outline-success" type="submit"><i class="bi-search"></i></button>
-				  </form>
-			  </div>
-			</nav>
-			<nav class="navbar navbar-expand-lg navbar-light bg-second_navbar border border-secondary navdisappear">
-
-			  <div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav mx-auto ">
-				  <li class="nav-item text-center px-5 ">
-					<a class="nav-link text-dark " href="strona_kategorii.php">Laptopy i Komputery</a>
-				  </li>
-				  <li class="nav-item text-center px-5">
-					<a class="nav-link text-dark" href="strona_kategorii.php">Smartfony i smartwatche</a>
-				  </li>
-				  <li class="nav-item text-center px-5">
-					<a class="nav-link text-dark" href="strona_kategorii.php">Gaming i Streaming</a>
-				  </li>
-				  <li class="nav-item text-center px-5">
-					<a class="nav-link text-dark" href="strona_kategorii.php">Podzespoły Komputerowe</a>
-				  </li>
-				  <li class="nav-item text-center px-5">
-					<a class="nav-link text-dark" href="strona_kategorii.php">Urządzenia peryferyjne</a>
-				  </li>
-				</ul>
-			  </div>
-			</nav>
-		</header>
-		
-		<main>
-			<section class="page">
-				<div class="container">
-					<div class="row text-justify bg-second_navbar border rounded my-2">
-						<h1 class="pb-2 py-3 ps-2">Twoje konto</h1>
-						<h3 class="ps-3">Dane osobowe</h3>
-						<p class="ps-5">Imię</p>
-						<p class="ps-5">Nazwisko</p>
-						<p class="ps-5">Data urodzenia</p>
-						<p class="ps-5">Adres</p>
-						<p class="ps-5">Numer telefonu</p>
-						<h3 class="ps-3">Dane o koncie</h3>
-						<p class="ps-5">Adres e-mail</p>
-						<p class="ps-5">Nazwa użytkownika</p>
-						<p class="ps-5"><a href="zamowienia.php" class="link-dark">Zamówienia</a></p>
-					</div>
-					<div class="row text-center ">
-						<div class="col-12 text-center offset-3">
-							<form class="d-flex me-2" >
-									<button class="btn btn-outline-success w-50" type="submit">Zmień dane</button>
-							</form>
-						</div>
->>>>>>> 46340a76783821a4c5012d8811ecd1f74285dcc7
 					</div>
 				</div>
 			</div>
