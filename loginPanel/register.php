@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <?php
     // connect to db
-    require("../connection.php");
+    require("connect.php");
     ?>
 </head>
 
@@ -32,12 +32,13 @@
             echo "Account with this credentials already exists";
             header("refresh: 5");
         } else {
-            $sql = "INSERT INTO users (`login`, `pass`,`email`) VALUES (:login_, :email_, :password_)";
+            $sql = "INSERT INTO users (`login`, `pass`,`email`) VALUES (:login_,  :password_, :email_)";
             $stmt = $conn->prepare($sql);
             $stmt->execute(array(
                 ':login_' => $login,
-                ':email_' => $email,
-                ':password_' => $hashPassword
+                ':password_' => $hashPassword,
+                ':email_' => $email
+                
             ));
 
             echo "<h3 class='text-center'>Account created successfully</h3>";
