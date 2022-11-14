@@ -29,7 +29,7 @@
         $result = $stmt->fetchAll();
 
         if ($result) {
-            echo "Account with this credentials already exists";
+            echo "<h3 style='text-align: center;'>Account with this credentials already exists</h3>";
             header("refresh: 5");
         } else {
             $sql = "INSERT INTO users (`login`, `pass`,`email`) VALUES (:login_,  :password_, :email_)";
@@ -41,7 +41,7 @@
                 
             ));
 
-            echo "<h3 class='text-center'>Account created successfully</h3>";
+            echo "<h3 style='text-align: center;'>Account created successfully</h3>";
             header("refresh: 5;login.php");
         }
     }
