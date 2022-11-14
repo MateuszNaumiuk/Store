@@ -1,1 +1,1 @@
-1.
+1. Index php w carousel pobiera obrazki z folderu, obrazki maja miec taka sama nazwe w folderze jak id w bazie

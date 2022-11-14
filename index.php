@@ -11,7 +11,7 @@
 
 <body>
 	<header>
-		<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white border border-secondary">
+		<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark border border-secondary">
 			<div class="container-fluid">
 				<a class="navbar-brand order-first" href="index.html"><img src="img/logo.png" width="180" height="60"></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,20 +84,19 @@
 										</div>
 
 										<?php
-										for ($i = 1; $i <= 5; $i++) {
+										for ($i = 1; $i < 5; $i++) {
 										?>
 											<div class="carousel-item">
 												<div class="col-md-3">
 													<div class="card">
-														<div class="card-img">
-															<img src="img/sprzet<?=$i?>.jpg" class="img-fluid" style="width=600px; height=600px">
+														<div class="card-img"> 
+															<img src="img/sprzet<?=$i?>.jpg" class="img-fluid" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'" >
 														</div>
 													</div>
 												</div>
 											</div>
 										<?php
 										}
-
 										?>
 									</div> <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> </a> <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> </a>
 								</div>
