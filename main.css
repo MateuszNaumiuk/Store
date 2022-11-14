@@ -1,5 +1,5 @@
-.bg-second_navbar {
-	background-color: #EBEBEB
+.navbar-secondary{
+	background-color: #212529e3;
 }
 
 @media (max-width: 991px) {

@@ -11,7 +11,7 @@
 
 <body>
 	<header>
-		<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark border border-secondary">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
 			<div class="container-fluid">
 				<a class="navbar-brand order-first" href="index.html"><img src="img/logoblack.png" width="180" height="60"></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,23 +36,23 @@
 				</form>
 			</div>
 		</nav>
-		<nav class="navbar navbar-expand-lg navbar-light bg-second_navbar border border-secondary navdisappear">
+		<nav class="navbar-expand-lg navbar-secondary navdisappear mt-5 pt-5">
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav mx-auto ">
 					<li class="nav-item text-center px-5 ">
-						<a class="nav-link text-dark " href="strona_kategorii.html">Laptopy i Komputery</a>
+						<a class="nav-link text-white " href="strona_kategorii.html">Laptopy i Komputery</a>
 					</li>
 					<li class="nav-item text-center px-5">
-						<a class="nav-link text-dark" href="strona_kategorii.html">Smartfony i smartwatche</a>
+						<a class="nav-link text-white" href="strona_kategorii.html">Smartfony i smartwatche</a>
 					</li>
 					<li class="nav-item text-center px-5">
-						<a class="nav-link text-dark" href="strona_kategorii.html">Gaming i Streaming</a>
+						<a class="nav-link text-white" href="strona_kategorii.html">Gaming i Streaming</a>
 					</li>
 					<li class="nav-item text-center px-5">
-						<a class="nav-link text-dark" href="strona_kategorii.html">Podzespoły Komputerowe</a>
+						<a class="nav-link text-white" href="strona_kategorii.html">Podzespoły Komputerowe</a>
 					</li>
 					<li class="nav-item text-center px-5">
-						<a class="nav-link text-dark" href="strona_kategorii.html">Urządzenia peryferyjne</a>
+						<a class="nav-link text-white" href="strona_kategorii.html">Urządzenia peryferyjne</a>
 					</li>
 				</ul>
 			</div>
@@ -77,8 +77,9 @@
 										<div class="carousel-item active">
 											<div class="col-md-3">
 												<div class="card">
-													<div class="card-img"><img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid"> </div>
-													<div class="card-img-overlay">Slide 1</div>
+													<div class="card-img">
+														<a>asda</a>
+													</div>
 												</div>
 											</div>
 										</div>
