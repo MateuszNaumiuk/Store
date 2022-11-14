@@ -40,7 +40,7 @@
                         <form method="POST">
                             <a>Pomyslnie zalogowano</a>
                             <button id="stop_session" class="btn btn-danger" name="stop_session">Wyloguj</button>
-                            <?= header("location:index.php");?>
+                            <?= header("location: ../index.php");?>
                         </form>
     <?php
                     } else {
