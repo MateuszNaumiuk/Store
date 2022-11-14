@@ -7,13 +7,13 @@
         <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link d-block align-middle" href="ulubione.html"><i class="bi bi-heart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i> Ulubione</a>
+                    <a class="nav-link d-block align-middle" href="ulubione.php"><i class="bi bi-heart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i> Ulubione</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-block" href="koszyk.html"><i class="bi-cart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Koszyk</a>
+                    <a class="nav-link d-block" href="koszyk.php"><i class="bi-cart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Koszyk</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-block " href="konto.html"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Konto</a>
+                    <a class="nav-link d-block " href="konto.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Konto</a>
                 </li>
             </ul>
         </div>
