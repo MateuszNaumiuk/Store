@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-  <?=
+  <?php
 	require("bootstrapConnection.php")
 	?>
 	
