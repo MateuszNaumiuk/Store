@@ -42,7 +42,7 @@
             ));
 
             echo "<h3 class='text-center'>Account created successfully</h3>";
-            header("refresh: 5;index.php");
+            header("refresh: 5;login.php");
         }
     }
     ?>
