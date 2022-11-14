@@ -71,7 +71,7 @@
 					<h1 class="pb-2 py-3"> Produkty z listy ulubionych</h1>
 					<a href="strona_produktu.html" class="text-decoration-none link-dark">
 						<div class="col-12 py-2 px-4">
-							<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-wdith:100px; max-height:100px;">
+							<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-width:100px; max-height:100px;">
 							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Nazwa Produktu </p>
 							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Cena </p>
 
@@ -82,7 +82,7 @@
 				<div class="row text-justify bg-second_navbar border rounded my-2">
 					<a href="strona_produktu.html" class="text-decoration-none link-dark">
 						<div class="col-12 py-2 px-4">
-							<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-wdith:100px; max-height:100px;">
+							<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-width:100px; max-height:100px;">
 							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Nazwa Produktu </p>
 							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Cena </p>
 
@@ -92,7 +92,7 @@
 				<div class="row text-justify bg-second_navbar border rounded my-2">
 					<a href="strona_produktu.html" class="text-decoration-none link-dark">
 						<div class="col-12 py-2 px-4">
-							<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-wdith:100px; max-height:100px;">
+							<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-width:100px; max-height:100px;">
 							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Nazwa Produktu </p>
 							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Cena </p>
 
@@ -102,7 +102,7 @@
 				<div class="row text-justify bg-second_navbar border rounded my-2">
 					<a href="strona_produktu.html" class="text-decoration-none link-dark">
 						<div class="col-12 py-2 px-4">
-							<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-wdith:100px; max-height:100px;">
+							<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-width:100px; max-height:100px;">
 							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Nazwa Produktu </p>
 							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Cena </p>
 
