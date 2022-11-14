@@ -13,7 +13,7 @@
 
     <?php
     // connect to db
-    require("../connection.php");
+    require("connect.php");
     ?>
 
 </head>
@@ -22,24 +22,25 @@
     <?php
     if (array_key_exists('sign_in', $_POST)) {
         $login = $_POST['login'];
-        $pass = $_POST['password'];
+        $pass = $_POST['pass'];
 
-        $stmt = $conn->query("SELECT * FROM users WHERE logi = '$login'");
+        $stmt = $conn->query("SELECT * FROM users WHERE login = '$login'");
         $stmt->setFetchMode(PDO::FETCH_OBJ);
         $result = $stmt->fetchAll();
 
         // wypisanie
         if ($result) {
             foreach ($result as $row) {
-                if ($row->logi === $login) {
+                if ($row->login === $login) {
                     if (password_verify($pass, $row->pass)) {
-                        session_id($row->id);
+                        session_id($row->user_id);
                         session_start();
-                        setcookie("login", $row->id, time() + 900);
+                        setcookie("login", $row->user_id, time() + 186400);
     ?>
                         <form method="POST">
                             <a>Pomyslnie zalogowano</a>
                             <button id="stop_session" class="btn btn-danger" name="stop_session">Wyloguj</button>
+                            <?= header("location:index.php");?>
                         </form>
     <?php
                     } else {
@@ -53,8 +54,8 @@
             }
 
             if (isset($_POST['stop_session'])) {
-                setcookie("login", $row->id, time() - 186400);
-                session_abort($row->id);
+                setcookie("login", $row->user_id, time() - 186400);
+                session_abort($row->user_id);
             }
         } else {
             echo "<h3 class='text-center'>Wrong username or password!</h3>";
@@ -67,7 +68,7 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col d-flex justify-content-center">
-                    <form method="POST" action="index.php" id="log_form">
+                    <form method="POST" action="login.php" id="log_form">
                         <!-- Email input -->
                         <div class="form-outline mb-4">
                             <input type="login" name="login" class="form-control" />
@@ -76,8 +77,8 @@
 
                         <!-- Password input -->
                         <div class="form-outline mb-4">
-                            <input type="password" name="password" class="form-control" />
-                            <label class="form-label" for="password">Password</label>
+                            <input type="password" name="pass" class="form-control" />
+                            <label class="form-label" for="pass">Password</label>
                         </div>
 
                         <!-- Submit button -->
