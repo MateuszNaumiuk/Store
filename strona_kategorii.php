@@ -12,7 +12,7 @@
 	<header>
 		<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white border border-secondary">
 			<div class="container-fluid">
-				<a class="navbar-brand order-first" href="index.html"><img src="img/logo.png" width="180" height="60"></a>
+				<a class="navbar-brand order-first" href="index.php"><img src="img/logo.png" width="180" height="60"></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -21,13 +21,13 @@
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
 						<li class="nav-item">
-							<a class="nav-link d-block align-middle" href="ulubione.html"><i class="bi bi-heart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i> Ulubione</a>
+							<a class="nav-link d-block align-middle" href="ulubione.php"><i class="bi bi-heart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i> Ulubione</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link d-block" href="koszyk.html"><i class="bi-cart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Koszyk</a>
+							<a class="nav-link d-block" href="koszyk.php"><i class="bi-cart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Koszyk</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link d-block " href="konto.html"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Konto</a>
+							<a class="nav-link d-block " href="konto.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Konto</a>
 						</li>
 					</ul>
 
@@ -44,19 +44,19 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav mx-auto ">
 					<li class="nav-item text-center px-5 ">
-						<a class="nav-link text-dark " href="strona_kategorii.html">Laptopy i Komputery</a>
+						<a class="nav-link text-dark " href="strona_kategorii.php">Laptopy i Komputery</a>
 					</li>
 					<li class="nav-item text-center px-5">
-						<a class="nav-link text-dark" href="strona_kategorii.html">Smartfony i smartwatche</a>
+						<a class="nav-link text-dark" href="strona_kategorii.php">Smartfony i smartwatche</a>
 					</li>
 					<li class="nav-item text-center px-5">
-						<a class="nav-link text-dark" href="strona_kategorii.html">Gaming i Streaming</a>
+						<a class="nav-link text-dark" href="strona_kategorii.php">Gaming i Streaming</a>
 					</li>
 					<li class="nav-item text-center px-5">
-						<a class="nav-link text-dark" href="strona_kategorii.html">Podzespoły Komputerowe</a>
+						<a class="nav-link text-dark" href="strona_kategorii.php">Podzespoły Komputerowe</a>
 					</li>
 					<li class="nav-item text-center px-5">
-						<a class="nav-link text-dark" href="strona_kategorii.html">Urządzenia peryferyjne</a>
+						<a class="nav-link text-dark" href="strona_kategorii.php">Urządzenia peryferyjne</a>
 					</li>
 				</ul>
 			</div>
@@ -90,7 +90,7 @@
 						<p class="border-bottom border-secondary py-2 fw-bold " style="font-size:2.5vw">Produkty z kategorii:</p>
 						<div class="row">
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/intelek.jpg">
 									<span style="font-size: 0.85vw;">Procesor Intel Pentium G4560<br>
 										499zł
@@ -98,7 +98,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/wentylator_bequiet.png">
 									<span style="font-size: 0.85vw;">Wentylator BeQuiet<br>
 										99zł
@@ -107,7 +107,7 @@
 							</div>
 
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/mysz_logitech.jpg">
 									<span style="font-size: 0.85vw;">Mysz Logitech<br>
 										80zł
@@ -115,7 +115,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/glosniki_1.png">
 									<span style="font-size: 0.85vw;">Głośniki Logitech<br>
 										299zł
@@ -123,7 +123,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/obudowa_1.png">
 									<span style="font-size: 0.85vw;">Obudowa BeQuiet<br>
 										299zł
@@ -131,7 +131,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/plyta_1.png">
 									<span style="font-size: 0.85vw;">Płyta Główna Asus<br>
 										699zł
@@ -144,7 +144,7 @@
 						<div class="row mt-3">
 
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/plyta_2.jpg">
 									<span style="font-size: 0.85vw;">Płyta Główna Gigabyte<br>
 										420zł
@@ -152,7 +152,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/karta_1.jpg">
 									<span style="font-size: 0.85vw;">Karta Graficzna Geforce GTX1650<br>
 										1599zł
@@ -160,7 +160,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/karta_2.jpg">
 									<span style="font-size: 0.85vw;">Karta Graficzna Geforce GTX950<br>
 										799zł
@@ -168,7 +168,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/nvme_1.jpg">
 									<span style="font-size: 0.85vw;">Dysk SSD M2 PNY<br>
 										599zł
@@ -176,7 +176,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/ram_1.jpg">
 									<span style="font-size: 0.85vw;">Pamięć Ram Kingston 8GB<br>
 										249zł
@@ -184,7 +184,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/inteli9.png">
 									<span style="font-size: 0.85vw;">Procesor Intel Core i9 10900K<br>
 										2199zł
@@ -195,7 +195,7 @@
 						</div>
 						<div class="row mt-3">
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/intelek.jpg">
 									<span style="font-size: 0.85vw;">Procesor Intel Pentium G4560<br>
 										499zł
@@ -203,7 +203,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/wentylator_bequiet.png">
 									<span style="font-size: 0.85vw;">Wentylator BeQuiet<br>
 										99zł
@@ -212,7 +212,7 @@
 							</div>
 
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/mysz_logitech.jpg">
 									<span style="font-size: 0.85vw;">Mysz Logitech<br>
 										80zł
@@ -220,7 +220,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/glosniki_1.png">
 									<span style="font-size: 0.85vw;">Głośniki Logitech<br>
 										299zł
@@ -228,7 +228,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/obudowa_1.png">
 									<span style="font-size: 0.85vw;">Obudowa BeQuiet<br>
 										299zł
@@ -236,7 +236,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/plyta_1.png">
 									<span style="font-size: 0.85vw;">Płyta Główna Asus<br>
 										699zł
@@ -249,7 +249,7 @@
 						<div class="row mt-3">
 
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/plyta_2.jpg">
 									<span style="font-size: 0.85vw;">Płyta Główna Gigabyte<br>
 										420zł
@@ -257,7 +257,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/karta_1.jpg">
 									<span style="font-size: 0.85vw;">Karta Graficzna Geforce GTX1650<br>
 										1599zł
@@ -265,7 +265,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/karta_2.jpg">
 									<span style="font-size: 0.85vw;">Karta Graficzna Geforce GTX950<br>
 										799zł
@@ -273,7 +273,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/nvme_1.jpg">
 									<span style="font-size: 0.85vw;">Dysk SSD M2 PNY<br>
 										599zł
@@ -281,7 +281,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/ram_1.jpg">
 									<span style="font-size: 0.85vw;">Pamięć Ram Kingston 8GB<br>
 										249zł
@@ -289,7 +289,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/inteli9.png">
 									<span style="font-size: 0.85vw;">Procesor Intel Core i9 10900K<br>
 										2199zł
@@ -300,7 +300,7 @@
 						</div>
 						<div class="row mt-3">
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/intelek.jpg">
 									<span style="font-size: 0.85vw;">Procesor Intel Pentium G4560<br>
 										499zł
@@ -308,7 +308,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/wentylator_bequiet.png">
 									<span style="font-size: 0.85vw;">Wentylator BeQuiet<br>
 										99zł
@@ -317,7 +317,7 @@
 							</div>
 
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/mysz_logitech.jpg">
 									<span style="font-size: 0.85vw;">Mysz Logitech<br>
 										80zł
@@ -325,7 +325,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/glosniki_1.png">
 									<span style="font-size: 0.85vw;">Głośniki Logitech<br>
 										299zł
@@ -333,7 +333,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/obudowa_1.png">
 									<span style="font-size: 0.85vw;">Obudowa BeQuiet<br>
 										299zł
@@ -341,7 +341,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/plyta_1.png">
 									<span style="font-size: 0.85vw;">Płyta Główna Asus<br>
 										699zł
@@ -354,7 +354,7 @@
 						<div class="row mt-3">
 
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/plyta_2.jpg">
 									<span style="font-size: 0.85vw;">Płyta Główna Gigabyte<br>
 										420zł
@@ -362,7 +362,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/karta_1.jpg">
 									<span style="font-size: 0.85vw;">Karta Graficzna Geforce GTX1650<br>
 										1599zł
@@ -370,7 +370,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/karta_2.jpg">
 									<span style="font-size: 0.85vw;">Karta Graficzna Geforce GTX950<br>
 										799zł
@@ -378,7 +378,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/nvme_1.jpg">
 									<span style="font-size: 0.85vw;">Dysk SSD M2 PNY<br>
 										599zł
@@ -386,7 +386,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/ram_1.jpg">
 									<span style="font-size: 0.85vw;">Pamięć Ram Kingston 8GB<br>
 										249zł
@@ -394,7 +394,7 @@
 								</a>
 							</div>
 							<div class="col-2 text-center">
-								<a href="strona_produktu.html" class="text-decoration-none link-dark">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid mb-2" src="img/inteli9.png">
 									<span style="font-size: 0.85vw;">Procesor Intel Core i9 10900K<br>
 										2199zł
@@ -464,16 +464,16 @@
 								BetaShop
 							</h6>
 							<p>
-								<a href="o_nas.html" class="text-reset">O nas</a>
+								<a href="o_nas.php" class="text-reset">O nas</a>
 							</p>
 							<p>
-								<a href="regulamin.html" class="text-reset">Regulamin</a>
+								<a href="regulamin.php" class="text-reset">Regulamin</a>
 							</p>
 							<p>
-								<a href="polityka_prywatnosci.html" class="text-reset">Polityka Prywatności</a>
+								<a href="polityka_prywatnosci.php" class="text-reset">Polityka Prywatności</a>
 							</p>
 							<p>
-								<a href="forum.html" class="text-reset">Forum</a>
+								<a href="forum.php" class="text-reset">Forum</a>
 							</p>
 						</div>
 
@@ -485,16 +485,16 @@
 								Przydatne linki
 							</h6>
 							<p>
-								<a href="wspolpraca.html" class="text-reset">Współpraca</a>
+								<a href="wspolpraca.php" class="text-reset">Współpraca</a>
 							</p>
 							<p>
-								<a href="faq.html" class="text-reset">FAQ</a>
+								<a href="faq.php" class="text-reset">FAQ</a>
 							</p>
 							<p>
-								<a href="pomoc.html" class="text-reset">Pomoc techniczna</a>
+								<a href="pomoc.php" class="text-reset">Pomoc techniczna</a>
 							</p>
 							<p>
-								<a href="montaz.html" class="text-reset">Usługi montażu</a>
+								<a href="montaz.php" class="text-reset">Usługi montażu</a>
 							</p>
 						</div>
 

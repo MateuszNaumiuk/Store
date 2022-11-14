@@ -11,7 +11,7 @@
 		<header>
 				<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white border border-secondary">
 			  <div class="container-fluid">
-				<a class="navbar-brand order-first" href="index.html"><img src="img/logo.png" width="180" height="60"></a>
+				<a class="navbar-brand order-first" href="index.php"><img src="img/logo.png" width="180" height="60"></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				  <span class="navbar-toggler-icon"></span>
 				</button>
@@ -20,13 +20,13 @@
 				  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					
 					<li class="nav-item">
-					  <a class="nav-link d-block align-middle" href="ulubione.html"><i class="bi bi-heart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i> Ulubione</a>
+					  <a class="nav-link d-block align-middle" href="ulubione.php"><i class="bi bi-heart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i> Ulubione</a>
 					</li>
 					<li class="nav-item">
-					  <a class="nav-link d-block" href="koszyk.html"><i class="bi-cart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Koszyk</a>
+					  <a class="nav-link d-block" href="koszyk.php"><i class="bi-cart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Koszyk</a>
 					</li>
 					<li class="nav-item">
-					  <a class="nav-link d-block " href="konto.html"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Konto</a>
+					  <a class="nav-link d-block " href="konto.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Konto</a>
 					</li>
 				  </ul>
 				 
@@ -43,19 +43,19 @@
 			  <div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav mx-auto ">
 				  <li class="nav-item text-center px-5 ">
-					<a class="nav-link text-dark " href="strona_kategorii.html">Laptopy i Komputery</a>
+					<a class="nav-link text-dark " href="strona_kategorii.php">Laptopy i Komputery</a>
 				  </li>
 				  <li class="nav-item text-center px-5">
-					<a class="nav-link text-dark" href="strona_kategorii.html">Smartfony i smartwatche</a>
+					<a class="nav-link text-dark" href="strona_kategorii.php">Smartfony i smartwatche</a>
 				  </li>
 				  <li class="nav-item text-center px-5">
-					<a class="nav-link text-dark" href="strona_kategorii.html">Gaming i Streaming</a>
+					<a class="nav-link text-dark" href="strona_kategorii.php">Gaming i Streaming</a>
 				  </li>
 				  <li class="nav-item text-center px-5">
-					<a class="nav-link text-dark" href="strona_kategorii.html">Podzespoły Komputerowe</a>
+					<a class="nav-link text-dark" href="strona_kategorii.php">Podzespoły Komputerowe</a>
 				  </li>
 				  <li class="nav-item text-center px-5">
-					<a class="nav-link text-dark" href="strona_kategorii.html">Urządzenia peryferyjne</a>
+					<a class="nav-link text-dark" href="strona_kategorii.php">Urządzenia peryferyjne</a>
 				  </li>
 				</ul>
 			  </div>
@@ -149,16 +149,16 @@ Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculu
 						BetaShop
 					  </h6>
 					  <p>
-						<a href="o_nas.html" class="text-reset">O nas</a>
+						<a href="o_nas.php" class="text-reset">O nas</a>
 					  </p>
 					  <p>
-						<a href="regulamin.html" class="text-reset">Regulamin</a>
+						<a href="regulamin.php" class="text-reset">Regulamin</a>
 					  </p>
 					  <p>
-						<a href="polityka_prywatnosci.html" class="text-reset">Polityka Prywatności</a>
+						<a href="polityka_prywatnosci.php" class="text-reset">Polityka Prywatności</a>
 					  </p>
 					  <p>
-						<a href="forum.html" class="text-reset">Forum</a>
+						<a href="forum.php" class="text-reset">Forum</a>
 					  </p>
 					</div>
 					
@@ -170,16 +170,16 @@ Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculu
 						Przydatne linki
 					  </h6>
 					  <p>
-						<a href="wspolpraca.html" class="text-reset">Współpraca</a>
+						<a href="wspolpraca.php" class="text-reset">Współpraca</a>
 					  </p>
 					  <p>
-						<a href="faq.html" class="text-reset">FAQ</a>
+						<a href="faq.php" class="text-reset">FAQ</a>
 					  </p>
 					  <p>
-						<a href="pomoc.html" class="text-reset">Pomoc techniczna</a>
+						<a href="pomoc.php" class="text-reset">Pomoc techniczna</a>
 					  </p>
 					  <p>
-						<a href="montaz.html" class="text-reset">Usługi montażu</a>
+						<a href="montaz.php" class="text-reset">Usługi montażu</a>
 					  </p>
 					</div>
 					
