@@ -101,80 +101,6 @@
 
 			<section class="">
 				<div class="container text-center text-md-start mt-5">
-<<<<<<< HEAD
-
-					<div class="row mt-3">
-
-						<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-
-							<h6 class="text-uppercase fw-bold mb-4">
-								<i class="fas fa-gem me-3"></i>O nas
-							</h6>
-							<p>
-								Jesteśmy firmą od lat zajmującą się sprzedażą detaliczną artykułów komputerowych.
-								Stawiamy na jakość oraz zadowolenie naszych klientów.
-							</p>
-						</div>
-
-
-
-						<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-
-							<h6 class="text-uppercase fw-bold mb-4">
-								BetaShop
-							</h6>
-							<p>
-								<a href="o_nas.html" class="text-reset">O nas</a>
-							</p>
-							<p>
-								<a href="regulamin.html" class="text-reset">Regulamin</a>
-							</p>
-							<p>
-								<a href="polityka_prywatnosci.html" class="text-reset">Polityka Prywatności</a>
-							</p>
-							<p>
-								<a href="forum.html" class="text-reset">Forum</a>
-							</p>
-						</div>
-
-
-
-						<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-							<h6 class="text-uppercase fw-bold mb-4">
-								Przydatne linki
-							</h6>
-							<p>
-								<a href="wspolpraca.html" class="text-reset">Współpraca</a>
-							</p>
-							<p>
-								<a href="faq.html" class="text-reset">FAQ</a>
-							</p>
-							<p>
-								<a href="pomoc.html" class="text-reset">Pomoc techniczna</a>
-							</p>
-							<p>
-								<a href="montaz.html" class="text-reset">Usługi montażu</a>
-							</p>
-						</div>
-
-
-
-						<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-							<h6 class="text-uppercase fw-bold mb-4">
-								Kontakt
-							</h6>
-							<p><i class="bi bi-house me-3"></i> Siedlce 08-110, Sekulska 3</p>
-							<p>
-								<i class="bi bi-envelope me-3"></i>
-								info@Beta.shop
-							</p>
-							<p><i class="bi bi-telephone me-3"></i>123 456 789</p>
-							<p><i class="bi bi-printer me-3"></i> + 01 234 567 89</p>
-						</div>
-
-=======
 				  
 				  <div class="row mt-3">
 					
@@ -245,7 +171,6 @@
 					  </p>
 					  <p><i class="bi bi-telephone me-3"></i>123 456 789</p>
 					  <p><i class="bi bi-printer me-3"></i> + 01 234 567 89</p>
->>>>>>> 46340a76783821a4c5012d8811ecd1f74285dcc7
 					</div>
 
 				</div>
