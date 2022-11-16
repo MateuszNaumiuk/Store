@@ -16,24 +16,12 @@
 	require("navbar.php");
 	?>
 
-	<section>
-		<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="grafiki/1.jpg" class="d-block w-100" alt="...">
-				</div>
-				<div class="carousel-item">
-					<img src="grafiki/2.jpg" class="d-block w-100" alt="...">
-				</div>
-				<div class="carousel-item">
-					<img src="grafiki/3.jpg" class="d-block w-100" alt="...">
-				</div>
-			</div>
-		</div>
+	<section id="mainImg">
+		<img src="grafiki/1.jpg" alt="Logo" class="logo"/>
 	</section>
 
 	<section>
-		<div class="row">
+		<div class="container-fluid">
 			<div class="col-12 border-top border-secondary">
 				<p class="border-bottom border-secondary py-2 fw-bold" style="font-size:1.8em">Polecamy!</p>
 				<div class="row">
