@@ -16,22 +16,22 @@
 		require("navbar.php");
 		?>
 
-		<nav class="navbar-expand-lg navbar-secondary navdisappear mt-5 pt-5">
+		<nav class="navbar-expand-lg mt-5 pt-5" id="navbar-secondary">
 			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav mx-auto ">
-					<li class="nav-item text-center px-5 ">
+				<ul class="navbar-nav mx-auto px-5">
+					<li class="nav-item text-center">
 						<a class="nav-link text-white " href="strona_kategorii.php">Laptopy i Komputery</a>
 					</li>
-					<li class="nav-item text-center px-5">
+					<li class="nav-item text-center">
 						<a class="nav-link text-white" href="strona_kategorii.php">Smartfony i smartwatche</a>
 					</li>
-					<li class="nav-item text-center px-5">
+					<li class="nav-item text-center">
 						<a class="nav-link text-white" href="strona_kategorii.php">Gaming i Streaming</a>
 					</li>
-					<li class="nav-item text-center px-5">
+					<li class="nav-item text-center">
 						<a class="nav-link text-white" href="strona_kategorii.php">Podzespoły Komputerowe</a>
 					</li>
-					<li class="nav-item text-center px-5">
+					<li class="nav-item text-center">
 						<a class="nav-link text-white" href="strona_kategorii.php">Urządzenia peryferyjne</a>
 					</li>
 				</ul>
@@ -68,7 +68,7 @@
 												<div class="col-md-3">
 													<div class="card">
 														<div class="card-img">
-															<img src="img/sprzet<?= $i ?>.jpg" class="img-fluid img_carousel">
+															<img src="img/sprzet<?=$i?>.jpg" class="img-fluid img_carousel">
 														</div>
 														<!-- tutaj dodac tekst ktory zmienia atrybut hidden na hover pobierajacy z bazy cene nazwe i wymiary -->
 													</div>
