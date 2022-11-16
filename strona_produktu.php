@@ -2,18 +2,41 @@
 
 <head>
 	<?php
-	require("bootstrapConnection.php")
+	require("bootstrapConnection.php");
+	require("connection.php");
 	?>
 
 	<title>BetaShop</title>
 </head>
 
 <body>
+	<header>
+		<?php
+		require("navbar.php");
+		?>
+		<nav class="navbar navbar-expand-lg navbar-light bg-second_navbar border border-secondary navdisappear">
 
-	<?php
-	require("navbar.php");
-	?>
-
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mx-auto ">
+					<li class="nav-item text-center px-5 ">
+						<a class="nav-link text-dark " href="strona_kategorii.php">Laptopy i Komputery</a>
+					</li>
+					<li class="nav-item text-center px-5">
+						<a class="nav-link text-dark" href="strona_kategorii.php">Smartfony i smartwatche</a>
+					</li>
+					<li class="nav-item text-center px-5">
+						<a class="nav-link text-dark" href="strona_kategorii.php">Gaming i Streaming</a>
+					</li>
+					<li class="nav-item text-center px-5">
+						<a class="nav-link text-dark" href="strona_kategorii.php">Podzespoły Komputerowe</a>
+					</li>
+					<li class="nav-item text-center px-5">
+						<a class="nav-link text-dark" href="strona_kategorii.php">Urządzenia peryferyjne</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
 
 	<main>
 		<section class="page">
@@ -21,33 +44,35 @@
 				<p class="my-3 fw-light">betashop>*kategoria*>*podkategoria*</p>
 				<div class="row">
 					<div class="col-4">
-						<img src="img/intelek.jpg" class="img-fluid">
+						<img src="grafiki/1.jpg" class="img-fluid">
 					</div>
 
 					<div class="col-8">
 						<div class="row">
 							<div class="col-12">
-								<p style="font-size:2.7vw;" class="fw-light">Procesor Intel Pentium G4560</p>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-12">
-								<i class="bi bi-star-fill d-inline" style="color: #ffc107; font-size:1.3vw;"></i>
-								<i class="bi bi-star-fill d-inline" style="color: #ffc107; font-size:1.3vw;"></i>
-								<i class="bi bi-star-fill d-inline" style="color: #ffc107; font-size:1.3vw;"></i>
-								<i class="bi bi-star-fill d-inline" style="color: #ffc107; font-size:1.3vw;"></i>
-								<i class="bi bi-star-fill d-inline mr-2" style="color: #ffc107; font-size:1.3vw;"></i>
-								<p class="d-inline">(ilosc ocen)</p>
+								<p style="font-size:2.7vw;" class="fw-light"><?php
+								$zapytanie = $conn->query("SELECT pic_name FROM pictures WHERE picture_id = 1");
+        						while($row = $zapytanie->fetch()) {
+									echo $row['pic_name'];
+								}
+								?></p>
 							</div>
 						</div>
 
 						<div class="row mt-4 border-bottom">
 							<div class="col-4">
-								<p style="font-size:0.85vw;">Producent: Intel</p>
+								<p style="font-size:0.85vw;">Wysokość: <?php
+								$zapytanie = $conn->query("SELECT height FROM pictures WHERE picture_id = 1");
+        						while($row = $zapytanie->fetch()) {
+									echo $row['height'] . 'px';
+								} ?> </p>
 							</div>
 							<div class="col-4">
-								<p style="font-size:0.85vw;">Kod Producenta: XXXXXXXXXX</p>
+								<p style="font-size:0.85vw;">Szerokość: <?php
+								$zapytanie = $conn->query("SELECT width FROM pictures WHERE picture_id = 1");
+        						while($row = $zapytanie->fetch()) {
+									echo $row['width'] . 'px';
+								} ?></p>
 							</div>
 							<div class="col-4">
 								<p style="font-size:0.85vw;">Kod produktu: 123456789</p>
