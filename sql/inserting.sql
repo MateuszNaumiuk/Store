@@ -30,11 +30,11 @@ insert into category VALUES
 (8,'picture8',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'8.jpg'),
 (9,'picture9',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'9.jpg'),
 (10,'picture10',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'10.jpg'),
-(11,'picture12',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'11.jpg'),
-(12,'picture13',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'12.jpg'),
-(13,'picture14',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'13.jpg'),
-(14,'picture15',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'14.jpg'),
-(15,'picture1',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'15.jpg');
+(11,'picture11',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'11.jpg'),
+(12,'picture12',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'12.jpg'),
+(13,'picture13',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'13.jpg'),
+(14,'picture14',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'14.jpg'),
+(15,'picture15',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'15.jpg');
 
 
 
