@@ -72,3 +72,5 @@ create table if not EXISTS order_info (
     order_status varchar(20),
     PRIMARY KEY (order_id)
     );
+
+ALTER TABLE `pictures` ADD `image_path` VARCHAR(255) NOT NULL AFTER `width`;
