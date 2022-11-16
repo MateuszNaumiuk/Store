@@ -1,36 +1,41 @@
+/* whole page */
+body {
+	font-family: 'Poppins';
+}
+
+/* navbar*/
 #navbar-secondary
 {
+	padding-top: 7em;
+	padding-bottom: 1em;
 	background-color: #212529de;
 }
 
+/* medium size */
 @media (max-width: 991px) {
 	#navbar-secondary {
 		display: none;
 	}
 }
 
-.img_carousel{
-	width: 30em;
+/* carousel with multiple items */
+.card{
+	min-height: 15em;
+	max-height: 15em;
 }
 
 .img_carousel:hover{
 	opacity: 0.65;
 }
 
+/* medium size */
 @media (min-width: 991px) {
 	.form-control-resposive {
 		width: 400px;
 	}
 }
 
-.page {
-	text-align: center;
-}
-
-body {
-	font-family: 'Poppins';
-}
-
+/* small size */
 @media (max-width: 767px) {
 	.carousel-inner .carousel-item>div {
 		display: none
@@ -47,6 +52,7 @@ body {
 	display: flex
 }
 
+/* small size */
 @media (min-width: 768px) {
 
 	.carousel-inner .carousel-item-end.active,

@@ -9,33 +9,11 @@
 </head>
 
 <body>
-	<header>
-		<?php
-		require("navbar.php");
-		?>
-		<nav class="navbar navbar-expand-lg navbar-light bg-second_navbar border border-secondary navdisappear">
 
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav mx-auto ">
-					<li class="nav-item text-center px-5 ">
-						<a class="nav-link text-dark " href="strona_kategorii.php">Laptopy i Komputery</a>
-					</li>
-					<li class="nav-item text-center px-5">
-						<a class="nav-link text-dark" href="strona_kategorii.php">Smartfony i smartwatche</a>
-					</li>
-					<li class="nav-item text-center px-5">
-						<a class="nav-link text-dark" href="strona_kategorii.php">Gaming i Streaming</a>
-					</li>
-					<li class="nav-item text-center px-5">
-						<a class="nav-link text-dark" href="strona_kategorii.php">Podzespoły Komputerowe</a>
-					</li>
-					<li class="nav-item text-center px-5">
-						<a class="nav-link text-dark" href="strona_kategorii.php">Urządzenia peryferyjne</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</header>
+	<?php
+	require("navbar.php");
+	?>
+
 
 	<main>
 		<section class="page">

@@ -47,9 +47,6 @@
                     <p>
                         <a href="polityka_prywatnosci.php" class="text-reset">Polityka Prywatności</a>
                     </p>
-                    <p>
-                        <a href="forum.php" class="text-reset">Forum</a>
-                    </p>
                 </div>
 
 
@@ -66,9 +63,6 @@
                     </p>
                     <p>
                         <a href="pomoc.php" class="text-reset">Pomoc techniczna</a>
-                    </p>
-                    <p>
-                        <a href="montaz.php" class="text-reset">Usługi montażu</a>
                     </p>
                 </div>
 

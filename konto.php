@@ -10,34 +10,9 @@
 </head>
 
 <body>
-	<header>
-		<?php
-		require("navbar.php");
-		?>
-		
-		<nav class="navbar navbar-expand-lg navbar-light bg-second_navbar border border-secondary navdisappear">
-
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav mx-auto ">
-					<li class="nav-item text-center px-5 ">
-						<a class="nav-link text-dark " href="strona_kategorii.html">Laptopy i Komputery</a>
-					</li>
-					<li class="nav-item text-center px-5">
-						<a class="nav-link text-dark" href="strona_kategorii.html">Smartfony i smartwatche</a>
-					</li>
-					<li class="nav-item text-center px-5">
-						<a class="nav-link text-dark" href="strona_kategorii.html">Gaming i Streaming</a>
-					</li>
-					<li class="nav-item text-center px-5">
-						<a class="nav-link text-dark" href="strona_kategorii.html">Podzespoły Komputerowe</a>
-					</li>
-					<li class="nav-item text-center px-5">
-						<a class="nav-link text-dark" href="strona_kategorii.html">Urządzenia peryferyjne</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</header>
+	<?php
+	require("navbar.php");
+	?>
 
 	<main>
 		<section class="page">
@@ -97,9 +72,7 @@
 
 			<section class="">
 				<div class="container text-center text-md-start mt-5">
-<<<<<<< HEAD
-
-					<div class="row mt-3">
+					<<<<<<< HEAD <div class="row mt-3">
 
 						<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
@@ -170,81 +143,81 @@
 							<p><i class="bi bi-printer me-3"></i> + 01 234 567 89</p>
 						</div>
 
-=======
-				  
-				  <div class="row mt-3">
-					
-					<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-					  
-					  <h6 class="text-uppercase fw-bold mb-4">
-						<i class="fas fa-gem me-3"></i>O nas
-					  </h6>
-					  <p>
-						Jesteśmy firmą od lat zajmującą się sprzedażą detaliczną artykułów komputerowych.
-						Stawiamy na jakość oraz zadowolenie naszych klientów.
-					  </p>
-					</div>
-					
+						=======
 
-					
-					<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-					  
-					  <h6 class="text-uppercase fw-bold mb-4">
-						BetaShop
-					  </h6>
-					  <p>
-						<a href="o_nas.php" class="text-reset">O nas</a>
-					  </p>
-					  <p>
-						<a href="regulamin.php" class="text-reset">Regulamin</a>
-					  </p>
-					  <p>
-						<a href="polityka_prywatnosci.php" class="text-reset">Polityka Prywatności</a>
-					  </p>
-					  <p>
-						<a href="forum.php" class="text-reset">Forum</a>
-					  </p>
-					</div>
-					
+						<div class="row mt-3">
 
-					
-					<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-					  
-					  <h6 class="text-uppercase fw-bold mb-4">
-						Przydatne linki
-					  </h6>
-					  <p>
-						<a href="wspolpraca.php" class="text-reset">Współpraca</a>
-					  </p>
-					  <p>
-						<a href="faq.php" class="text-reset">FAQ</a>
-					  </p>
-					  <p>
-						<a href="pomoc.php" class="text-reset">Pomoc techniczna</a>
-					  </p>
-					  <p>
-						<a href="montaz.php" class="text-reset">Usługi montażu</a>
-					  </p>
-					</div>
-					
+							<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
-					
-					<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-					  
-					  <h6 class="text-uppercase fw-bold mb-4">
-						Kontakt
-					  </h6>
-					  <p><i class="bi bi-house me-3"></i> Siedlce 08-110, Sekulska 3</p>
-					  <p>
-						<i class="bi bi-envelope me-3"></i>
-						info@Beta.shop
-					  </p>
-					  <p><i class="bi bi-telephone me-3"></i>123 456 789</p>
-					  <p><i class="bi bi-printer me-3"></i> + 01 234 567 89</p>
->>>>>>> 46340a76783821a4c5012d8811ecd1f74285dcc7
-					</div>
+								<h6 class="text-uppercase fw-bold mb-4">
+									<i class="fas fa-gem me-3"></i>O nas
+								</h6>
+								<p>
+									Jesteśmy firmą od lat zajmującą się sprzedażą detaliczną artykułów komputerowych.
+									Stawiamy na jakość oraz zadowolenie naszych klientów.
+								</p>
+							</div>
 
-				</div>
+
+
+							<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+								<h6 class="text-uppercase fw-bold mb-4">
+									BetaShop
+								</h6>
+								<p>
+									<a href="o_nas.php" class="text-reset">O nas</a>
+								</p>
+								<p>
+									<a href="regulamin.php" class="text-reset">Regulamin</a>
+								</p>
+								<p>
+									<a href="polityka_prywatnosci.php" class="text-reset">Polityka Prywatności</a>
+								</p>
+								<p>
+									<a href="forum.php" class="text-reset">Forum</a>
+								</p>
+							</div>
+
+
+
+							<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+								<h6 class="text-uppercase fw-bold mb-4">
+									Przydatne linki
+								</h6>
+								<p>
+									<a href="wspolpraca.php" class="text-reset">Współpraca</a>
+								</p>
+								<p>
+									<a href="faq.php" class="text-reset">FAQ</a>
+								</p>
+								<p>
+									<a href="pomoc.php" class="text-reset">Pomoc techniczna</a>
+								</p>
+								<p>
+									<a href="montaz.php" class="text-reset">Usługi montażu</a>
+								</p>
+							</div>
+
+
+
+							<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+								<h6 class="text-uppercase fw-bold mb-4">
+									Kontakt
+								</h6>
+								<p><i class="bi bi-house me-3"></i> Siedlce 08-110, Sekulska 3</p>
+								<p>
+									<i class="bi bi-envelope me-3"></i>
+									info@Beta.shop
+								</p>
+								<p><i class="bi bi-telephone me-3"></i>123 456 789</p>
+								<p><i class="bi bi-printer me-3"></i> + 01 234 567 89</p>
+								>>>>>>> 46340a76783821a4c5012d8811ecd1f74285dcc7
+							</div>
+
+						</div>
 			</section>
 
 
