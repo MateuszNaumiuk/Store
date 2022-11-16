@@ -19,21 +19,22 @@ insert into category VALUES
     inserting values into pictures
     */
     
-    insert into pictures(`picture_id`, `pic_name`, `price`, `description`, `height`, `width`) VALUES
-(1,'picture1',10,'We share the best photos on the internet. Best prices and customer service!', 600,600),
-(2,'picture2',10,'We share the best photos on the internet. Best prices and customer service!', 600,600), (3,'picture3',10,'We share the best photos on the internet. Best prices and customer service!', 600,600),
-(4,'picture4',10,'We share the best photos on the internet. Best prices and customer service!', 600,600),
-(5,'picture5',10,'We share the best photos on the internet. Best prices and customer service!', 600,600),
-(6,'picture6',10,'We share the best photos on the internet. Best prices and customer service!', 600,600),
-(7,'picture7',10,'We share the best photos on the internet. Best prices and customer service!', 600,600),
-(8,'picture8',10,'We share the best photos on the internet. Best prices and customer service!', 600,600),
-(9,'picture9',10,'We share the best photos on the internet. Best prices and customer service!', 600,600),
-(10,'picture10',10,'We share the best photos on the internet. Best prices and customer service!', 600,600),
-(11,'picture12',10,'We share the best photos on the internet. Best prices and customer service!', 600,600),
-(12,'picture13',10,'We share the best photos on the internet. Best prices and customer service!', 600,600),
-(13,'picture14',10,'We share the best photos on the internet. Best prices and customer service!', 600,600),
-(14,'picture15',10,'We share the best photos on the internet. Best prices and customer service!', 600,600),
-(15,'picture1',10,'We share the best photos on the internet. Best prices and customer service!', 600,600);
+    insert into pictures(`picture_id`, `pic_name`, `price`, `description`, `height`, `width`,`image_path`) VALUES
+(1,'picture1',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'\Store\grafiki'),
+(2,'picture2',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'\Store\grafiki'),
+(3,'picture3',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'\Store\grafiki'),
+(4,'picture4',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'\Store\grafiki'),
+(5,'picture5',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'\Store\grafiki'),
+(6,'picture6',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'\Store\grafiki'),
+(7,'picture7',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'\Store\grafiki'),
+(8,'picture8',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'\Store\grafiki'),
+(9,'picture9',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'\Store\grafiki'),
+(10,'picture10',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'\Store\grafiki'),
+(11,'picture12',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'\Store\grafiki'),
+(12,'picture13',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'\Store\grafiki'),
+(13,'picture14',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'\Store\grafiki'),
+(14,'picture15',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'\Store\grafiki'),
+(15,'picture1',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'\Store\grafiki');
 
 
 
