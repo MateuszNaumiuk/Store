@@ -14,6 +14,7 @@
 		<?php
 		require("navbar.php");
 		?>
+		
 		<nav class="navbar navbar-expand-lg navbar-light bg-second_navbar border border-secondary navdisappear">
 
 			<div class="collapse navbar-collapse" id="navbarNav">
