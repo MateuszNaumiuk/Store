@@ -17,6 +17,10 @@
 	}
 }
 
+.card{
+	height: 300px;
+}
+
 .page {
 	text-align: center;
 }
