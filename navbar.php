@@ -17,9 +17,5 @@
                 </li>
             </ul>
         </div>
-        <form class="d-flex me-2 w">
-            <input class="form-control me-2 form-control-resposive" type="search" placeholder="Czego szukasz?" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit"><i class="bi-search"></i></button>
-        </form>
     </div>
 </nav>
