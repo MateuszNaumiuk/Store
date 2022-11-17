@@ -13,25 +13,29 @@
 
     <?php
     // connect to db
-    require("../connection.php");
+    require("bootstrapConnection.php");
+    require("connection.php");
     ?>
 
 </head>
 
 <body>
     <?php
+    // navbar
+    include("navbar.php");
+    
     if (array_key_exists('sign_in', $_POST)) {
         $login = $_POST['login'];
         $pass = $_POST['pass'];
 
-        $stmt = $conn->query("SELECT * FROM users WHERE login = '$login'");
+        $stmt = $conn->query("SELECT * FROM users WHERE login = '$login' or email = '$login'");
         $stmt->setFetchMode(PDO::FETCH_OBJ);
         $result = $stmt->fetchAll();
 
         // wypisanie
         if ($result) {
             foreach ($result as $row) {
-                if ($row->login === $login) {
+                if ($row->login === $login || $row->email === $login) {
                     if (password_verify($pass, $row->pass)) {
                         session_id($row->user_id);
                         session_start();
@@ -40,7 +44,7 @@
                         <form method="POST">
                             <a>Pomyslnie zalogowano</a>
                             <button id="stop_session" class="btn btn-danger" name="stop_session">Wyloguj</button>
-                            <?= header("location: ../index.php");?>
+                            <?php header("location: index.php"); ?>
                         </form>
     <?php
                     } else {
@@ -72,7 +76,7 @@
                         <!-- Email input -->
                         <div class="form-outline mb-4">
                             <input type="login" name="login" class="form-control" />
-                            <label class="form-label" for="login">Login</label>
+                            <label class="form-label" for="login">Login or email</label>
                         </div>
 
                         <!-- Password input -->
@@ -82,7 +86,7 @@
                         </div>
 
                         <!-- Submit button -->
-                        <button type="submit" name="sign_in" class="btn btn-primary btn-block mb-4">Sign in</button>
+                        <button type="submit" name="sign_in" class="btn btn-outline-success btn-block mb-4">Sign in</button>
 
                         <!-- Register buttons -->
                         <div class="text-center">
@@ -93,6 +97,11 @@
             </div>
         </div>
     </section>
+
+    <?php
+    // footer
+    include("footer.php");
+    ?>
 </body>
 
 </html>

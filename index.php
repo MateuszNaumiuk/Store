@@ -8,6 +8,11 @@
 	?>
 
 	<title>BetaShop</title>
+	<style>
+		#nav-section{
+			margin-bottom: 5em !important;
+		}
+	</style>
 </head>
 
 <body class="text-center">

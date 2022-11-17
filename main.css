@@ -3,14 +3,6 @@ body {
 	font-family: 'Poppins';
 }
 
-
-/* medium size */
-@media (max-width: 991px) {
-	#navbar-secondary {
-		display: none;
-	}
-}
-
 /* main image container */
 #header {
 	position: relative;

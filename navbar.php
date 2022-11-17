@@ -1,5 +1,5 @@
 <header>
-    <section style="margin-bottom: 5em;">
+    <section style="margin-bottom: 7em;" id="nav-section">
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand order-first" href="index.php"><img src="img/logoblack.png" width="180" height="60"></a>
@@ -20,7 +20,7 @@
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="loginPanel/login.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Zaloguj</a>
+                            <a class="nav-link" href="login.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Zaloguj</a>
                         </li>
                     </ul>
                 </div>

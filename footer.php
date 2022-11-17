@@ -24,7 +24,7 @@
             <div class="row mt-3">
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="fas fa-gem me-3"></i>O nas
+                        <i class="fas"></i>O nas
                     </h6>
                     <p>
                         Jesteśmy firmą od lat zajmującą się sprzedażą detaliczną artykułów komputerowych.

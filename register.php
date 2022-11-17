@@ -12,17 +12,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <?php
     // connect to db
-    require("../connection.php");
+    require("bootstrapConnection.php");
+    require("connection.php");
     ?>
 </head>
 
 <body>
     <?php
+    // navbar
+    include("navbar.php");
+
     if (isset($_POST['register_in'])) {
         $login = $_POST['login'];
         $password = $_POST['pass'];
         $email = $_POST['email'];
-        $hashPassword = password_hash($password,PASSWORD_BCRYPT);
+        $hashPassword = password_hash($password, PASSWORD_BCRYPT);
 
         $stmt = $conn->query("SELECT * FROM users WHERE login = '$login'");
         $stmt->setFetchMode(PDO::FETCH_OBJ);
@@ -38,7 +42,7 @@
                 ':login_' => $login,
                 ':password_' => $hashPassword,
                 ':email_' => $email
-                
+
             ));
 
             echo "<h3 style='text-align: center;'>Account created successfully</h3>";
@@ -70,7 +74,7 @@
                         </div>
 
                         <!-- Submit button -->
-                        <button type="submit" name="register_in" class="btn btn-primary btn-block mb-4">Create account</button>
+                        <button type="submit" name="register_in" class="btn btn-outline-success btn-block mb-4">Create account</button>
 
                         <!-- Register buttons -->
                         <div class="text-center">
@@ -81,6 +85,10 @@
             </div>
         </div>
     </section>
+    <?php
+    // footer
+    include("footer.php");
+    ?>
 </body>
 
 </html>
