@@ -22,7 +22,7 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <?php
-                            if (isset($_SESSION['logged'])) {
+                            if (isset($_SESSION['user'])) {
                             ?>
                                 <a class="nav-link" href="logout.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Wyloguj</a>
                             <?php
