@@ -17,24 +17,20 @@
                         <li class="nav-item">
                             <a class="nav-link" href="konto.php"><i class="bi-people" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Konto</a>
                         </li>
-                        
+
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="login.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>
-                            <?php 
-                                if(isset($_SESSION['logged'])) 
-                                {
-                            ?>  
-                                    Wyloguj
-                            <?php                                    
-                                }
-                                else
-                                {
-                            ?>
-                                    Zaloguj
                             <?php
-                                }
+                            if (isset($_SESSION['logged'])) {
+                            ?>
+                                <a class="nav-link" href="logout.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Wyloguj</a>
+                            <?php
+                            } else {
+                            ?>
+                                <a class="nav-link" href="login.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Zaloguj</a>
+                            <?php
+                            }
                             ?></a>
                         </li>
                     </ul>
