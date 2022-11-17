@@ -3,6 +3,7 @@
 
 <head>
 	<?php
+    session_start();
 	require("bootstrapConnection.php")
 	?>
 
@@ -95,7 +96,7 @@
 						} else {
 						?>
 							<form class="d-flex me-2" action="login.php">
-								<button class="btn btn-outline-success w-50" type="submit">Złóż zamówienie</button>
+								<button class="btn btn-outline-success w-50" type="submit">Zaloguj sie by złożyć zamówienie</button>
 							</form>
 						<?php } ?>
 					</div>
