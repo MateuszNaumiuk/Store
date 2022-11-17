@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(isset($_SESSION['logged']))
+{
+    unset($_SESSION['logged']);
+    unset($_SESSION['curr_user_id']);
+    header('Location:index.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,15 +48,16 @@
             foreach ($result as $row) {
                 if ($row->login === $login || $row->email === $login) {
                     if (password_verify($pass, $row->pass)) {
-                        session_id($row->user_id);
-                        session_start();
-                        setcookie("login", $row->user_id, time() + 186400);
+                        $_SESSION['logged'] = true;
+                        $_SESSION['curr_user_id'] = $row->user_id;
+                        $_SESSION['curr_user_name'] = $row->login;
+                        header( "Refresh:3; url=index.php");
+                        
     ?>
-                        <form method="POST">
-                            <a>Pomyslnie zalogowano</a>
-                            <button id="stop_session" class="btn btn-danger" name="stop_session">Wyloguj</button>
-                            <?php header("location: index.php"); ?>
-                        </form>
+                        <div class="alert alert-dark text-center" role="alert">
+                            Pomyślnie zalogowano! Za chwilę zostaniesz przekierowany.
+                        </div>
+
     <?php
                     } else {
                         echo "<h3 class='text-center'>Wrong username or password!</h3>";
@@ -57,10 +69,6 @@
                 }
             }
 
-            if (isset($_POST['stop_session'])) {
-                setcookie("login", $row->user_id, time() - 186400);
-                session_abort($row->user_id);
-            }
         } else {
             echo "<h3 class='text-center'>Wrong username or password!</h3>";
             header("refresh: 5");

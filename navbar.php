@@ -15,12 +15,27 @@
                             <a class="nav-link" href="koszyk.php"><i class="bi-cart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Koszyk</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="strona_kategorii.php"><i class="bi-bag" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Produkty</a>
+                            <a class="nav-link" href="konto.php"><i class="bi-people" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Konto</a>
                         </li>
+                        
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="login.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Zaloguj</a>
+                            <a class="nav-link" href="login.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>
+                            <?php 
+                                if(isset($_SESSION['logged'])) 
+                                {
+                            ?>  
+                                    Wyloguj
+                            <?php                                    
+                                }
+                                else
+                                {
+                            ?>
+                                    Zaloguj
+                            <?php
+                                }
+                            ?></a>
                         </li>
                     </ul>
                 </div>

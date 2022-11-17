@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION['logged']))
+{
+    header('Location:login.php');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -18,7 +26,8 @@
 		<section class="page">
 			<div class="container">
 				<div class="row text-justify bg-second_navbar border rounded my-2">
-					<h1 class="pb-2 py-3 ps-2">Twoje konto</h1>
+					<h1>Witaj, <?= $_SESSION['curr_user_name'] ?></h1>
+					<h2 class="pb-2 py-3 ps-2">Twoje konto</h2>
 					<h3 class="ps-3">Dane osobowe</h3>
 					<p class="ps-5">Imię</p>
 					<p class="ps-5">Nazwisko</p>
