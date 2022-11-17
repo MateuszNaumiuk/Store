@@ -27,21 +27,26 @@
 	<?php
 	require("navbar.php");
 	?>
-
+	<?php 
+	    if (isset($_GET['width'])) {
+			$login = $_POST['width'];
+			echo $login;
+		}
+	?>
 	<section class="page">
 		<div class="container-fluid">
 			<div class="row my-3">
 				<div class="col-xl-2 col-md-4">
 					<ul class="list-group px-3 py-3 border border-secondary rounded">
 						<h3 class="h4 my-3">Rozmiary</h3>
-						<form mathod="POST" action="">
+						<form mathod="GET" action="">
 							<div class="row">
 								<?php
 								$zapytanie = $conn->query("SELECT DISTINCT width,height FROM pictures");
 								while ($row = $zapytanie->fetch()) {
 								?>
-									<div class="col-12">
-										<input type="submit" value="<?= $row['width'] ?> x <?= $row['height'] ?>" class="my-1	">
+									<div class="col-6">
+										<input type="submit" name="width" value="<?= $row['width']?> x <?= $row['height']?>">
 									</div>
 								<?php
 								}

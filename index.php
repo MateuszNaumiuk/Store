@@ -26,7 +26,7 @@
 	</section>
 
 	<section>
-<div class="container-fluid">
+<div class="container">
   <div class="row mb-4 ">
 	<h2 class="text-center mb-4 fw-bold border-bottom border-secondary py-2 border-top"> O nas </h2>
     <div class="col-sm-4">
