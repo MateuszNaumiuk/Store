@@ -1,11 +1,3 @@
-<?php
-session_start();
-if(!isset($_SESSION['logged']))
-{
-    header('Location:login.php');
-    exit();
-}
-?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -70,7 +62,6 @@ if(!isset($_SESSION['logged']))
 							</a>
 							<form class="d-inline ms-3 w">
 								<input type="number" class="form-control d-inline me-2" style="max-width:10%;" placeholder="1">
-
 							</form>
 
 						</div>
@@ -94,9 +85,19 @@ if(!isset($_SESSION['logged']))
 				</div>
 				<div class="row text-center ">
 					<div class="col-12 text-center offset-3">
-						<form class="d-flex me-2">
-							<button class="btn btn-outline-success w-50" type="submit">Złóż zamówienie</button>
-						</form>
+						<?php
+						if (isset($_SESSION['user'])) {
+						?>
+							<form class="d-flex me-2" action="">
+								<button class="btn btn-outline-success w-50" type="submit">Złóż zamówienie</button>
+							</form>
+						<?php
+						} else {
+						?>
+							<form class="d-flex me-2" action="login.php">
+								<button class="btn btn-outline-success w-50" type="submit">Złóż zamówienie</button>
+							</form>
+						<?php } ?>
 					</div>
 				</div>
 			</div>
