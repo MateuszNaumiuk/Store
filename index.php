@@ -26,17 +26,41 @@
 	</section>
 
 	<section>
+<div class="container-fluid">
+  <div class="row mb-4 ">
+	<h2 class="text-center mb-4 fw-bold border-bottom border-secondary py-2 border-top"> O nas </h2>
+    <div class="col-sm-4">
+		<h3 class="fw-bold"> <i class="bi bi-hourglass-split"></i> Historia</h3>
+      		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.
+    </div>
+    <div class="col-sm-4">
+		<h3 class="fw-bold"> <i class="bi bi-calendar2-check-fill"></i> Przyszłość</h3>
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.
+    </div>
+    <div class="col-sm-4">
+		<h3 class="fw-bold"> <i class="bi bi-award-fill"></i> Co cenimy</h3>
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.
+    </div>
+  </div>
+</div>
+	</section>
+
+
+	<section>
 		<div class="container-fluid">
-			<div class="col-12 border-top border-secondary">
-				<p class="border-bottom border-secondary py-2 fw-bold" style="font-size:1.8em">Polecamy!</p>
+			<div class="row">
+			<div class="col-12">
 				<div class="row">
-					<div class="container text-center my-3">
-						<div class="row mx-auto mt-5 my-auto justify-content-center">
+					<div class="fw-bold bg-dark text-light py-4" style="font-size:1.8em">
+						Polecamy!
+					</div>
+					<div class="container text-center pb-3 bg-dark">
+						<div class="row mx-auto pb-5 auto justify-content-center">
 							<div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
 								<div class="carousel-inner" role="listbox">
 									<div class="carousel-item active">
 										<div class="col-md-3">
-											<div class="card align-middle">
+											<div class="card align-middle bg-dark text-light">
 												<a>Najpopularniejsze wybory!</a>
 											</div>
 										</div>
@@ -46,7 +70,7 @@
 									?>
 										<div class="carousel-item">
 											<div class="col-md-3">
-												<div class="card">
+												<div class="card bg-dark">
 													<div class="card-img">
 														<img src="grafiki/<?= $i ?>.jpg" class="img-fluid img_carousel" alt="img<?= $i ?>">
 													</div>
@@ -63,6 +87,7 @@
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	</section>
 
