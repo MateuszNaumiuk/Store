@@ -33,10 +33,21 @@
 			<div class="row my-3">
 				<div class="col-xl-2 col-md-4">
 					<ul class="list-group px-3 py-3 border border-secondary rounded">
-						<h3 class="h4 my-3">Podkategorie</h3>
-						<a href="#" class="list-group-item list-group-item-dark list-group-item-action">1</a>
-						<a href="#" class="list-group-item list-group-item-dark list-group-item-action">2</a>
-						<a href="#" class="list-group-item list-group-item-dark list-group-item-action">3</a>
+						<h3 class="h4 my-3">Rozmiary</h3>
+						<form mathod="POST" action="">
+							<div class="row">
+								<?php
+								$zapytanie = $conn->query("SELECT DISTINCT width,height FROM pictures");
+								while ($row = $zapytanie->fetch()) {
+								?>
+									<div class="col-12">
+										<input type="submit" value="<?= $row['width'] ?> x <?= $row['height'] ?>" class="my-1	">
+									</div>
+								<?php
+								}
+								?>
+							</div>
+						</form>
 					</ul>
 				</div>
 				<div class="col-xl-10 col-md-8 col-sm-12">
@@ -49,8 +60,8 @@
 								while ($row = $zapytanie->fetch()) {
 								?>
 									<div class="col-sm-4 col-xl-2 mb-5 text-center">
-										<a href="strona_produktu.php?id=<?=$row['picture_id'] ?>">
-												<img src="grafiki/<?= $row['image_path'] ?>" class="card-img-top" style="max-height: 10em; border-radius:1em;" alt="<?= $row['image_path'] ?>">
+										<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>">
+											<img src="<?= $row['image_path'] ?>" class="card-img-top" style="max-height: 10em; border-radius:1em;" alt="<?= $row['image_path'] ?>">
 											<a style="font-size: 1em; font-width: bold;"><?= $row['pic_name']; ?></a>
 											<p><?= $row['price'] ?> zl</p>
 										</a>

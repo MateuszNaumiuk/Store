@@ -26,7 +26,7 @@
 					$zapytanie = $conn->query("SELECT * FROM pictures where picture_id = $id");
 					while ($row = $zapytanie->fetch()) {
 					?>
-						<img src="grafiki/<?= $row['image_path'] ?>" class="card-img-top" alt="<?= $row['image_path'] ?>">
+						<img src="<?= $row['image_path']?>" class="card-img-top" alt="<?= $row['image_path'] ?>">
 				</div>
 
 				<div class="col-8">
@@ -80,7 +80,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-12 border rounded text-justify">
+				<div class="col-12 mt-4 border rounded text-justify">
 					<p style="font-size:2vw;" class="ms-2 my-3"><i class="bi bi-cpu me-3"></i>Opis</p>
 					<p class="ms-5 me-5" style="font-size:1vw;"><?= $row['description'] ?>
 				</div>
