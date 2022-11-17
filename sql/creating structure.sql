@@ -28,7 +28,7 @@ create table if not EXISTS pictures (
 
 
 	/*
-  creating users
+    creating users
     */
     
 create table if not EXISTS users (
@@ -38,6 +38,8 @@ create table if not EXISTS users (
    	pass varchar(255),
     fname varchar(255),
     lname varchar(255),
+    birthDate date,
+    phoneNumber varchar(64),
     country varchar(255),
     town varchar(255),
     street varchar(255),

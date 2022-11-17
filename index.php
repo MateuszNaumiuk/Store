@@ -26,25 +26,24 @@
 	</section>
 
 	<section>
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row mb-4 ">
 				<h2 class="text-center mb-5 fw-bold border-bottom border-secondary py-2 border-top"> O nas </h2>
-				<div class="col-sm mx-3 mt-3">
+				<div class="col-sm">
 					<h3 class="fw-bold"> <i class="bi bi-hourglass-split"></i> Historia</h3>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.
+					<div class="container" style="max-width: 25em;"><a>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.</a></div>
 				</div>
-				<div class="col-sm mx-3 mt-3">
+				<div class="col-sm">
 					<h3 class="fw-bold"> <i class="bi bi-calendar2-check-fill"></i> Przyszłość</h3>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.
+					<div class="container" style="max-width: 25em;"><a>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.</a></div>
 				</div>
-				<div class="col-sm mx-3 mb-5 mt-3">
+				<div class="col-sm">
 					<h3 class="fw-bold"> <i class="bi bi-award-fill"></i> Co cenimy</h3>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.
+					<div class="container" style="max-width: 25em;"><a>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.</a></div>
 				</div>
 			</div>
 		</div>
 	</section>
-
 
 	<section>
 		<div class="container-fluid">

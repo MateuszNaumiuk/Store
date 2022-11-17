@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <header>
     <section style="margin-bottom: 7em;" id="nav-section">
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -18,27 +19,32 @@ session_start();
                             <a class="nav-link" href="koszyk.php"><i class="bi-cart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Koszyk</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="konto.php"><i class="bi-people" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Konto</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="strona_kategorii.php"><i class="bi-bag" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Produkty</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto" id="navbar-drop">
                         <li class="nav-item">
                             <?php
                             if (isset($_SESSION['user'])) {
                             ?>
-                                <a class="nav-link" href="logout.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i><?= $_SESSION['user']?></a>
-
-                            <?php
-                            } else {
-                            ?>
-                                <a class="nav-link" href="login.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Zaloguj</a>
-                            <?php
-                            }
-                            ?></a>
+                                <!-- <a class="nav-link" href="logout.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i><?= $_SESSION['user'] ?></a> -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Konto
+                            </a>
+                            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item text-white bg-dark" href="konto.php">Dane</a></li>
+                                <li><a class="dropdown-item text-white bg-dark" href="logout.php">Wyloguj</a></li>
+                            </ul>
                         </li>
+                    <?php
+                            } else {
+                    ?>
+                        <a class="nav-link" href="login.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Zaloguj</a>
+                    <?php
+                            }
+                    ?></a>
+                    </li>
                     </ul>
                 </div>
             </div>
