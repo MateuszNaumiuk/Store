@@ -28,16 +28,16 @@
 	<section>
 <div class="container">
   <div class="row mb-4 ">
-	<h2 class="text-center mb-4 fw-bold border-bottom border-secondary py-2 border-top"> O nas </h2>
-    <div class="col-sm-4">
+	<h2 class="text-center mb-5 fw-bold border-bottom border-secondary py-2 border-top"> O nas </h2>
+    <div class="col-sm mx-3 mt-3">
 		<h3 class="fw-bold"> <i class="bi bi-hourglass-split"></i> Historia</h3>
       		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm mx-3 mt-3">
 		<h3 class="fw-bold"> <i class="bi bi-calendar2-check-fill"></i> Przyszłość</h3>
 			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm mx-3 mb-5 mt-3">
 		<h3 class="fw-bold"> <i class="bi bi-award-fill"></i> Co cenimy</h3>
 			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.
     </div>
@@ -70,11 +70,17 @@
 									?>
 										<div class="carousel-item">
 											<div class="col-md-3">
-												<div class="card bg-dark">
+												<div class="card bg-dark text-light	">
 													<div class="card-img">
 														<img src="grafiki/<?= $i ?>.jpg" class="img-fluid img_carousel" alt="img<?= $i ?>">
 													</div>
 													<!-- tutaj dodac tekst ktory zmienia atrybut hidden na hover pobierajacy z bazy cene nazwe i wymiary -->
+
+													<div class="centered" id="centeronhover" hidden>
+														tekst
+													</div>
+
+
 												</div>
 											</div>
 										</div>
