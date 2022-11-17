@@ -76,3 +76,21 @@ body {
 .carousel-inner .carousel-item-start {
 	transform: translateX(0)
 }
+
+/* text on hover  */
+
+  .centeronhover {
+	position: absolute;
+	top: 30%;
+	transform: translateY(0);
+	transform: translateX(0);
+	color: #fff;
+	visibility: hidden;
+	opacity: 0;
+	 transition: opacity .6s, visibility .4s;
+  }
+  
+  .card-img:hover .centeronhover {
+	visibility: visible;
+	opacity: 1;
+  }
