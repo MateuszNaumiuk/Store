@@ -1,3 +1,4 @@
+use store;
 /*
 creating indexes
 */
