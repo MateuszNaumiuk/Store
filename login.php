@@ -4,8 +4,6 @@
 <head>
     <?php
     // connect to db
-    session_start();
-
     require("bootstrapConnection.php");
     require("connection.php");
     ?>

@@ -3,10 +3,8 @@
 
 <head>
 	<?php
-	session_start();
 	require("bootstrapConnection.php")
 	?>
-
 	<title>BetaShop</title>
 </head>
 

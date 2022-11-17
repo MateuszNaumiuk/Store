@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <header>
     <section style="margin-bottom: 7em;" id="nav-section">
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -17,14 +20,17 @@
                         <li class="nav-item">
                             <a class="nav-link" href="konto.php"><i class="bi-people" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Konto</a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="strona_kategorii.php"><i class="bi-bag" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Produkty</a>
+                        </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <?php
                             if (isset($_SESSION['user'])) {
                             ?>
-                                <a class="nav-link" href="logout.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Wyloguj</a>
+                                <a class="nav-link" href="logout.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i><?= $_SESSION['user']?></a>
+
                             <?php
                             } else {
                             ?>
