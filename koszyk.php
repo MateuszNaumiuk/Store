@@ -59,16 +59,7 @@ if (isset($_GET["action"])) {
 		<h1 class="py-3">Twój koszyk: </h1>
 		<?php if (!empty($_SESSION["cart"])) {
 			$total = 0;
-			foreach ($_SESSION["cart"] as $key => $value) { ?> <tr>
-					<a><?php $value["image_name"]; ?></a>
-					<a><?php echo $value["item_quantity"]; ?></a>
-					<a>$ <?php echo $value["product_price"]; ?></a>
-					<a> $ <?php echo number_format($value["item_quantity"] * $value["product_price"], 2); ?></a>
-				</tr> <?php $total = $total + ($value["item_quantity"] * $value["product_price"]);
-					} ?> <tr>
-				<a colspan="3">Total</a>
-				<th><?php echo number_format($total, 2); ?></th>
-				<a></a>
+			?>
 			</tr>
 			<div class="border rounded my-2">
 				<a href="strona_produktu.php" class="text-decoration-none link-dark">
