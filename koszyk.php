@@ -1,114 +1,136 @@
-<!DOCTYPE html>
-<html lang="pl">
+<html>
 
 <head>
 	<?php
-	require("bootstrapConnection.php")
-	?>
-
-	<title>BetaShop</title>
-</head>
-
-<body>
-
-	<?php
+	require("bootstrapConnection.php");
+	require("connection.php");
 	require("navbar.php");
 	?>
+	<title>Shopping Cart</title>
 
-	<main>
-		<section class="page">
-			<div class="container">
-				<div class="row text-justify bg-second_navbar border rounded my-2">
-					<h1 class="pb-2 py-3"> Twój koszyk: </h1>
+</head>
+<?php
+if (isset($_POST["add"])) {
+	if (isset($_SESSION["cart"])) {
+		$item_array_id = array_column($_SESSION["cart"], "product_id");
+		if (!in_array($_GET["id"], $item_array_id)) {
+			$count = count($_SESSION["cart"]);
+			$item_array = array(
+				'product_id' => $_POST["picture_id"],
+				'image_name' => $_POST["hidden_name"],
+				'product_price' => $_POST["hidden_price"],
+				'item_quantity' => $_POST["quantity"],
+				'image_path' => $_POST["hidden_path"],
+			);
+			$_SESSION["cart"][$count] = $item_array;
+		} else {
+			echo '<script>alert("Produkt jest juz w koszyku")</script>';
+		}
+	} else {
+		$item_array = array(
+			'product_id' => $_GET["id"],
+			'image_name' => $_POST["hidden_name"],
+			'product_price' => $_POST["hidden_price"],
+			'item_quantity' => $_POST["quantity"],
+			'image_path' => $_POST["hidden_path"],
+		);
+		$_SESSION["cart"][0] = $item_array;
+	}
+}
+if (isset($_GET["action"])) {
+	if ($_GET["action"] == "delete") {
+		foreach ($_SESSION["cart"] as $keys => $value) {
+			if ($value["product_id"] == $_GET["id"]) {
+				unset($_SESSION["cart"][$keys]);
+?>
+				<div class="alert alert-dark text-center" role="alert">
+					Usunieto z koszyka.
+				</div>
+				<meta http-equiv="refresh" content="2">
+<?php
+			}
+		}
+	}
+} ?>
 
-					<div class="col-12 py-2 px-4">
-						<a href="strona_produktu.php" class="text-decoration-none link-dark">
-							<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-width:100px; max-height:100px;">
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Nazwa Produktu </p>
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Cena </p>
-						</a>
-						<form class="d-inline ms-3 w">
-							<input type="number" class="form-control d-inline me-2" style="max-width:10%;" placeholder="1">
 
+<body>
+	<div class="container-md-fluid container-xl">
+		<h1 class="py-3">Twój koszyk: </h1>
+		<?php if (!empty($_SESSION["cart"])) {
+			$total = 0;
+			foreach ($_SESSION["cart"] as $key => $value) { ?> <tr>
+					<a><?php $value["image_name"]; ?></a>
+					<a><?php echo $value["item_quantity"]; ?></a>
+					<a>$ <?php echo $value["product_price"]; ?></a>
+					<a> $ <?php echo number_format($value["item_quantity"] * $value["product_price"], 2); ?></a>
+				</tr> <?php $total = $total + ($value["item_quantity"] * $value["product_price"]);
+					} ?> <tr>
+				<a colspan="3">Total</a>
+				<th><?php echo number_format($total, 2); ?></th>
+				<a></a>
+			</tr>
+			<div class="border rounded my-2">
+				<a href="strona_produktu.php" class="text-decoration-none link-dark">
+					<?php
+					foreach ($_SESSION["cart"] as $key => $value) {
+					?>
+						<div class="row">
+							<div class="col-12 d-flex justify-content-xl-start justify-content-sm-center py-2 px-4">
+								<a href="strona_produktu.php" class="text-decoration-none link-dark">
+									<img class="img-fluid d-inline" src="<?= $value['image_path'] ?>" style="max-width:100px; max-height:100px;">
+									<p class="d-inline mx-3" style="font-size: 1.3em"><?= $value['image_name'] ?></p>
+									<p class="d-inline mx-3" style="font-size: 1.3em">Cena: <?= $value["item_quantity"] * $value["product_price"] . " zł"; ?></p>
+									<p class="d-inline mx-3" style="font-size: 1.3em">ilosc: <?= $value['item_quantity'] . " szt" ?></p>
+								</a>
+								<a href="koszyk.php?action=delete&id=<?php echo $value["product_id"]; ?>" class="text-danger ">Remove Item</a>
+
+							</div>
+						</div>
+					<?php } ?>
+					<div class="row">
+						<div class="col-12 d-flex justify-content-end">
+							<p class="d-inline mx-3" style="font-size: 1.3em">Cena ostateczna: <?= $total = $total + ($value["item_quantity"] * $value["product_price"]) . " zł"?></p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="row text-center ">
+				<div class="col-12 text-center">
+					<?php
+					if (isset($_SESSION['user'])) {
+					?>
+						<form class="d-flex justify-content-center " action="">
+							<button class="btn btn-outline-success w-50" type="submit">Złóż zamówienie</button>
 						</form>
-
-					</div>
-
-				</div>
-
-				<div class="row text-justify bg-second_navbar border rounded my-2">
-					<a href="strona_produktu.php" class="text-decoration-none link-dark">
-						<div class="col-12 py-2 px-4">
-							<a href="strona_produktu.php" class="text-decoration-none link-dark">
-								<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-width:100px; max-height:100px;">
-								<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Nazwa Produktu </p>
-								<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Cena </p>
-							</a>
-							<form class="d-inline ms-3 w">
-								<input type="number" class="form-control d-inline me-2" style="max-width:10%;" placeholder="1">
-
-							</form>
-
-						</div>
-					</a>
-				</div>
-				<div class="row text-justify bg-second_navbar border rounded my-2">
-					<a href="strona_produktu.php" class="text-decoration-none link-dark">
-						<div class="col-12 py-2 px-4">
-							<a href="strona_produktu.php" class="text-decoration-none link-dark">
-								<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-width:100px; max-height:100px;">
-								<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Nazwa Produktu </p>
-								<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Cena </p>
-							</a>
-							<form class="d-inline ms-3 w">
-								<input type="number" class="form-control d-inline me-2" style="max-width:10%;" placeholder="1">
-							</form>
-
-						</div>
-					</a>
-				</div>
-				<div class="row text-justify bg-second_navbar border rounded my-2">
-					<a href="strona_produktu.php" class="text-decoration-none link-dark">
-						<div class="col-12 py-2 px-4">
-							<a href="strona_produktu.php" class="text-decoration-none link-dark">
-								<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-width:100px; max-height:100px;">
-								<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Nazwa Produktu </p>
-								<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Cena </p>
-							</a>
-							<form class="d-inline ms-3 w">
-								<input type="number" class="form-control d-inline me-2" style="max-width:10%;" placeholder="1">
-
-							</form>
-
-						</div>
-					</a>
-				</div>
-				<div class="row text-center ">
-					<div class="col-12 text-center offset-3">
-						<?php
-						if (isset($_SESSION['user'])) {
-						?>
-							<form class="d-flex me-2" action="">
-								<button class="btn btn-outline-success w-50" type="submit">Złóż zamówienie</button>
-							</form>
-						<?php
-						} else {
-						?>
-							<form class="d-flex me-2" action="login.php">
-								<button class="btn btn-outline-success w-50" type="submit">Zaloguj sie by złożyć zamówienie</button>
-							</form>
-						<?php } ?>
-					</div>
+					<?php
+					} else {
+					?>
+						<form class="d-flex justify-content-center me-2" action="login.php">
+							<button class="btn btn-outline-success w-50" type="submit">Zaloguj sie by złożyć zamówienie</button>
+						</form>
+					<?php } ?>
 				</div>
 			</div>
-		</section>
-
-		<!-- footer -->
-		<?php
-		include("footer.php");
+		<?php } else {
 		?>
-	</main>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+			<a href="strona_produktu.php" class="text-decoration-none link-dark">
+				<div class="row">
+					<div class="col-xl-6 col-md-12 d-flex justify-content-xl-start justify-content-sm-center py-2 px-4">
+						<a href="strona_produktu.php" class="text-decoration-none link-dark">
+							<p class="d-inline mx-3" style="font-size: 1.3em">Koszyk jest pusty! </p>
+						</a>
+					</div>
+				</div>
+			</a>
+		<?php
+		} ?>
+		</table>
+	</div>
+	<?php
+	include("footer.php");
+	?>
 </body>
 
 </html>

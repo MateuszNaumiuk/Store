@@ -13,8 +13,6 @@
 <body>
 	<?php
 	require("navbar.php");
-	$zapytanie = $conn->query("SELECT width FROM pictures WHERE picture_id = $id");
-
 	?>
 
 	<section class="page">
@@ -59,22 +57,24 @@
 							</div>
 							<div class="row">
 								<div class="col-12">
-									<form class="d-flex me-2 w">
-										<input type="number" class="form-control w-25 me-2" placeholder="1">
-										<button class="btn btn-outline-success w-75" type="submit">Dodaj do koszyka</button>
+									<form action="koszyk.php?action=add&id=<?=$row['picture_id']?>" method='POST' class="d-flex me-2 w">
+										<input type="number" name="quantity" value="1" min="1" placeholder="Quantity" class="form-control w-25 me-2" required>
+										<input type="hidden" name="hidden_name" value="<?=$row['pic_name']?>">
+										<input type="hidden" name="hidden_path" value="<?=$row['image_path']?>">
+										<input type="hidden" name="picture_id" value="<?=$row['picture_id']?>">
+										<input type="hidden" name="hidden_name" value="<?=$row['pic_name']?>">
+										<input type="hidden" name="hidden_price" value="<?=$row['price']?>">
+										<input  type="submit" name="add" class="btn btn-outline-success w-75" value="Dodaj do koszyka">
 									</form>
 								</div>
 							</div>
 						</div>
-
-
 
 					</div>
 					<div class="row my-4">
 						<div class="col-6">
 
 						</div>
-
 
 					</div>
 				</div>
