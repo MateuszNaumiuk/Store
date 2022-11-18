@@ -92,7 +92,7 @@ if (isset($_GET["action"])) {
 					<?php
 					if (isset($_SESSION['user'])) {
 					?>
-						<form class="d-flex justify-content-center " action="">
+						<form class="d-flex justify-content-center " action="order.php">
 							<button class="btn btn-outline-success w-50" type="submit">Złóż zamówienie</button>
 						</form>
 					<?php
