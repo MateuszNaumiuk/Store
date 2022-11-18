@@ -10,16 +10,15 @@
 
 </head>
 <?php
-if (isset($_POST["add"])) {
+if (array_key_exists("add", $_POST)) {
 	if (isset($_SESSION["cart"])) {
 		$item_array_id = array_column($_SESSION["cart"], "product_id");
-		if (!in_array($_GET["id"], $item_array_id)) {
+		if (!in_array($_POST["picture_id"], $item_array_id)) {
 			$count = count($_SESSION["cart"]);
 			$item_array = array(
 				'product_id' => $_POST["picture_id"],
 				'image_name' => $_POST["hidden_name"],
 				'product_price' => $_POST["hidden_price"],
-				'item_quantity' => $_POST["quantity"],
 				'image_path' => $_POST["hidden_path"],
 			);
 			$_SESSION["cart"][$count] = $item_array;
@@ -31,7 +30,6 @@ if (isset($_POST["add"])) {
 			'product_id' => $_GET["id"],
 			'image_name' => $_POST["hidden_name"],
 			'product_price' => $_POST["hidden_price"],
-			'item_quantity' => $_POST["quantity"],
 			'image_path' => $_POST["hidden_path"],
 		);
 		$_SESSION["cart"][0] = $item_array;
@@ -59,7 +57,7 @@ if (isset($_GET["action"])) {
 		<h1 class="py-3">Twój koszyk: </h1>
 		<?php if (!empty($_SESSION["cart"])) {
 			$total = 0;
-			?>
+		?>
 			</tr>
 			<div class="border rounded my-2">
 				<a href="strona_produktu.php" class="text-decoration-none link-dark">
@@ -71,17 +69,19 @@ if (isset($_GET["action"])) {
 								<a href="strona_produktu.php" class="text-decoration-none link-dark">
 									<img class="img-fluid d-inline" src="<?= $value['image_path'] ?>" style="max-width:100px; max-height:100px;">
 									<p class="d-inline mx-3" style="font-size: 1.3em"><?= $value['image_name'] ?></p>
-									<p class="d-inline mx-3" style="font-size: 1.3em">Cena: <?= $value["item_quantity"] * $value["product_price"] . " zł"; ?></p>
-									<p class="d-inline mx-3" style="font-size: 1.3em">ilosc: <?= $value['item_quantity'] . " szt" ?></p>
+									<p class="d-inline mx-3" style="font-size: 1.3em">Cena: <?= $value["product_price"] . " zł"; ?></p>
 								</a>
 								<a href="koszyk.php?action=delete&id=<?php echo $value["product_id"]; ?>" class="text-danger ">Remove Item</a>
 
 							</div>
 						</div>
-					<?php } ?>
+					<?php
+						$total += $value["product_price"];
+					}
+					?>
 					<div class="row">
 						<div class="col-12 d-flex justify-content-end">
-							<p class="d-inline mx-3" style="font-size: 1.3em">Cena ostateczna: <?= $total = $total + ($value["item_quantity"] * $value["product_price"]) . " zł"?></p>
+							<p class="d-inline mx-3" style="font-size: 1.3em">Cena ostateczna: <?= $total . " zł" ?></p>
 						</div>
 					</div>
 				</a>

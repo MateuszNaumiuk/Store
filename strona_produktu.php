@@ -51,20 +51,17 @@
 								<div class="col text-center">
 									<p style='font-size:1.5vw;' class='fw-bold'>
 										<?= $row['price'] ?> zl
-
 									</p>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-12">
-									<form action="koszyk.php?action=add&id=<?=$row['picture_id']?>" method='POST' class="d-flex me-2 w">
-										<input type="number" name="quantity" value="1" min="1" placeholder="Quantity" class="form-control w-25 me-2" required>
+									<form action="koszyk.php" method='POST' class="d-flex me-2 w">
 										<input type="hidden" name="hidden_name" value="<?=$row['pic_name']?>">
 										<input type="hidden" name="hidden_path" value="<?=$row['image_path']?>">
 										<input type="hidden" name="picture_id" value="<?=$row['picture_id']?>">
-										<input type="hidden" name="hidden_name" value="<?=$row['pic_name']?>">
 										<input type="hidden" name="hidden_price" value="<?=$row['price']?>">
-										<input  type="submit" name="add" class="btn btn-outline-success w-75" value="Dodaj do koszyka">
+										<input  type="submit" id="add" name="add" class="btn btn-outline-success w-100" value="Dodaj do koszyka">
 									</form>
 								</div>
 							</div>

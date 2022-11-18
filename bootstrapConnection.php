@@ -10,3 +10,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 <link rel="stylesheet" href="main.css">
 <link rel="shortcut icon" href="img/logo_min.png">
+
+<?php
+session_start();
+?>
