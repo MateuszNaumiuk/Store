@@ -54,7 +54,6 @@ session_start();
                 $lname = $_POST['lname'];
                 $phone = $_POST['phone'];
                 foreach ($_SESSION["cart"] as $keys => $value) {
-                    //To działa dla wszystkich obrazow poza picture1 w koszyku, bo ma id 0
                     $p_id = $value["product_id"];
                     $sql = ("INSERT INTO order_info VALUES ('null', '$usr_id', '$p_id','$date','done','$fname','$lname','$phone');");
                     $stmt = $conn->prepare($sql);

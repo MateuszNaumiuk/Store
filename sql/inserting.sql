@@ -67,8 +67,8 @@ insert into users_privileges VALUES
   inserting values into  users_privileges
     */
     
-insert into order_info(`order_id`,`order_date`,`quantity`,`order_status`)VALUES
-(1,'2022-10-11',24,'done'),
-(2,'2022-05-19',12,'done'),
-(3,'2021-12-23',44,'done'),
-(4,'2022-02-02',231,'done');
+insert into order_info(`order_id`,`order_date`,`order_status`)VALUES
+(1,'2022-10-11','done'),
+(2,'2022-05-19','done'),
+(3,'2021-12-23','done'),
+(4,'2022-02-02','done');
