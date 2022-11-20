@@ -16,19 +16,39 @@
     // navbar
     include("navbar.php");
 
-
-    
         if (isset($_POST['register_in'])) {
+
+            $login = $_POST['login'];
+            $password = $_POST['pass'];
+            $email = $_POST['email'];
+            // Validation flag
+            $all_good = true;
+
             // Recaptcha validation
             $secret = "6Ld_YB0jAAAAAIzbQFyCm56DAplL3lJI8mH8IP00";
             $response = $_POST['g-recaptcha-response'];
             $check = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$response);
             $answ = json_decode($check);
-            if($answ->success==true)
+
+            if(!$answ->success==true)
             {
-                $login = $_POST['login'];
-                $password = $_POST['pass'];
-                $email = $_POST['email'];
+                $_SESSION['e_bot'] = "Potwierdź, że nie jesteś robotem!";
+                $all_good = false;
+            }
+            // Password validation
+            if(!preg_match('@[A-Z]@', $password) || !preg_match('@[a-z]@', $password) || !preg_match('@[0-9]@', $password) || strlen($password)<8 || strlen($password)>=25)
+            {
+                $_SESSION['e_password'] = "Hasło powinno zawierać jedną wielką oraz małą literę, jedną cyfrę oraz 8-25 znaków";
+                $all_good = false;
+            }
+            if(!ctype_alnum($login))
+            {
+                $_SESSION['e_login'] = "Login może składać się jedynie ze znaków alfanumerycznych";
+                $all_good = false;
+            }
+
+            if($all_good)
+            {
                 $hashPassword = password_hash($password, PASSWORD_BCRYPT);
 
                 $stmt = $conn->query("SELECT * FROM users WHERE login = '$login'");
@@ -48,14 +68,11 @@
 
                     ));
 
-                    echo "<h3 style='text-align: center;'>Account created successfully</h3>";
+                    echo "<div class='alert alert-dark text-center' role='alert'>Konto zostało stworzone! Za chwilę cię przekierujemy.</div>";
                     header("refresh: 5;login.php");
             }
             }
-            else
-            {
-                $_SESSION['e_bot'] = "Potwierdź, że nie jesteś robotem!";
-            } 
+
     }   
     ?>
     <section>
@@ -68,6 +85,13 @@
                             <input type="login" name="login" class="form-control" />
                             <label class="form-label" for="login">Login</label>
                         </div>
+                        <?php
+                            if(isset($_SESSION['e_login']))
+                            {
+                                echo '<div style="color:red">'.$_SESSION['e_login'].' </div>';
+                                unset($_SESSION['e_login']);
+                            }
+                        ?>
 
                         <!-- Email input -->
                         <div class="form-outline mb-4">
@@ -80,6 +104,13 @@
                             <input type="password" name="pass" class="form-control" />
                             <label class="form-label" for="password">Password</label>
                         </div>
+                        <?php
+                            if(isset($_SESSION['e_password']))
+                            {
+                                echo '<div style="color:red">'.$_SESSION['e_password'].' </div>';
+                                unset($_SESSION['e_password']);
+                            }
+                        ?>
 
                         <!-- Recaptcha api -->
                         <div class="g-recaptcha my-2" data-sitekey="6Ld_YB0jAAAAAAiL3HbgukBbYGVC_7G07Qth8LAR" data-callback="captchaVerified"></div>
