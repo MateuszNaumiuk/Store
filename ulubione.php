@@ -4,7 +4,7 @@
 	<?php
 	require("bootstrapConnection.php");
 	require("connection.php");
-	require("navbar.php");
+
 	?>
 	<title>BetaShop</title>
 
@@ -60,7 +60,8 @@ if (array_key_exists("fav", $_POST)) {
 
 <body>
 
-<body>
+<?php require("navbar.php"); ?>
+
 	<div class="container-md-fluid container-xl">
 		<h1 class="py-3">Produkty dodane do ulubionych: </h1>
 		<?php if (!empty($_SESSION["favourite"])) {

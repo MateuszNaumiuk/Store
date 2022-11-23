@@ -4,7 +4,6 @@
 	<?php
 	require("bootstrapConnection.php");
 	require("connection.php");
-	require("navbar.php");
 	?>
 	<title>Shopping Cart</title>
 
@@ -61,6 +60,8 @@ if (isset($_GET["action"])) {
 
 
 <body>
+<?php require("navbar.php"); ?>
+
 	<div class="container-md-fluid container-xl">
 		<h1 class="py-3">Twój koszyk: </h1>
 		<?php if (!empty($_SESSION["cart"])) {
