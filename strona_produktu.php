@@ -63,6 +63,16 @@
 										<input type="hidden" name="hidden_price" value="<?=$row['price']?>">
 										<input  type="submit" id="add" name="add" class="btn btn-outline-success w-100" value="Dodaj do koszyka">
 									</form>
+
+									<form action="ulubione.php" method='POST' class="d-flex me-2 w">
+										<input type="hidden" name="hidden_name" value="<?=$row['pic_name']?>">
+										<input type="hidden" name="hidden_path" value="<?=$row['image_path']?>">
+										<input type="hidden" name="picture_id" value="<?=$row['picture_id']?>">
+										<input type="hidden" name="hidden_price" value="<?=$row['price']?>">				
+										<button type="submit" id="fav" name="fav" class="btn btn-outline-danger w-100" value="Dodaj do ulubionych">
+										<i class="bi bi-heart-fill"></i>
+										</button>
+									</form>
 								</div>
 							</div>
 						</div>
