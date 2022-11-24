@@ -22,11 +22,13 @@ if (array_key_exists("add", $_POST)) {
 			);
 			$_SESSION["cart"][$count] = $item_array;
 		} else {
+			if (isset($_SESSION['user'])) {
 			echo
 			'<div class="alert alert-dark text-center mt-3" role="alert">
-				Produkt znajduje sie juz w koszyku! 
+				Produkt znajduje sie juz w ulubionych! 
 				<meta http-equiv="refresh" content="2">
 				</div>';
+			}
 		}
 	} else {
 		$item_array = array(
