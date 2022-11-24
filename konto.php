@@ -35,6 +35,7 @@
 							<h3 class="ps-3">Dane o koncie</h3>
 							<p class="ps-5">Adres e-mail: <?= $row['email']?></p>
 							<p class="ps-5">Nazwa użytkownika: <?= $row['login']?></p>
+							<p class="ps-5">Typ konta: <?= $row['user_privileges']?></p>
 							<p class="ps-5"><a href="zamowienia.html" class="link-dark">Zamówienia</a></p>
 							<div class="row text-center ">
 								<div class="col-12 text-center offset-3">
