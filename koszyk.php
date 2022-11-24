@@ -66,7 +66,13 @@ if (isset($_GET["action"])) {
 		<h1 class="py-3">Twój koszyk: </h1>
 		<?php if (!empty($_SESSION["cart"])) {
 			$total = 0;
-		?>
+	
+		if (isset($_SESSION['user'])) {
+					?>
+						<form class="d-flex justify-content-center " action="order.php">
+							<button class="btn btn-outline-success w-50" type="submit">Złóż zamówienie</button>
+						</form>
+					
 			</tr>
 			<div class="border rounded my-2">
 				<?php
@@ -97,12 +103,7 @@ if (isset($_GET["action"])) {
 			<div class="row text-center ">
 				<div class="col-12 text-center">
 					<?php
-					if (isset($_SESSION['user'])) {
-					?>
-						<form class="d-flex justify-content-center " action="order.php">
-							<button class="btn btn-outline-success w-50" type="submit">Złóż zamówienie</button>
-						</form>
-					<?php
+					
 					} else {
 					?>
 						<form class="d-flex justify-content-center me-2" action="login.php">
