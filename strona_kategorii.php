@@ -79,12 +79,12 @@
 											</a>
 										</div>
 										<?php
-									}
-									if (isset($_POST['reset'])) {
+									} 
+								}
+								 else if (!isset($_POST['rozmiar'])) {
 										$zapytanie = $conn->query("SELECT * FROM pictures");
 										while ($row = $zapytanie->fetch()) {
 										?>
-
 											<div class="col-sm-4 col-xl-2 mb-5 text-center">
 												<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>">
 													<img src="<?= $row['image_path'] ?>" class="card-img-top" style="max-height: 10em; border-radius:1em;" alt="<?= $row['image_path'] ?>">
@@ -95,7 +95,7 @@
 								<?php
 										}
 									}
-								}
+								
 								?>
 							</div>
 						</div>
