@@ -33,7 +33,7 @@ if (array_key_exists("fav", $_POST)) {
 			}
 		} else {
 			$item_array = array(
-				'product_id' => $_GET["picture_id"],
+				'product_id' => $_POST["picture_id"],
 				'image_name' => $_POST["hidden_name"],
 				'product_price' => $_POST["hidden_price"],
 				'image_path' => $_POST["hidden_path"],
