@@ -73,7 +73,7 @@
 													<div class="col-md-3">
 														<div class="card bg-dark text-light	">
 															<div class="card-img">
-																<img src="grafiki/<?= $i ?>.jpg" class="img-fluid img_carousel" alt="img<?= $i ?>">
+															<a href="strona_produktu.php?id=<?= $i?>"><img src="grafiki/<?= $i ?>.jpg" class="img-fluid img_carousel" alt="img<?= $i ?>"></a>
 																<div class="centeronhover">
 																	<?= $row['description'] . "<br>" . $row['price'] . "zl" ?>
 																</div>

@@ -13,8 +13,6 @@
 <body>
 	<?php
 	require("navbar.php");
-	$zapytanie = $conn->query("SELECT width FROM pictures WHERE picture_id = $id");
-
 	?>
 
 	<section class="page">
@@ -53,28 +51,37 @@
 								<div class="col text-center">
 									<p style='font-size:1.5vw;' class='fw-bold'>
 										<?= $row['price'] ?> zl
-
 									</p>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-12">
-									<form class="d-flex me-2 w">
-										<input type="number" class="form-control w-25 me-2" placeholder="1">
-										<button class="btn btn-outline-success w-75" type="submit">Dodaj do koszyka</button>
+									<form action="koszyk.php" method='POST' class="d-flex me-2 w">
+										<input type="hidden" name="hidden_name" value="<?=$row['pic_name']?>">
+										<input type="hidden" name="hidden_path" value="<?=$row['image_path']?>">
+										<input type="hidden" name="picture_id" value="<?=$row['picture_id']?>">
+										<input type="hidden" name="hidden_price" value="<?=$row['price']?>">
+										<input  type="submit" id="add" name="add" class="btn btn-outline-success w-100" value="Dodaj do koszyka">
+									</form>
+
+									<form action="ulubione.php" method='POST' class="d-flex me-2 w">
+										<input type="hidden" name="hidden_name" value="<?=$row['pic_name']?>">
+										<input type="hidden" name="hidden_path" value="<?=$row['image_path']?>">
+										<input type="hidden" name="picture_id" value="<?=$row['picture_id']?>">
+										<input type="hidden" name="hidden_price" value="<?=$row['price']?>">				
+										<button type="submit" id="fav" name="fav" class="btn btn-outline-danger w-100" value="Dodaj do ulubionych">
+										<i class="bi bi-heart-fill"></i>
+										</button>
 									</form>
 								</div>
 							</div>
 						</div>
-
-
 
 					</div>
 					<div class="row my-4">
 						<div class="col-6">
 
 						</div>
-
 
 					</div>
 				</div>

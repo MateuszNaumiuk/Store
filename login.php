@@ -28,7 +28,8 @@
             foreach ($result as $row) {
                 if ($row->login === $login || $row->email === $login) {
                     if (password_verify($pass, $row->pass)) {
-                        $_SESSION['user']= $row->login; 
+                        $_SESSION['user']= $row->login;
+                        $_SESSION['user_id']= $row->user_id;   
                         header("Refresh:3; url=index.php");
     ?>
                         <div class="alert alert-dark text-center" role="alert">

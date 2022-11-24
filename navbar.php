@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <header>
     <section style="margin-bottom: 7em;" id="nav-section">
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -27,7 +23,6 @@ session_start();
                             <?php
                             if (isset($_SESSION['user'])) {
                             ?>
-                                <!-- <a class="nav-link" href="logout.php"><i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i><?= $_SESSION['user'] ?></a> -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Konto

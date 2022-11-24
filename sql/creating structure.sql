@@ -70,8 +70,10 @@ create table if not EXISTS order_info (
     user_id int,
     picture_id int,
     order_date date,
-    quantity int,
     order_status varchar(20),
+    fname varchar(255),
+    lname varchar(255),
+    phone varchar(255),
     PRIMARY KEY (order_id)
     );
 

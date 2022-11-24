@@ -1,114 +1,137 @@
-<!DOCTYPE html>
-<html lang="pl">
+<html>
 
 <head>
 	<?php
-	require("bootstrapConnection.php")
+	require("bootstrapConnection.php");
+	require("connection.php");
 	?>
+	<title>Shopping Cart</title>
 
-	<title>BetaShop</title>
 </head>
+<?php
+if (array_key_exists("add", $_POST)) {
+	if (isset($_SESSION["cart"])) {
+		$item_array_id = array_column($_SESSION["cart"], "product_id");
+		if (!in_array($_POST["picture_id"], $item_array_id)) {
+			$count = count($_SESSION["cart"]);
+			$item_array = array(
+				'product_id' => $_POST["picture_id"],
+				'image_name' => $_POST["hidden_name"],
+				'product_price' => $_POST["hidden_price"],
+				'image_path' => $_POST["hidden_path"],
+			);
+			$_SESSION["cart"][$count] = $item_array;
+		} else {
+			if (isset($_SESSION['user'])) {
+			echo
+			'<div class="alert alert-dark text-center mt-3" role="alert">
+				Produkt znajduje sie juz w koszyku! 
+				<meta http-equiv="refresh" content="2">
+				</div>';
+			}
+		}
+	} else {
+		$item_array = array(
+			'product_id' => $_GET["picture_id"],
+			'image_name' => $_POST["hidden_name"],
+			'product_price' => $_POST["hidden_price"],
+			'image_path' => $_POST["hidden_path"],
+		);
+		$_SESSION["cart"][0] = $item_array;
+	}
+}
+if (isset($_GET["action"])) {
+	if ($_GET["action"] == "delete") {
+		foreach ($_SESSION["cart"] as $keys => $value) {
+			if ($value["product_id"] == $_GET["id"]) {
+				unset($_SESSION["cart"][$keys]);
+?>
+				<div class="alert alert-dark text-center" role="alert">
+					Usunieto z koszyka.
+				</div>
+				<meta http-equiv="refresh" content="2">
+<?php
+			}
+		}
+	}
+}
+// foreach($_SESSION['cart'] as $vlla){
+// 	echo $_SESSION['cart'][0]['product_id'];  
+// }
+?>
+
 
 <body>
+<?php require("navbar.php"); ?>
 
-	<?php
-	require("navbar.php");
-	?>
-
-	<main>
-		<section class="page">
-			<div class="container">
-				<div class="row text-justify bg-second_navbar border rounded my-2">
-					<h1 class="pb-2 py-3"> Twój koszyk: </h1>
-
-					<div class="col-12 py-2 px-4">
-						<a href="strona_produktu.php" class="text-decoration-none link-dark">
-							<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-width:100px; max-height:100px;">
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Nazwa Produktu </p>
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Cena </p>
-						</a>
-						<form class="d-inline ms-3 w">
-							<input type="number" class="form-control d-inline me-2" style="max-width:10%;" placeholder="1">
-
+	<div class="container-md-fluid container-xl">
+		<h1 class="py-3">Twój koszyk: </h1>
+		<?php if (!empty($_SESSION["cart"])) {
+			$total = 0;
+	
+		if (isset($_SESSION['user'])) {
+					?>
+						<form class="d-flex justify-content-center " action="order.php">
+							<button class="btn btn-outline-success w-50" type="submit">Złóż zamówienie</button>
 						</form>
+					
+			</tr>
+			<div class="border rounded my-2">
+				<?php
+				foreach ($_SESSION["cart"] as $key => $value) {
+				?>
+					<div class="row">
+						<div class="col-12 d-flex justify-content-xl-start justify-content-sm-center py-2 px-4">
+							<a href="strona_produktu.php?id=<?= $value['product_id'] ?>" class="text-decoration-none link-dark">
+								<img class="img-fluid d-inline" src="<?= $value['image_path'] ?>" style="max-width:100px; max-height:100px;">
+								<p class="d-inline mx-3" style="font-size: 1.3em"><?= $value['image_name'] ?></p>
+								<p class="d-inline mx-3" style="font-size: 1.3em">Cena: <?= $value["product_price"] . " zł"; ?></p>
+							</a>
+							<a href="koszyk.php?action=delete&id=<?php echo $value["product_id"]; ?>" class="text-danger ">Remove Item</a>
 
+						</div>
 					</div>
-
-				</div>
-
-				<div class="row text-justify bg-second_navbar border rounded my-2">
-					<a href="strona_produktu.php" class="text-decoration-none link-dark">
-						<div class="col-12 py-2 px-4">
-							<a href="strona_produktu.php" class="text-decoration-none link-dark">
-								<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-width:100px; max-height:100px;">
-								<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Nazwa Produktu </p>
-								<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Cena </p>
-							</a>
-							<form class="d-inline ms-3 w">
-								<input type="number" class="form-control d-inline me-2" style="max-width:10%;" placeholder="1">
-
-							</form>
-
-						</div>
-					</a>
-				</div>
-				<div class="row text-justify bg-second_navbar border rounded my-2">
-					<a href="strona_produktu.php" class="text-decoration-none link-dark">
-						<div class="col-12 py-2 px-4">
-							<a href="strona_produktu.php" class="text-decoration-none link-dark">
-								<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-width:100px; max-height:100px;">
-								<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Nazwa Produktu </p>
-								<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Cena </p>
-							</a>
-							<form class="d-inline ms-3 w">
-								<input type="number" class="form-control d-inline me-2" style="max-width:10%;" placeholder="1">
-							</form>
-
-						</div>
-					</a>
-				</div>
-				<div class="row text-justify bg-second_navbar border rounded my-2">
-					<a href="strona_produktu.php" class="text-decoration-none link-dark">
-						<div class="col-12 py-2 px-4">
-							<a href="strona_produktu.php" class="text-decoration-none link-dark">
-								<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-width:100px; max-height:100px;">
-								<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Nazwa Produktu </p>
-								<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Cena </p>
-							</a>
-							<form class="d-inline ms-3 w">
-								<input type="number" class="form-control d-inline me-2" style="max-width:10%;" placeholder="1">
-
-							</form>
-
-						</div>
-					</a>
-				</div>
-				<div class="row text-center ">
-					<div class="col-12 text-center offset-3">
-						<?php
-						if (isset($_SESSION['user'])) {
-						?>
-							<form class="d-flex me-2" action="">
-								<button class="btn btn-outline-success w-50" type="submit">Złóż zamówienie</button>
-							</form>
-						<?php
-						} else {
-						?>
-							<form class="d-flex me-2" action="login.php">
-								<button class="btn btn-outline-success w-50" type="submit">Zaloguj sie by złożyć zamówienie</button>
-							</form>
-						<?php } ?>
+				<?php
+					$total += $value["product_price"];
+				}
+				?>
+				<div class="row">
+					<div class="col-12 d-flex justify-content-end">
+						<p class="d-inline mx-3" style="font-size: 1.3em">Cena ostateczna: <?= $total . " zł" ?></p>
 					</div>
 				</div>
 			</div>
-		</section>
 
-		<!-- footer -->
-		<?php
-		include("footer.php");
+			<div class="row text-center ">
+				<div class="col-12 text-center">
+					<?php
+					
+					} else {
+					?>
+						<form class="d-flex justify-content-center me-2" action="login.php">
+							<button class="btn btn-outline-success w-50" type="submit">Zaloguj sie by złożyć zamówienie</button>
+						</form>
+					<?php } ?>
+				</div>
+			</div>
+		<?php } else {
 		?>
-	</main>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+			<a href="strona_produktu.php" class="text-decoration-none link-dark">
+				<div class="row">
+					<div class="col-xl-6 col-md-12 d-flex justify-content-xl-start justify-content-sm-center py-2 px-4">
+						<a href="strona_produktu.php" class="text-decoration-none link-dark">
+							<p class="d-inline mx-3" style="font-size: 1.3em">Koszyk jest pusty! </p>
+						</a>
+					</div>
+				</div>
+			</a>
+		<?php
+		} ?>
+		</table>
+	</div>
+	<?php
+	include("footer.php");
+	?>
 </body>
 
 </html>
