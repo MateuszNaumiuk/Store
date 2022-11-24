@@ -1,9 +1,9 @@
 use store;
 
 
-    /*
-    inserting values into  category
-    */
+/*
+inserting values into  category
+*/
     
 insert into category VALUES
 (1, 'category1'),
@@ -16,10 +16,10 @@ insert into category VALUES
 
 
 /*
-    inserting values into pictures
-    */
-    
-    insert into pictures(`picture_id`, `pic_name`, `price`, `description`, `height`, `width`,`image_path`) VALUES
+inserting values into pictures
+*/
+
+insert into pictures(`picture_id`, `pic_name`, `price`, `description`, `height`, `width`,`image_path`) VALUES
 (1,'picture1',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'grafiki/1.jpg'),
 (2,'picture2',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'grafiki/2.jpg'),
 (3,'picture3',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'grafiki/3.jpg'),
@@ -38,22 +38,23 @@ insert into category VALUES
 
 
 
-     	/*
-  inserting values into  users
-    */
+/*
+inserting values into  users
+*/
     
-insert into users (`user_id`, `login`,`email`,`pass`,`fname`,`lname` ,`country` ,`town`,`street`,`house_nr`,`zipcode`) values 
-(1,'login1','email1','pass1','fname1','lname1','country1','town1','street1','nr1','zipcode1'),
-(2,'login2','email2','pass2','fname2','lname2','country2','town2','street2','nr2','zipcode2'),
-(3,'login3','email3','pass3','fname3','lname3','country3','town3','street3','nr3','zipcode3'),
-(4,'login4','email4','pass4','fname4','lname4','country4','town4','street4','nr4','zipcode4'),
-(5,'login5','email5','pass5','fname5','lname5','country5','town5','street5','nr5','zipcode5');
+insert into users (`user_id`, `login`,`email`,`pass`,`fname`,`lname` ,`country` ,`town`,`street`,`house_nr`,`zipcode`,`user_privileges`) values 
+(1,'login1','email1','pass1','fname1','lname1','country1','town1','street1','nr1','zipcode1','user'),
+(2,'login2','email2','pass2','fname2','lname2','country2','town2','street2','nr2','zipcode2','user'),
+(3,'login3','email3','pass3','fname3','lname3','country3','town3','street3','nr3','zipcode3','user'),
+(4,'login4','email4','pass4','fname4','lname4','country4','town4','street4','nr4','zipcode4','user'),
+(5,'login5','email5','pass5','fname5','lname5','country5','town5','street5','nr5','zipcode5','user'),
+(6,'admin','admin','$2y$10$L9OgOC4vt8f/shXpDUBOJ.xFX.WPhEFTClpaWKs/EOkZe/26oMgya','admin','admin','admin','admin','admin','admin','admin','admin');
+-- password for admin is Admin123!!!!!!!!!!!!
 
 /*
-  inserting values into  users_privileges
-    */
+inserting values into  users_privileges
+*/
     
-
 insert into users_privileges VALUES 
 ('user'),
 ('vip'),
@@ -62,9 +63,9 @@ insert into users_privileges VALUES
 
 
 
-    	/*
-  inserting values into  users_privileges
-    */
+/*
+inserting values into  users_privileges
+*/
     
 insert into order_info(`order_id`,`order_date`,`order_status`)VALUES
 (1,'2022-10-11','done'),
