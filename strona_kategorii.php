@@ -37,17 +37,23 @@
 					<ul class="list-group px-3 py-3 border border-secondary rounded">
 						<h3 class="h4 my-3">Rozmiary</h3>
 						<div class="row">
+
 							<?php
 							$zapytanie = $conn->query("SELECT DISTINCT width, height FROM pictures");
 							while ($row = $zapytanie->fetch()) {
 							?>
-								<form method="POST">
-									<button class="btn btn-outline-secondary w-75 mt-1" type="submit" name="<?= $row['width'] ?>"><?= $row['width'] . " x " . $row['height']; ?></button>
-								<?php
-							}
-								?>
-								<button class="btn btn-outline-secondary w-75 mt-3" type="submit" name="clear">Clear</button>
+								<form action="" method="POST">
+									<button class="btn btn-outline-secondary w-75 mt-1" type="submit" name="rozmiar"><?= $row['width'] . "px " . $row['height'] . "px" ?></button>
+									<input type="hidden" name="hidden_width" value="<?= $row['width'] ?>">
+									<input type="hidden" name="hidden_height" value="<?= $row['height'] ?>">
 								</form>
+
+							<?php
+							}
+							?>
+							<form action="" method="POST">
+								<button class="btn btn-outline-secondary w-75 mt-4" type="submit" name="reset">Clear</button>
+							</form>
 						</div>
 						</form>
 					</ul>
@@ -58,13 +64,12 @@
 							<p class="border-bottom border-secondary fw-bold " style="font-size:2.5vw">Produkty z kategorii:</p>
 							<div class="row">
 								<?php
-								$zapytanie = $conn->query("SELECT  * FROM pictures");
-								while ($row = $zapytanie->fetch()) {
-									if (isset($_POST[$row['width']])) {
-										echo $_POST[$row['width']];
-										$zapytanie = $conn->query("SELECT DISTINCT * FROM pictures WHERE 'width' = $test");
-									}
-									if (isset($_POST['clear'])) {
+
+								if (isset($_POST["rozmiar"])) {
+									$hidden_width = $_POST['hidden_width'];
+									$hidden_height = $_POST['hidden_height'];
+									$zapytanie = $conn->query("SELECT * FROM pictures WHERE `width` = $hidden_width AND `height` = $hidden_height");
+									while ($row = $zapytanie->fetch()) {
 								?>
 										<div class="col-sm-4 col-xl-2 mb-5 text-center">
 											<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>">
@@ -73,7 +78,22 @@
 												<p><?= $row['price'] ?> zl</p>
 											</a>
 										</div>
+										<?php
+									}
+									if (isset($_POST['reset'])) {
+										$zapytanie = $conn->query("SELECT * FROM pictures");
+										while ($row = $zapytanie->fetch()) {
+										?>
+
+											<div class="col-sm-4 col-xl-2 mb-5 text-center">
+												<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>">
+													<img src="<?= $row['image_path'] ?>" class="card-img-top" style="max-height: 10em; border-radius:1em;" alt="<?= $row['image_path'] ?>">
+													<a style="font-size: 1em; font-width: bold;"><?= $row['pic_name']; ?></a>
+													<p><?= $row['price'] ?> zl</p>
+												</a>
+											</div>
 								<?php
+										}
 									}
 								}
 								?>
