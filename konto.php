@@ -39,7 +39,7 @@
 							<p class="ps-5"><a href="zamowienia.html" class="link-dark">Zamówienia</a></p>
 							<div class="row text-center ">
 								<div class="col-12 text-center offset-3">
-									<form class="d-flex me-2">
+									<form class="d-flex me-2" action="newdetails.php">
 										<button class="btn btn-outline-success w-50" type="submit">Zmień dane</button>
 									</form>
 								</div>
