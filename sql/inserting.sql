@@ -48,7 +48,7 @@ insert into users (`user_id`, `login`,`email`,`pass`,`fname`,`lname` ,`country` 
 (3,'login3','email3','pass3','fname3','lname3','country3','town3','street3','nr3','zipcode3','user'),
 (4,'login4','email4','pass4','fname4','lname4','country4','town4','street4','nr4','zipcode4','user'),
 (5,'login5','email5','pass5','fname5','lname5','country5','town5','street5','nr5','zipcode5','user'),
-(6,'admin','admin','$2y$10$L9OgOC4vt8f/shXpDUBOJ.xFX.WPhEFTClpaWKs/EOkZe/26oMgya','admin','admin','admin','admin','admin','admin','admin','admin');
+(6,'admin','admin@admin','$2y$10$L9OgOC4vt8f/shXpDUBOJ.xFX.WPhEFTClpaWKs/EOkZe/26oMgya','admin','admin','admin','admin','admin','admin','admin','admin');
 -- password for admin is Admin123!!!!!!!!!!!!
 
 /*

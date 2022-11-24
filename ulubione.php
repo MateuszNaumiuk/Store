@@ -82,14 +82,14 @@
 							foreach ($_SESSION["favourite"] as $key => $value) {
 							?>
 								<div class="row">
-									<div class="col-12 d-flex justify-content-xl-start justify-content-sm-center py-2 px-4">
+									<div class="col-12 d-flex justify-content-xl-between justify-content-sm-centerjustify-content-sm-center py-2 px-4">
 										<a href="strona_produktu.php?id=<?= $value['product_id'] ?>" class="text-decoration-none link-dark">
 											<img class="img-fluid d-inline" src="<?= $value['image_path'] ?>" style="max-width:100px; max-height:100px;">
 											<p class="d-inline mx-3" style="font-size: 1.3em"><?= $value['image_name'] ?></p>
 											<p class="d-inline mx-3" style="font-size: 1.3em">Cena: <?= $value["product_price"] . " zł"; ?></p>
 										</a>
 										<a href="ulubione.php?action=delete&id=<?php echo $value["product_id"]; ?>">
-											<button class="btn btn-outline-secondary" value="Dodaj do ulubionych">
+											<button class="btn btn-outline-danger mt-3" value="Dodaj do ulubionych">
 												<i class="bi bi-heartbreak-fill"></i>
 											</button>
 										</a>
