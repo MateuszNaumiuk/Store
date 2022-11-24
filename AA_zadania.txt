@@ -1,6 +1,7 @@
 1. podmienic tekst z
 "O nas", "Regulamin", "Polityka_Prywatnosci", "wspolpraca", "faq", "pomoc techniczna"
 na tekst z bazy zeby zmniejszyc ilosc plikow
+2. zmienic opisy zdjec i inne dane
 ✓ 3. zrobic dzialanie przycisku zmien dane w konto.
 ✓ 4. ogarnac koszyk, ulubione 
 ✓ 5. zrobic filtrowanie
