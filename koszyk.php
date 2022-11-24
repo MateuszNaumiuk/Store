@@ -32,7 +32,7 @@ if (array_key_exists("add", $_POST)) {
 		}
 	} else {
 		$item_array = array(
-			'product_id' => $_GET["picture_id"],
+			'product_id' => $_POST["picture_id"],
 			'image_name' => $_POST["hidden_name"],
 			'product_price' => $_POST["hidden_price"],
 			'image_path' => $_POST["hidden_path"],
@@ -55,9 +55,10 @@ if (isset($_GET["action"])) {
 		}
 	}
 }
-// foreach($_SESSION['cart'] as $vlla){
-// 	echo $_SESSION['cart'][0]['product_id'];  
-// }
+foreach($_SESSION['cart'] as $vlla){
+	echo $_SESSION['cart'][0]['product_id'];  
+	echo "a";
+}
 ?>
 
 
