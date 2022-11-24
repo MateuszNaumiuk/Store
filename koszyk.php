@@ -25,7 +25,7 @@ if (array_key_exists("add", $_POST)) {
 			if (isset($_SESSION['user'])) {
 			echo
 			'<div class="alert alert-dark text-center mt-3" role="alert">
-				Produkt znajduje sie juz w ulubionych! 
+				Produkt znajduje sie juz w koszyku! 
 				<meta http-equiv="refresh" content="2">
 				</div>';
 			}
