@@ -20,8 +20,8 @@ inserting values into pictures
 */
 
 insert into pictures(`picture_id`, `pic_name`, `price`, `description`, `height`, `width`,`image_path`) VALUES
-(1,'picture1',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'grafiki/1.jpg'),
-(2,'picture2',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'grafiki/2.jpg'),
+(1,'picture1',10,'We share the best photos on the internet. Best prices and customer service!', 100,100,'grafiki/1.jpg'),
+(2,'picture2',10,'We share the best photos on the internet. Best prices and customer service!', 200,200,'grafiki/2.jpg'),
 (3,'picture3',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'grafiki/3.jpg'),
 (4,'picture4',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'grafiki/4.jpg'),
 (5,'picture5',10,'We share the best photos on the internet. Best prices and customer service!', 600,600,'grafiki/5.jpg'),
@@ -39,10 +39,10 @@ insert into pictures(`picture_id`, `pic_name`, `price`, `description`, `height`,
 
 
 /*
-inserting values into  users
+inserting values into users
 */
     
-insert into users (`user_id`, `login`,`email`,`pass`,`fname`,`lname` ,`country` ,`town`,`street`,`house_nr`,`zipcode`,`user_privileges`) values 
+insert into users (`user_id`, `login`,`email`,`pass`,`fname`,`lname` ,`country` ,`town`,`street`,`house_nr`,`zipcode`,`privileges`) values 
 (1,'login1','email1','pass1','fname1','lname1','country1','town1','street1','nr1','zipcode1','user'),
 (2,'login2','email2','pass2','fname2','lname2','country2','town2','street2','nr2','zipcode2','user'),
 (3,'login3','email3','pass3','fname3','lname3','country3','town3','street3','nr3','zipcode3','user'),
@@ -52,10 +52,10 @@ insert into users (`user_id`, `login`,`email`,`pass`,`fname`,`lname` ,`country` 
 -- password for admin is Admin123!!!!!!!!!!!!
 
 /*
-inserting values into  users_privileges
+inserting values into privileges
 */
     
-insert into users_privileges VALUES 
+insert into all_privileges VALUES 
 ('user'),
 ('vip'),
 ('super_vip'),

@@ -34,7 +34,7 @@
 		<div class="container-fluid">
 			<div class="row my-3">
 				<div class="col-xl-2 col-md-4">
-					<ul class="list-group px-3 py-3 border border-secondary rounded">
+					<ul class="list-group px-3 py-3 border border-secondary rounded mb-3">
 						<h3 class="h4 my-3">Rozmiary</h3>
 						<div class="row">
 
@@ -61,7 +61,7 @@
 				<div class="col-xl-10 col-md-8 col-sm-12">
 					<form action="strona_produktu" method="post">
 						<div class="col-10 border-top border-secondary mx-lg-4 mx-md-2 mx-sm-0">
-							<p class="border-bottom border-secondary fw-bold " style="font-size:2.5vw">Produkty z kategorii:</p>
+							<p class="border-bottom border-secondary fw-bold text-center" style="font-size:1.5em">Produkty z kategorii:</p>
 							<div class="row">
 								<?php
 

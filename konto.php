@@ -24,24 +24,25 @@
 					while ($row = $zapytanie->fetch()) {
 				?>
 						<div class="border rounded">
-							<h1>Witaj, <?=$row['login'] ?></h1>
+							<h1>Witaj, <?= $row['login'] ?></h1>
 							<h2 class="pb-2 py-3 ps-2">Twoje konto</h2>
 							<h3 class="ps-3">Dane osobowe</h3>
 							<p class="ps-5">Imię: <?= $row['fname'] ?></p>
 							<p class="ps-5">Nazwisko: <?= $row['lname'] ?></p>
 							<p class="ps-5">Data urodzenia: <?= $row['birthDate'] ?></p>
 							<p class="ps-5">Adres: <?= $row['country'] ?> <?= $row['town'] ?> <?= $row['street'] ?> <?= $row['house_nr'] ?> <?= $row['zipcode'] ?></p>
-							<p class="ps-5">Numer telefonu: <?= $row['phoneNumber']?></p>
+							<p class="ps-5">Numer telefonu: <?= $row['phoneNumber'] ?></p>
 							<h3 class="ps-3">Dane o koncie</h3>
-							<p class="ps-5">Adres e-mail: <?= $row['email']?></p>
-							<p class="ps-5">Nazwa użytkownika: <?= $row['login']?></p>
-							<p class="ps-5">Typ konta: <?= $row['user_privileges']?></p>
-							<p class="ps-5"><a href="zamowienia.html" class="link-dark">Zamówienia</a></p>
+							<p class="ps-5">Adres e-mail: <?= $row['email'] ?></p>
+							<p class="ps-5">Nazwa użytkownika: <?= $row['login'] ?></p>
+							<p class="ps-5">Typ konta: <?= $row['privileges'] ?></p>
 							<div class="row text-center ">
-								<div class="col-12 text-center offset-3">
-									<form class="d-flex me-2" action="newdetails.php">
-										<button class="btn btn-outline-success w-50" type="submit">Zmień dane</button>
-									</form>
+								<div class="row">
+									<div class="col-12 text-center">
+										<form class="d-flex justify-content-center my-3" action="newdetails.php">
+											<button class="btn btn-outline-success w-50" type="submit">Zmień dane</button>
+										</form>
+									</div>
 								</div>
 							</div>
 						</div>

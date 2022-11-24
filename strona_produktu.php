@@ -17,7 +17,6 @@
 
 	<section class="page">
 		<div class="container">
-			<p class="my-3 fw-light">betashop>*kategoria*>*podkategoria*</p>
 			<div class="row">
 				<div class="col-4">
 					<?php
