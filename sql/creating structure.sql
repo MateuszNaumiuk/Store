@@ -23,7 +23,7 @@ create table if not EXISTS pictures (
     category_id int,
     height int unsigned,
     width int unsigned,
-    picture_privileges varchar(64),
+    privileges varchar(64),
     PRIMARY KEY (picture_id)
 );
 
@@ -46,7 +46,7 @@ create table if not EXISTS users (
     street varchar(255),
     house_nr varchar(255),
     zipcode varchar(255),
-    user_privileges varchar(255),
+    privileges varchar(255),
     PRIMARY KEY(user_id)
     );
 
@@ -56,9 +56,9 @@ create table if not EXISTS users (
     */
 
 
-create table  if not EXISTS users_privileges (
-    user_privileges varchar(255) not null,
-    PRIMARY KEY (user_privileges)
+create table  if not EXISTS all_privileges (
+    privileges varchar(255) not null,
+    PRIMARY KEY (privileges)
 );
 
 	/*
