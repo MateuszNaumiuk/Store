@@ -39,13 +39,13 @@
                         BetaShop
                     </h6>
                     <p>
-                        <a href="o_nas.php" class="text-reset">O nas</a>
+                        <a href="footer_links/o_nas.php" class="text-reset">O nas</a>
                     </p>
                     <p>
-                        <a href="regulamin.php" class="text-reset">Regulamin</a>
+                        <a href="footer_links/regulamin.php" class="text-reset">Regulamin</a>
                     </p>
                     <p>
-                        <a href="polityka_prywatnosci.php" class="text-reset">Polityka Prywatności</a>
+                        <a href="footer_links/polityka_prywatnosci.php" class="text-reset">Polityka Prywatności</a>
                     </p>
                 </div>
 
@@ -56,13 +56,13 @@
                         Przydatne linki
                     </h6>
                     <p>
-                        <a href="wspolpraca.php" class="text-reset">Współpraca</a>
+                        <a href="footer_links/wspolpraca.php" class="text-reset">Współpraca</a>
                     </p>
                     <p>
-                        <a href="faq.php" class="text-reset">FAQ</a>
+                        <a href="footer_links/faq.php" class="text-reset">FAQ</a>
                     </p>
                     <p>
-                        <a href="pomoc.php" class="text-reset">Pomoc techniczna</a>
+                        <a href="footer_links/pomoc.php" class="text-reset">Pomoc techniczna</a>
                     </p>
                 </div>
 
