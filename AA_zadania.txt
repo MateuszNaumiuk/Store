@@ -1,4 +1,4 @@
-1. podmienic tekst z
+X 1. podmienic tekst z
 "O nas", "Regulamin", "Polityka_Prywatnosci", "wspolpraca", "faq", "pomoc techniczna"
 na tekst z bazy zeby zmniejszyc ilosc plikow
 2. zmienic opisy zdjec i inne dane
