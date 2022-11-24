@@ -55,11 +55,10 @@ insert into users (`user_id`, `login`,`email`,`pass`,`fname`,`lname` ,`country` 
     
 
 insert into users_privileges VALUES 
-(1,'type1'),
-(2,'type2'),
-(3,'type3'),
-(4,'type4'),
-(5,'type5');
+('user'),
+('vip'),
+('super_vip'),
+('admin');
 
 
 

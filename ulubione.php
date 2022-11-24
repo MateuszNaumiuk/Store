@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang=pl>
 
 <head>
 	<?php
@@ -7,10 +8,8 @@
 
 	?>
 	<title>BetaShop</title>
-
-</head>
-<?php
-if (array_key_exists("fav", $_POST)) {
+	<?php
+	if (array_key_exists("fav", $_POST)) {
 		if (isset($_SESSION["favourite"])) {
 			$item_array_id = array_column($_SESSION["favourite"], "product_id");
 			if (!in_array($_POST["picture_id"], $item_array_id)) {
@@ -24,8 +23,8 @@ if (array_key_exists("fav", $_POST)) {
 				$_SESSION["favourite"][$count] = $item_array;
 			} else {
 				if (isset($_SESSION['user'])) {
-				echo
-				'<div class="alert alert-dark text-center mt-3" role="alert">
+					echo
+					'<div class="alert alert-dark text-center mt-3" role="alert">
 					Produkt znajduje sie juz w ulubionych! 
 					<meta http-equiv="refresh" content="2">
 					</div>';
@@ -56,23 +55,27 @@ if (array_key_exists("fav", $_POST)) {
 			}
 		}
 	}
-?>
+	?>
+
+</head>
 
 <body>
-
-<?php require("navbar.php"); ?>
+	<!-- navbar -->
+	<?php
+	include("navbar.php");
+	?>
 
 	<div class="container-md-fluid container-xl">
 		<h1 class="py-3">Produkty dodane do ulubionych: </h1>
 		<?php if (!empty($_SESSION["favourite"])) {
 		?>
-			
+
 
 			<div class="row text-center ">
 				<div class="col-12 text-center">
 					<?php
 					if (isset($_SESSION['user'])) {
-						?>
+					?>
 						</tr>
 						<div class="border rounded my-2">
 							<?php
@@ -86,9 +89,9 @@ if (array_key_exists("fav", $_POST)) {
 											<p class="d-inline mx-3" style="font-size: 1.3em">Cena: <?= $value["product_price"] . " zł"; ?></p>
 										</a>
 										<a href="ulubione.php?action=delete&id=<?php echo $value["product_id"]; ?>">
-										<button class="btn btn-outline-secondary" value="Dodaj do ulubionych">
-										<i class="bi bi-heartbreak-fill"></i>	
-										</button>
+											<button class="btn btn-outline-secondary" value="Dodaj do ulubionych">
+												<i class="bi bi-heartbreak-fill"></i>
+											</button>
 										</a>
 									</div>
 								</div>
@@ -96,7 +99,7 @@ if (array_key_exists("fav", $_POST)) {
 							}
 							?>
 						</div>
-				
+
 					<?php
 					} else {
 					?>
@@ -124,6 +127,8 @@ if (array_key_exists("fav", $_POST)) {
 	<?php
 	include("footer.php");
 	?>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

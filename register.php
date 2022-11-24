@@ -59,13 +59,12 @@
                     echo "<h3 style='text-align: center;'>Account with this credentials already exists</h3>";
                     header("refresh: 5");
                 } else {
-                    $sql = "INSERT INTO users (`login`, `pass`,`email`) VALUES (:login_,  :password_, :email_)";
+                    $sql = "INSERT INTO users (`login`, `pass`,`email`,`user_privileges`) VALUES (:login_,  :password_, :email_, 'user')";
                     $stmt = $conn->prepare($sql);
                     $stmt->execute(array(
                         ':login_' => $login,
                         ':password_' => $hashPassword,
                         ':email_' => $email
-
                     ));
 
                     echo "<div class='alert alert-dark text-center' role='alert'>Konto zostało stworzone! Za chwilę cię przekierujemy.</div>";

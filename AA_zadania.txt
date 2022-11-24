@@ -2,4 +2,8 @@
 "O nas", "Regulamin", "Polityka_Prywatnosci", "wspolpraca", "faq", "pomoc techniczna"
 na tekst z bazy zeby zmniejszyc ilosc plikow
 3. zrobic dzialanie przycisku zmien dane w konto.
-4. ogarnac koszyk, ulubione
+✓ 4. ogarnac koszyk, ulubione 
+5. zrobic filtrowanie
+✓ 6. koszyk i ulubione nie dziala navbar
+7. zrobic inne wyswietlanie dla klienta i inne dla admina
+8. usunac linka ze spodu kazdej strony i wlozyc go w footer
