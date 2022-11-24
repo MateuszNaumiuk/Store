@@ -28,10 +28,7 @@
 	require("navbar.php");
 	?>
 	<?php 
-	    if (isset($_GET['width'])) {
-			$login = $_POST['width'];
-			echo $login;
-		}
+
 	?>
 	<section class="page">
 		<div class="container-fluid">
@@ -39,18 +36,12 @@
 				<div class="col-xl-2 col-md-4">
 					<ul class="list-group px-3 py-3 border border-secondary rounded">
 						<h3 class="h4 my-3">Rozmiary</h3>
-						<form mathod="GET" action="">
 							<div class="row">
-								<?php
-								$zapytanie = $conn->query("SELECT DISTINCT width,height FROM pictures");
-								while ($row = $zapytanie->fetch()) {
-								?>
-									<div class="col-6">
-										<input type="submit" name="width" value="<?= $row['width']?> x <?= $row['height']?>">
-									</div>
-								<?php
-								}
-								?>
+							<form method="POST">
+								<button class="btn btn-outline-secondary w-50 mt-5" type="submit" name="600px">600x600</button>
+								<button class="btn btn-outline-secondary w-50 mt-5" type="submit" name="1000px">600x1000</button>
+								<button class="btn btn-outline-secondary w-50 mt-5" type="submit" name="clear">Clear</button>
+							</form>
 							</div>
 						</form>
 					</ul>
@@ -61,7 +52,25 @@
 							<p class="border-bottom border-secondary fw-bold " style="font-size:2.5vw">Produkty z kategorii:</p>
 							<div class="row">
 								<?php
-								$zapytanie = $conn->query("SELECT * FROM pictures");
+								if(isset($_POST['600px']))
+								{															
+								
+									$zapytanie = $conn->query("SELECT * FROM pictures where width = 600");
+									while ($row = $zapytanie->fetch()) {
+									?>
+										<div class="col-sm-4 col-xl-2 mb-5 text-center">
+											<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>">
+												<img src="<?= $row['image_path'] ?>" class="card-img-top" style="max-height: 10em; border-radius:1em;" alt="<?= $row['image_path'] ?>">
+												<a style="font-size: 1em; font-width: bold;"><?= $row['pic_name']; ?></a>
+												<p><?= $row['price'] ?> zl</p>
+											</a>
+										</div>
+									<?php
+									}
+
+								}	else if(isset($_POST['1000px'])) {
+									
+									$zapytanie = $conn->query("SELECT * FROM pictures where width = 1000");
 								while ($row = $zapytanie->fetch()) {
 								?>
 									<div class="col-sm-4 col-xl-2 mb-5 text-center">
@@ -73,6 +82,20 @@
 									</div>
 								<?php
 								}
+								} else if(isset($_POST['clear'])) {
+									$zapytanie = $conn->query("SELECT * FROM pictures");
+								while ($row = $zapytanie->fetch()) {
+								?>
+									<div class="col-sm-4 col-xl-2 mb-5 text-center">
+										<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>">
+											<img src="<?= $row['image_path'] ?>" class="card-img-top" style="max-height: 10em; border-radius:1em;" alt="<?= $row['image_path'] ?>">
+											<a style="font-size: 1em; font-width: bold;"><?= $row['pic_name']; ?></a>
+											<p><?= $row['price'] ?> zl</p>
+										</a>
+									</div>
+								<?php
+								}
+							}
 								?>
 							</div>
 						</div>
