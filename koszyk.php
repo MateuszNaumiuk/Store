@@ -55,10 +55,10 @@ if (isset($_GET["action"])) {
 		}
 	}
 }
-foreach($_SESSION['cart'] as $vlla){
-	echo $_SESSION['cart'][0]['product_id'];  
-	echo "a";
-}
+// foreach($_SESSION['cart'] as $vlla){
+// 	echo $_SESSION['cart'][0]['product_id'];  
+// 	echo "a";
+// }
 ?>
 
 
