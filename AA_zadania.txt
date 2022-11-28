@@ -15,4 +15,4 @@ na tekst z bazy zeby zmniejszyc ilosc plikow
 ✓ 4. Klienci nie mogą kupować bez rejestracji, muszą mieć założone konto w sklepie.
 ✓ 5. Klient może dodać kilka artykułów do koszyka. Klient może otrzymać potwierdzenie zamówienia mailem (opcjonalnie).
 6. Admin zarządza klientami, produktami, zamówieniami.
-½ 7. Interfejs zaplecza zależny jest od uprawnień czy jesteśmy klientem czy adminem.
+½ 7. Interfejs zaplecza zależny jest od uprawnień czy jesteśmy klientem czy adminem. (zmienic w produkcie)
