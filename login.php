@@ -29,13 +29,26 @@
                 if ($row->login === $login || $row->email === $login) {
                     if (password_verify($pass, $row->pass)) {
                         $_SESSION['user']= $row->login;
-                        $_SESSION['user_id']= $row->user_id;   
+                        $_SESSION['user_id']= $row->user_id; 
+                        $_SESSION['priv'] = $row->privileges;
+
+                        if($login == "admin")
+                        {
                         header("Refresh:3; url=index.php");
     ?>
                         <div class="alert alert-dark text-center" role="alert">
-                            Pomyślnie zalogowano! Za chwilę zostaniesz przekierowany.
+                            Pomyślnie zalogowano! Witaj adminie.
                         </div>
     <?php
+                        } else
+                        { 
+                            header("Refresh:3; url=index.php");
+        ?>
+                            <div class="alert alert-dark text-center" role="alert">
+                                Pomyślnie zalogowano! Za chwilę zostaniesz przekierowany.
+                            </div>
+        <?php
+                }
                     } else {
                         echo "<h3 class='text-center'>Wrong username or password!</h3>";
                         header("refresh: 5");
