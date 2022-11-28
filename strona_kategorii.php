@@ -106,11 +106,10 @@
 											<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>">
 												<img src="<?= $row['image_path'] ?>" class="card-img-top" style="max-height: 10em; border-radius:1em;" alt="<?= $row['image_path'] ?>">
 												<a style="font-size: 1em; font-width: bold;"><?= $row['pic_name']; ?></a>
-												<a style="font-size: 1em; font-width: bold;"><?= $row['pic_name']; ?></a>
 												<?php
 												if ($_SESSION['priv'] == 'admin' && $row['privileges'] == "admin") {
 												?>
-												<a style="font-size: 1em; font-width: bold; color: grey;"><u>niewidoczne dla klienta</u></a>
+												<br><a style="font-size: 1em; font-width: bold; color: grey;"><u>niewidoczne dla klienta</u></a>
 												<?php
 												}
 												?>
