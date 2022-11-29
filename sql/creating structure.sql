@@ -23,6 +23,7 @@ create table if not EXISTS pictures (
     category_id int,
     height int unsigned,
     width int unsigned,
+    image_path VARCHAR(255),
     privileges varchar(64),
     PRIMARY KEY (picture_id)
 );
@@ -76,5 +77,3 @@ create table if not EXISTS order_info (
     phone varchar(255),
     PRIMARY KEY (order_id)
     );
-
-ALTER TABLE `pictures` ADD `image_path` VARCHAR(255) NOT NULL AFTER `width`;
