@@ -74,7 +74,7 @@
                             </thead>
                             <tbody>
                                 <?php
-                                $zapytanie = $conn->query("SELECT * FROM users");
+                                $zapytanie = $conn->query("SELECT `user_id`, `login`, email, pass, fname, lname, birthDate, phoneNumber, country, town, street, house_nr, zipcode, privileges FROM users");
                                 while ($row = $zapytanie->fetch()) {
                                     echo "
                                 <tr>" .
