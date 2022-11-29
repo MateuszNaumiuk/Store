@@ -81,9 +81,17 @@
 											<i class="bi bi-heart-fill"></i>
 										</button>
 									</form>
-									<form method='POST' class="d-flex me-2 w">
-										<button type="submit" id="visibility" name="visibility" class="btn btn-outline-dark w-100" value="Zmień widoczność">Zmień widoczność</button>
-									</form>
+									<?php
+									if ((isset($_SESSION['user']))) {
+										if ($_SESSION['priv'] == 'admin') {
+									?>
+											<form method='POST' class="d-flex me-2 w">
+												<button type="submit" id="visibility" name="visibility" class="btn btn-outline-dark w-100" value="Zmień widoczność">Zmień widoczność</button>
+											</form>
+									<?php
+										}
+									}
+									?>
 									<?php
 									if (isset($_POST['visibility'])) {
 										if ($row['privileges'] == 'user') {
