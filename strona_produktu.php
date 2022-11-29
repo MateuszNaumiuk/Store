@@ -22,8 +22,17 @@
 					<?php
 					$zapytanie = $conn->query("SELECT * FROM pictures where picture_id = $id");
 					while ($row = $zapytanie->fetch()) {
+						if ($row['privileges'] == 'user') {
 					?>
-						<img src="<?= $row['image_path']?>" class="card-img-top" alt="<?= $row['image_path'] ?>">
+							<img src="<?= $row['image_path'] ?>" class="card-img-top" alt="<?= $row['image_path'] ?>">
+						<?php
+						} else {
+						?>
+							<a style="font-size: 1.6em; font-width: bold; color: grey; text-align:center;"><u>niewidoczne dla klienta</u></a>
+							<img src="<?= $row['image_path'] ?>" class="card-img-top" alt="<?= $row['image_path'] ?>">
+						<?php
+						}
+						?>
 				</div>
 
 				<div class="col-8">
@@ -56,22 +65,36 @@
 							<div class="row">
 								<div class="col-12">
 									<form action="koszyk.php" method='POST' class="d-flex me-2 w">
-										<input type="hidden" name="hidden_name" value="<?=$row['pic_name']?>">
-										<input type="hidden" name="hidden_path" value="<?=$row['image_path']?>">
-										<input type="hidden" name="picture_id" value="<?=$row['picture_id']?>">
-										<input type="hidden" name="hidden_price" value="<?=$row['price']?>">
-										<input  type="submit" id="add" name="add" class="btn btn-outline-success w-100" value="Dodaj do koszyka">
+										<input type="hidden" name="hidden_name" value="<?= $row['pic_name'] ?>">
+										<input type="hidden" name="hidden_path" value="<?= $row['image_path'] ?>">
+										<input type="hidden" name="picture_id" value="<?= $row['picture_id'] ?>">
+										<input type="hidden" name="hidden_price" value="<?= $row['price'] ?>">
+										<input type="submit" id="add" name="add" class="btn btn-outline-success w-100" value="Dodaj do koszyka">
 									</form>
 
 									<form action="ulubione.php" method='POST' class="d-flex me-2 w">
-										<input type="hidden" name="hidden_name" value="<?=$row['pic_name']?>">
-										<input type="hidden" name="hidden_path" value="<?=$row['image_path']?>">
-										<input type="hidden" name="picture_id" value="<?=$row['picture_id']?>">
-										<input type="hidden" name="hidden_price" value="<?=$row['price']?>">				
+										<input type="hidden" name="hidden_name" value="<?= $row['pic_name'] ?>">
+										<input type="hidden" name="hidden_path" value="<?= $row['image_path'] ?>">
+										<input type="hidden" name="picture_id" value="<?= $row['picture_id'] ?>">
+										<input type="hidden" name="hidden_price" value="<?= $row['price'] ?>">
 										<button type="submit" id="fav" name="fav" class="btn btn-outline-danger w-100" value="Dodaj do ulubionych">
-										<i class="bi bi-heart-fill"></i>
+											<i class="bi bi-heart-fill"></i>
 										</button>
 									</form>
+									<form method='POST' class="d-flex me-2 w">
+										<button type="submit" id="visibility" name="visibility" class="btn btn-outline-dark w-100" value="Zmień widoczność">Zmień widoczność</button>
+									</form>
+									<?php
+									if (isset($_POST['visibility'])) {
+										if ($row['privileges'] == 'user') {
+											$zapytanie1 = $conn->query("UPDATE pictures SET privileges = 'admin' where picture_id = $id");
+											echo '<meta http-equiv="refresh" content="0">';
+										} else {
+											$zapytanie1 = $conn->query("UPDATE pictures SET privileges = 'user' where picture_id = $id");
+											echo '<meta http-equiv="refresh" content="0">';
+										}
+									}
+									?>
 								</div>
 							</div>
 						</div>
