@@ -4,7 +4,7 @@
 <head>
 	<?php
 	require("bootstrapConnection.php");
-	require("connection.php")
+	require("connection.php");
 	?>
 	<title>BetaShop</title>
 	<style>
