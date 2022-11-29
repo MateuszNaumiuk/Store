@@ -28,18 +28,15 @@
                                 <i class="bi-person" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Konto
                             </a>
                             <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                                
-                               
                                 <li><a class="dropdown-item text-white bg-dark" href="konto.php">Dane</a></li>
+                                <?php
+                                if ($_SESSION['priv'] == 'admin') {
+                                ?>
+                                    <li><a class="dropdown-item text-white bg-dark" href="zarzadzanie.php">Zarządzaj</a></li>
+                                <?php
+                                }
+                                ?>
                                 <li><a class="dropdown-item text-white bg-dark" href="logout.php">Wyloguj</a></li>
-                                <?php
-                                 if($_SESSION['priv']=='admin')
-                                 {
-                                    ?>
-                                <li><a class="dropdown-item text-white bg-dark" href="zarzadzanie.php">Zarządzaj</a></li>
-                                <?php
-                                 }
-                                 ?>
                             </ul>
                         </li>
                     <?php

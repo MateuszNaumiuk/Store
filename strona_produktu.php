@@ -28,7 +28,7 @@
 						<?php
 						} else {
 						?>
-							<a style="font-size: 1.6em; font-width: bold; color: grey; text-align:center;"><u>niewidoczne dla klienta</u></a>
+							<a style="font-size: 1.6em; font-weight: bold; color: grey; text-align:center;"><u>niewidoczne dla klienta</u></a>
 							<img src="<?= $row['image_path'] ?>" class="card-img-top" alt="<?= $row['image_path'] ?>">
 						<?php
 						}
