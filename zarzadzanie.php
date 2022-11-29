@@ -62,7 +62,7 @@
                                     <th scope="col">Hasło</th>
                                     <th scope="col">Imię</th>
                                     <th scope="col">Nazwisko</th>
-                                    <th scope="col">Nr telefonu</th>
+                                    <th scope="col">Data urodzenia</th>
                                     <th scope="col">Numer telefonu</th>
                                     <th scope="col">Kraj</th>
                                     <th scope="col">Miasto</th>
