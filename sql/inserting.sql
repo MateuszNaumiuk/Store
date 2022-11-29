@@ -46,7 +46,7 @@ insert into users (`user_id`, `login`,`email`,`pass`,`fname`,`lname` ,`country` 
 (1,'login1','email1','pass1','fname1','lname1','country1','town1','street1','nr1','zipcode1','user'),
 (2,'login2','email2','pass2','fname2','lname2','country2','town2','street2','nr2','zipcode2','user'),
 (3,'login3','email3','pass3','fname3','lname3','country3','town3','street3','nr3','zipcode3','user'),
-(4,'user','user@user','$2y$10$L9OgOC4vt8f/shXpDUBOJ.xFX.WPhEFTClpaWKs/EOkZe/26oMgya','user','user','user','user','user','user','user','user'),
+(4,'user','user@user','$2y$10$NyeOS9GGkOQpNNes047YdOvBqVCWjvxmJdII3LVClxmkrYLVbrK6G','user','user','user','user','user','user','user','user'),
 -- password for user is User1234!!!!!!!!!!!!
 (5,'admin','admin@admin','$2y$10$L9OgOC4vt8f/shXpDUBOJ.xFX.WPhEFTClpaWKs/EOkZe/26oMgya','admin','admin','admin','admin','admin','admin','admin','admin');
 -- password for admin is Admin123!!!!!!!!!!!!
