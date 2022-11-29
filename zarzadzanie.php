@@ -62,7 +62,7 @@
                                     <th scope="col">Hasło</th>
                                     <th scope="col">Imię</th>
                                     <th scope="col">Nazwisko</th>
-                                    <th scope="col">Nr telefonu</th>
+                                    <th scope="col">Data urodzenia</th>
                                     <th scope="col">Numer telefonu</th>
                                     <th scope="col">Kraj</th>
                                     <th scope="col">Miasto</th>
@@ -74,7 +74,7 @@
                             </thead>
                             <tbody>
                                 <?php
-                                $zapytanie = $conn->query("SELECT * FROM users");
+                                $zapytanie = $conn->query("SELECT `user_id`, `login`, email, pass, fname, lname, birthDate, phoneNumber, country, town, street, house_nr, zipcode, privileges FROM users");
                                 while ($row = $zapytanie->fetch()) {
                                     echo "
                                 <tr>" .
