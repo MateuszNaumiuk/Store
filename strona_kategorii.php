@@ -64,56 +64,93 @@
 							<p class="border-bottom border-secondary fw-bold text-center" style="font-size:1.5em">Produkty z kategorii:</p>
 							<div class="row">
 								<?php
-							if(isset($_SESSION['user']))
-							{
-								if (isset($_POST["rozmiar"])) {
-									$hidden_width = $_POST['hidden_width'];
-									$hidden_height = $_POST['hidden_height'];
-									if ($_SESSION['priv'] == 'admin') {
-										$zapytanie = $conn->query("SELECT * FROM pictures WHERE `width` = $hidden_width AND `height` = $hidden_height");
-									} else {
-										$privs = $_SESSION['priv'];
-										$zapytanie = $conn->query("SELECT * FROM pictures WHERE `width` = $hidden_width AND `height` = $hidden_height AND `privileges` = '$privs'");
-									}
-									while ($row = $zapytanie->fetch()) {
+								if (isset($_SESSION['user'])) {
+									if (isset($_POST["rozmiar"])) {
+										$hidden_width = $_POST['hidden_width'];
+										$hidden_height = $_POST['hidden_height'];
+										if ($_SESSION['priv'] == 'admin') {
+											$zapytanie = $conn->query("SELECT * FROM pictures WHERE `width` = $hidden_width AND `height` = $hidden_height");
+										} else {
+											$privs = $_SESSION['priv'];
+											$zapytanie = $conn->query("SELECT * FROM pictures WHERE `width` = $hidden_width AND `height` = $hidden_height AND `privileges` = '$privs'");
+										}
+										while ($row = $zapytanie->fetch()) {
 
 								?>
+											<div class="col-sm-4 col-xl-2 mb-5 text-center">
+												<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>">
+													<img src="<?= $row['image_path'] ?>" class="card-img-top" style="max-height: 10em; border-radius:1em;" alt="<?= $row['image_path'] ?>">
+													<a style="font-size: 1em; font-width: bold;"><?= $row['pic_name']; ?></a>
+													<?php
+													if ($_SESSION['priv'] == 'admin' && $row['privileges'] == "admin") {
+													?>
+														<a style="font-size: 1em; font-width: bold; color: grey;"><u>niewidoczne dla klienta</u></a>
+													<?php
+													}
+													?>
+													<p><?= $row['price'] ?> zl</p>
+												</a>
+											</div>
+										<?php
+										}
+									} else if (!isset($_POST['rozmiar'])) {
+										if ($_SESSION['priv'] == 'admin') {
+											$zapytanie = $conn->query("SELECT * FROM pictures");
+										} else {
+											$privs = $_SESSION['priv'];
+											$zapytanie = $conn->query("SELECT * FROM pictures WHERE `privileges` = '$privs'");
+										}
+										while ($row = $zapytanie->fetch()) {
+										?>
+											<div class="col-sm-4 col-xl-2 mb-5 text-center">
+												<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>">
+													<img src="<?= $row['image_path'] ?>" class="card-img-top" style="max-height: 10em; border-radius:1em;" alt="<?= $row['image_path'] ?>">
+													<a style="font-size: 1em; font-width: bold;"><?= $row['pic_name']; ?></a>
+													<?php
+													if ($_SESSION['priv'] == 'admin' && $row['privileges'] == "admin") {
+													?>
+														<br><a style="font-size: 1em; font-width: bold; color: grey;"><u>niewidoczne dla klienta</u></a>
+													<?php
+													}
+													?>
+													<p><?= $row['price'] ?> zl</p>
+												</a>
+											</div>
+										<?php
+										}
+									}
+								}
+
+
+
+								if (!isset($_SESSION['user'])) {
+									if (isset($_POST["rozmiar"])) {
+										$hidden_width = $_POST['hidden_width'];
+										$hidden_height = $_POST['hidden_height'];
+										$zapytanie = $conn->query("SELECT * FROM pictures WHERE `width` = $hidden_width AND `height` = $hidden_height AND `privileges` = 'user'");
+									
+									while ($row = $zapytanie->fetch()) {
+
+										?>
 										<div class="col-sm-4 col-xl-2 mb-5 text-center">
 											<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>">
 												<img src="<?= $row['image_path'] ?>" class="card-img-top" style="max-height: 10em; border-radius:1em;" alt="<?= $row['image_path'] ?>">
 												<a style="font-size: 1em; font-width: bold;"><?= $row['pic_name']; ?></a>
-												<?php
-												if ($_SESSION['priv'] == 'admin' && $row['privileges'] == "admin") {
-												?>
-												<a style="font-size: 1em; font-width: bold; color: grey;"><u>niewidoczne dla klienta</u></a>
-												<?php
-												}
-												?>
 												<p><?= $row['price'] ?> zl</p>
 											</a>
 										</div>
 									<?php
 									}
-								} else if (!isset($_POST['rozmiar'])) {
-									if ($_SESSION['priv'] == 'admin') {
-										$zapytanie = $conn->query("SELECT * FROM pictures");
-									} else {
-										$privs = $_SESSION['priv'];
-										$zapytanie = $conn->query("SELECT * FROM pictures WHERE `privileges` = '$privs'");
-									}
+								}
+								 else if (!isset($_POST['rozmiar'])) {
+									$zapytanie = $conn->query("SELECT * FROM pictures WHERE `privileges` = 'user'");
+
 									while ($row = $zapytanie->fetch()) {
 									?>
 										<div class="col-sm-4 col-xl-2 mb-5 text-center">
 											<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>">
 												<img src="<?= $row['image_path'] ?>" class="card-img-top" style="max-height: 10em; border-radius:1em;" alt="<?= $row['image_path'] ?>">
 												<a style="font-size: 1em; font-width: bold;"><?= $row['pic_name']; ?></a>
-												<?php
-												if ($_SESSION['priv'] == 'admin' && $row['privileges'] == "admin") {
-												?>
-												<br><a style="font-size: 1em; font-width: bold; color: grey;"><u>niewidoczne dla klienta</u></a>
-												<?php
-												}
-												?>
 												<p><?= $row['price'] ?> zl</p>
 											</a>
 										</div>
@@ -121,43 +158,6 @@
 									}
 								}
 							}
-
-								
-
-								if(!isset($_SESSION['user']))
-								{
-									if (isset($_POST["rozmiar"])) {
-										$hidden_width = $_POST['hidden_width'];
-										$hidden_height = $_POST['hidden_height'];
-										$zapytanie = $conn->query("SELECT * FROM pictures WHERE `width` = $hidden_width AND `height` = $hidden_height AND `privileges` = 'user'");
-										}
-										while ($row = $zapytanie->fetch()) {
-	
-									?>
-											<div class="col-sm-4 col-xl-2 mb-5 text-center">
-												<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>">
-													<img src="<?= $row['image_path'] ?>" class="card-img-top" style="max-height: 10em; border-radius:1em;" alt="<?= $row['image_path'] ?>">
-													<a style="font-size: 1em; font-width: bold;"><?= $row['pic_name']; ?></a>
-													<p><?= $row['price'] ?> zl</p>
-												</a>
-											</div>
-										<?php
-										}
-									} else if (!isset($_POST['rozmiar'])) {
-										$zapytanie = $conn->query("SELECT * FROM pictures WHERE `privileges` = 'user'");
-									
-									while ($row = $zapytanie->fetch()) {
-									?>
-										<div class="col-sm-4 col-xl-2 mb-5 text-center">
-											<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>">
-												<img src="<?= $row['image_path'] ?>" class="card-img-top" style="max-height: 10em; border-radius:1em;" alt="<?= $row['image_path'] ?>">
-												<a style="font-size: 1em; font-width: bold;"><?= $row['pic_name']; ?></a>
-												<p><?= $row['price'] ?> zl</p>
-											</a>
-										</div>
-								<?php
-									}
-								}
 								?>
 							</div>
 						</div>
