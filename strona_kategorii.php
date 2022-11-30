@@ -143,16 +143,7 @@
 											$privs = $_SESSION['priv'];
 											$zapytanie = $conn->query("SELECT * FROM pictures WHERE `width` = $hidden_width AND `height` = $hidden_height AND `privileges` = '$privs'");
 										}
-									} else {
-										if (!$_SESSION['priv'] == 'admin') {
-											$privs = $_SESSION['priv'];
-											$zapytanie = $conn->query("SELECT * FROM pictures WHERE `privileges` = '$privs'");
-										} else {
-											$zapytanie = $conn->query("SELECT * FROM pictures");
-										}
-									}
-									// if category is set
-									if (isset($_POST["category"])) {
+									} else if (isset($_POST["category"])) {
 										$hidden_category = $_POST['hidden_category'];
 										if ($_SESSION['priv'] == 'admin') {
 											$zapytanie = $conn->query("SELECT * FROM pictures WHERE `category` = '$hidden_category'");
@@ -160,15 +151,20 @@
 											$privs = $_SESSION['priv'];
 											$zapytanie = $conn->query("SELECT * FROM pictures WHERE  `category` = '$hidden_category' AND `privileges` = '$privs'");
 										}
-									}
-									// if authors is set
-									if (isset($_POST["authors"])) {
+									} else if (isset($_POST["authors"])) {
 										$hidden_authors = $_POST['hidden_authors'];
 										if ($_SESSION['priv'] == 'admin') {
 											$zapytanie = $conn->query("SELECT * FROM pictures WHERE `author_name` = '$hidden_authors'");
 										} else {
 											$privs = $_SESSION['priv'];
 											$zapytanie = $conn->query("SELECT * FROM pictures WHERE  `author_name` = '$hidden_authors' AND `privileges` = '$privs'");
+										}
+									} else {
+										if (!$_SESSION['priv'] == 'admin') {
+											$privs = $_SESSION['priv'];
+											$zapytanie = $conn->query("SELECT * FROM pictures WHERE `privileges` = '$privs'");
+										} else {
+											$zapytanie = $conn->query("SELECT * FROM pictures");
 										}
 									}
 								} else {

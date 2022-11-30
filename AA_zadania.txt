@@ -12,8 +12,8 @@ na tekst z bazy zeby zmniejszyc ilosc plikow
 
 ✓ 1. Utwórz skrypt tworzący i wprowadzające dane do układu min 4 tabel (np. mam sklep internetowy, więc potrzebuje tabel produkty (15 rekordów), kategorie, klienci (5 rekordów), sprzedaz oraz uzytkownicy (min admin)
 ✓ 2. Zaplecze sklepu jest inne dla klienta i dla admina.
-½ 3. Na stronie głównej widzimy asortyment sklepu z filtrowaniem np. kategorie, rodzaje, przedział cenowy itp. oraz moduł do logowania. Opcjonalnie można zmieniać ilość wyświetlanych produktów (np. 10/20/30 / wszystkie) albo lista /kafelki.
+✓ 3. Na stronie głównej widzimy asortyment sklepu z filtrowaniem np. kategorie, rodzaje, przedział cenowy itp. oraz moduł do logowania. Opcjonalnie można zmieniać ilość wyświetlanych produktów (np. 10/20/30 / wszystkie) albo lista /kafelki.
 ✓ 4. Klienci nie mogą kupować bez rejestracji, muszą mieć założone konto w sklepie.
 ✓ 5. Klient może dodać kilka artykułów do koszyka. Klient może otrzymać potwierdzenie zamówienia mailem (opcjonalnie).
-½ 6. Admin zarządza klientami, produktami, zamówieniami.
+✓ 6. Admin zarządza klientami, produktami, zamówieniami.
 ✓ 7. Interfejs zaplecza zależny jest od uprawnień czy jesteśmy klientem czy adminem. (zmienic w produkcie)
