@@ -15,41 +15,7 @@
         <p class="border-bottom border-secondary fw-bold text-center" style="font-size:2.5em">Panel Administratora</p>
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h3 class="my-3 text-center"><b>Zamówienia</b></h3>
-                    <table class="table">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">Id zamówienia</th>
-                                <th scope="col">Id klienta</th>
-                                <th scope="col">Id produktu</th>
-                                <th scope="col">Data zamówienia</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Imię</th>
-                                <th scope="col">Nazwisko</th>
-                                <th scope="col">Numer telefonu</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            $zapytanie = $conn->query("SELECT * FROM order_info");
-                            while ($row = $zapytanie->fetch()) {
-                                echo "
-                                <tr>" .
-                                    "<td>" . $row['order_id'] . "</td>" .
-                                    "<td>" . $row['user_id'] . "</td>" .
-                                    "<td>" . $row['picture_id'] . "</td>" .
-                                    "<td>" . $row['order_date'] . "</td>" .
-                                    "<td>" . $row['order_status'] . "</td>" .
-                                    "<td>" . $row['fname'] . "</td>" .
-                                    "<td>" . $row['lname'] . "</td>" .
-                                    "<td>" . $row['phone'] . "</td>" .
-                                    "</tr>";
-                            }
-                            ?>
-                        </tbody>
-                    </table>
-                </div>
+            <a href="zamowienia.php"><button type="submit" name="zamowienia" value="zamowienia" class="btn btn-secondary">Zamowienia</button></a>
             </div>
             <div class="row">
                 <div class="col-12">
