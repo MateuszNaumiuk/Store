@@ -37,7 +37,6 @@
 					<ul class="list-group px-3 py-3 border border-secondary rounded mb-3">
 						<h3 class="h4 my-3">Rozmiary</h3>
 						<div class="row">
-
 							<?php
 							$zapytanie = $conn->query("SELECT DISTINCT width, height FROM pictures");
 							while ($row = $zapytanie->fetch()) {
@@ -82,8 +81,7 @@
 											$zapytanie = $conn->query("SELECT * FROM pictures");
 										}
 									}
-								}
-								if (!isset($_SESSION['user'])) {
+								}else{
 									if (isset($_POST["rozmiar"])) {
 										$hidden_width = $_POST['hidden_width'];
 										$hidden_height = $_POST['hidden_height'];
@@ -92,6 +90,7 @@
 										$zapytanie = $conn->query("SELECT * FROM pictures WHERE `privileges` = 'user'");
 									}
 								}
+								// zrobic tutaj filtrowanie po kategorii
 								while ($row = $zapytanie->fetch()) {
 								?>
 									<div class="col-sm-4 col-xl-2 mb-5 text-center">
@@ -99,7 +98,7 @@
 											<img src="<?= $row['image_path'] ?>" class="card-img-top" style="max-height: 10em; border-radius:1em;" alt="<?= $row['image_path'] ?>">
 											<a style="font-size: 1em; font-width: bold;"><?= $row['pic_name']; ?></a>
 											<?php
-											if ($_SESSION['priv'] == 'admin' && $row['privileges'] == "admin") {
+											if (isset($_SESSION['priv']) && $_SESSION['priv'] == 'admin' && $row['privileges'] == "admin") {
 											?>
 												<a style="font-size: 1em; font-weight: bold; color: grey;"><u>niewidoczne dla klienta</u></a>
 											<?php
