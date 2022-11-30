@@ -6,9 +6,8 @@ use store;
     */
 
 create table if not EXISTS category (
-    category_id int AUTO_INCREMENT not null,
     cat_name varchar(255) not null,
-    PRIMARY KEY (category_id)
+    PRIMARY KEY (cat_name)
 );
 
     /*
@@ -20,11 +19,11 @@ create table if not EXISTS pictures (
     pic_name varchar(255) not null,
     price double unsigned,
     description text,
-    category_id int,
     height int unsigned,
     width int unsigned,
     image_path VARCHAR(255),
     privileges varchar(64),
+    category varchar(255),
     PRIMARY KEY (picture_id)
 );
 
@@ -77,3 +76,4 @@ create table if not EXISTS order_info (
     phone varchar(255),
     PRIMARY KEY (order_id)
     );
+    

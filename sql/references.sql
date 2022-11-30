@@ -4,7 +4,7 @@ creating indexes
 */
 
 ALTER TABLE `users` ADD INDEX(`privileges`);
-ALTER TABLE `category` ADD INDEX(`category_id`);
+ALTER TABLE `category` ADD INDEX(`cat_name`);
 ALTER TABLE `order_info` ADD INDEX(`user_id`);
 ALTER TABLE `order_info` ADD INDEX(`picture_id`);
 ALTER TABLE `pictures` ADD INDEX(`privileges`);
@@ -14,7 +14,7 @@ ALTER TABLE `pictures` ADD INDEX(`privileges`);
 creating references
 */
 
-ALTER TABLE pictures ADD FOREIGN KEY (category_id) REFERENCES category(category_id);
+ALTER TABLE pictures ADD FOREIGN KEY (category) REFERENCES category(cat_name);
 
 ALTER TABLE pictures ADD FOREIGN KEY (privileges) REFERENCES all_privileges(privileges);
 
