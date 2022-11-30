@@ -62,19 +62,19 @@ insert into authors VALUES
 
 
 
-insert into pictures(`picture_id`, `pic_name`, `price`, `description`, `width`, `height`, `image_path`, `privileges`,`category`) VALUES
-(1,'Howling',8,'Wolf howling at moon!', 1920,1080,'grafiki/1.jpg','user','FullHD'),
-(2,'Stand',12,'Man wathing stars!', 1440,900,'grafiki/2.jpg','admin','Portret'),
-(3,'Mountains',20,'Beautiful mountain!', 1600,900,'grafiki/3.jpg','user','Krajobraz'),
-(4,'Sunset',40,'Sunset!', 1600,900,'grafiki/4.jpg','admin','Pejzaz'),
-(5,'Sunset man',5,'Man wathing sunset!', 1440,900,'grafiki/5.jpg','user','Portret'),
-(6,'SpoderMan',100,'Spoderman watching city!', 1920,1080,'grafiki/6.jpg','admin','Abstrakcja'),
-(7,'Nebula',63,'Giant gas cloud!', 1440,900,'grafiki/7.jpg','user','Abstrakcja'),
-(8,'Sandy',15,'Desert in night!', 1600,900,'grafiki/8.jpg','admin','Pejzaz'),
-(9,'Skull',99,'Very intelligent skull!', 1600,900,'grafiki/9.jpg','user','Abstrakcja'),
-(10,'Hellfire',84,'Hellgate!', 800,600,'grafiki/10.jpg','user','Abstrakcja'),
-(11,'The nights',65,'Halloween is comming!', 640,480,'grafiki/11.jpg','user','Abstrakcja'),
-(12,'I hate math',9,'I really hate maths!', 1440,900,'grafiki/12.jpg','admin','Abstrakcja'),
-(13,'Best Friends',38,'Just some friends!', 600,600,'grafiki/13.jpg','user','Portret'),
-(14,'Book worm',55,'Reading books is good!', 1920,1080,'grafiki/14.jpg','user','FullHD'),
-(15,'Standing bookwarm',17,'Standing book!', 600,600,'grafiki/15.jpg','admin','Abstrakcja');
+insert into pictures(`picture_id`, `pic_name`, `price`, `description`, `width`, `height`, `image_path`, `privileges`,`category`,`author_name`) VALUES
+(1,'Howling',8,'Wolf howling at moon!', 1920,1080,'grafiki/1.jpg','user','FullHD','Andrew Tate'),
+(2,'Stand',12,'Man wathing stars!', 1440,900,'grafiki/2.jpg','admin','Portret','Andrzej Tatowski'),
+(3,'Mountains',20,'Beautiful mountain!', 1600,900,'grafiki/3.jpg','user','Krajobraz','Alejandro Tateviz'),
+(4,'Sunset',40,'Sunset!', 1600,900,'grafiki/4.jpg','admin','Pejzaz','Ondreje Tateova'),
+(5,'Sunset man',5,'Man wathing sunset!', 1440,900,'grafiki/5.jpg','user','Portret','Arjantin Telek'),
+(6,'SpoderMan',100,'Spoderman watching city!', 1920,1080,'grafiki/6.jpg','admin','Abstrakcja','Andrew Tate'),
+(7,'Nebula',63,'Giant gas cloud!', 1440,900,'grafiki/7.jpg','user','Abstrakcja','Andrzej Tatowski'),
+(8,'Sandy',15,'Desert in night!', 1600,900,'grafiki/8.jpg','admin','Pejzaz','Alejandro Tateviz'),
+(9,'Skull',99,'Very intelligent skull!', 1600,900,'grafiki/9.jpg','user','Abstrakcja','Ondreje Tateova'),
+(10,'Hellfire',84,'Hellgate!', 800,600,'grafiki/10.jpg','user','Abstrakcja','Arjantin Telek'),
+(11,'The nights',65,'Halloween is comming!', 640,480,'grafiki/11.jpg','user','Abstrakcja','Andrew Tate'),
+(12,'I hate math',9,'I really hate maths!', 1440,900,'grafiki/12.jpg','admin','Abstrakcja','Andrzej Tatowski'),
+(13,'Best Friends',38,'Just some friends!', 600,600,'grafiki/13.jpg','user','Portret','Alejandro Tateviz'),
+(14,'Book worm',55,'Reading books is good!', 1920,1080,'grafiki/14.jpg','user','FullHD','Ondreje Tateova'),
+(15,'Standing bookwarm',17,'Standing book!', 600,600,'grafiki/15.jpg','admin','Abstrakcja','Arjantin Telek');
