@@ -8,6 +8,7 @@ ALTER TABLE `category` ADD INDEX(`cat_name`);
 ALTER TABLE `order_info` ADD INDEX(`user_id`);
 ALTER TABLE `order_info` ADD INDEX(`picture_id`);
 ALTER TABLE `pictures` ADD INDEX(`privileges`);
+ALTER TABLE `pictures` ADD INDEX(`author_name`);
 
 
 /*
@@ -23,6 +24,8 @@ ALTER TABLE order_info ADD FOREIGN KEY (user_id) REFERENCES users(user_id);
 ALTER TABLE order_info ADD FOREIGN KEY (picture_id) REFERENCES pictures(picture_id);
 
 ALTER TABLE users ADD FOREIGN KEY (privileges) REFERENCES all_privileges(privileges);
+
+ALTER TABLE pictures ADD FOREIGN KEY (author_name) REFERENCES `authors`(author_name);
 
 
 /* with restrictions on delete and update */ 

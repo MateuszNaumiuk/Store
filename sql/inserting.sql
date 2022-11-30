@@ -52,6 +52,16 @@ insert into order_info(`order_id`,`order_date`,`order_status`)VALUES
 inserting values into pictures
 */
 
+insert into authors VALUES
+('Andrew Tate'),
+('Andrzej Tatowski'),
+('Alejandro Tateviz'),
+('Ondreje Tateova'),
+('Arjantin Telek');
+
+
+
+
 insert into pictures(`picture_id`, `pic_name`, `price`, `description`, `width`, `height`, `image_path`, `privileges`,`category`) VALUES
 (1,'Howling',8,'Wolf howling at moon!', 1920,1080,'grafiki/1.jpg','user','FullHD'),
 (2,'Stand',12,'Man wathing stars!', 1440,900,'grafiki/2.jpg','admin','Portret'),
@@ -61,8 +71,8 @@ insert into pictures(`picture_id`, `pic_name`, `price`, `description`, `width`, 
 (6,'SpoderMan',100,'Spoderman watching city!', 1920,1080,'grafiki/6.jpg','admin','Abstrakcja'),
 (7,'Nebula',63,'Giant gas cloud!', 1440,900,'grafiki/7.jpg','user','Abstrakcja'),
 (8,'Sandy',15,'Desert in night!', 1600,900,'grafiki/8.jpg','admin','Pejzaz'),
-(9,'Skull',99,'Very intelligent skull!', 1600,900,'grafiki/9.jpg','user','abstrakcja'),
-(10,'Hellfire',84,'Hellgate!', 800,600,'grafiki/10.jpg','user','abstrakcja'),
+(9,'Skull',99,'Very intelligent skull!', 1600,900,'grafiki/9.jpg','user','Abstrakcja'),
+(10,'Hellfire',84,'Hellgate!', 800,600,'grafiki/10.jpg','user','Abstrakcja'),
 (11,'The nights',65,'Halloween is comming!', 640,480,'grafiki/11.jpg','user','Abstrakcja'),
 (12,'I hate math',9,'I really hate maths!', 1440,900,'grafiki/12.jpg','admin','Abstrakcja'),
 (13,'Best Friends',38,'Just some friends!', 600,600,'grafiki/13.jpg','user','Portret'),

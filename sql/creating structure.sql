@@ -24,7 +24,13 @@ create table if not EXISTS pictures (
     image_path VARCHAR(255),
     privileges varchar(64),
     category varchar(255),
+    author_name varchar(255),
     PRIMARY KEY (picture_id)
+);
+
+create table if not EXISTS authors (
+    author_name varchar(255) not null,
+    PRIMARY KEY (author_name)
 );
 
 
