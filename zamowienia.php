@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang=pl>
 
 <head>
 	<?php
-	require("bootstrapConnection.php")
+	require("bootstrapConnection.php");
+	require("connection.php");
 	?>
+	<title>Zamówienia</title>
 
-	<title>BetaShop</title>
 </head>
-
 <body>
 
 	<?php
@@ -16,62 +16,44 @@
 	?>
 
 	<main>
-		<section class="page">
-			<div class="container">
-				<div class="row text-justify bg-second_navbar border rounded my-2">
-					<h1 class="pb-2 py-3">Twoje zamówienia</h1>
-					<a href="strona_produktu.php" class="text-decoration-none link-dark">
-						<div class="col-12 py-2 px-4">
-							<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-width:100px; max-height:100px;">
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Nazwa Produktu </p>
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Cena </p>
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Ilość </p>
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Data zrealizowania </p>
-
-						</div>
-					</a>
-				</div>
-
-				<div class="row text-justify bg-second_navbar border rounded my-2">
-					<a href="strona_produktu.php" class="text-decoration-none link-dark">
-						<div class="col-12 py-2 px-4">
-							<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-width:100px; max-height:100px;">
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Nazwa Produktu </p>
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Cena </p>
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Ilość </p>
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Data zrealizowania </p>
-
-						</div>
-					</a>
-				</div>
-				<div class="row text-justify bg-second_navbar border rounded my-2">
-					<a href="strona_produktu.php" class="text-decoration-none link-dark">
-						<div class="col-12 py-2 px-4">
-							<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-width:100px; max-height:100px;">
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Nazwa Produktu </p>
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Cena </p>
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Ilość </p>
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Data zrealizowania </p>
-
-						</div>
-					</a>
-				</div>
-				<div class="row text-justify bg-second_navbar border rounded my-2">
-					<a href="strona_produktu.php" class="text-decoration-none link-dark">
-						<div class="col-12 py-2 px-4">
-							<img class="img-fluid d-inline" src="img/intelek.jpg" style="max-width:100px; max-height:100px;">
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Nazwa Produktu </p>
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Cena </p>
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Ilość </p>
-							<p class="d-inline ms-3 me-3" style="font-size: 1.3vw">Data zrealizowania </p>
-
-						</div>
-					</a>
-				</div>
-
-			</div>
-		</section>
-
+	<div class="col-12">
+                    <h3 class="my-3 text-center"><b>Zamówienia</b></h3>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Id zamówienia</th>
+                                <th scope="col">Id klienta</th>
+                                <th scope="col">Id produktu</th>
+                                <th scope="col">Data zamówienia</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Imię</th>
+                                <th scope="col">Nazwisko</th>
+                                <th scope="col">Numer telefonu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $zapytanie = $conn->query("SELECT * FROM order_info");
+                            while ($row = $zapytanie->fetch()) {
+								?>
+                                <tr>
+                                    <td> <?= $row['order_id'] ?> </td> 
+                                    <td>  <?=$row['user_id'] ?> </td>
+                                    <td> <?= $row['picture_id'] ?>  </td>
+                                    <td> <?= $row['order_date'] ?> </td>
+                                    <td> <?=$row['order_status'] ?> </td>
+                                    <td> <?= $row['fname'] ?> </td>
+                                    <td> <?= $row['lname'] ?> </td>
+                                    <td> <?= $row['phone'] ?> </td>
+									<td><a href="usuwanie.php?order=<?= $row['order_id'] ?>"><button type="button" class="btn btn-danger">Usuń</button></a></td>
+                                    <td><a href="edytowanie.php?order=<?= $row['order_id'] ?>"><button type="button" class="btn btn-primary">Edytuj</button></a></td>
+                                    </tr>
+									<?php
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
 		<!-- footer -->
 		<?php
 		include("footer.php");
