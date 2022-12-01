@@ -15,9 +15,8 @@
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
         $zapytanie = $conn->query("SELECT * FROM users WHERE 'user_id'= $id");
-        $row = $zapytanie->fetch();
+        $row = $zapytanie->fetch()
     ?>
-
         <div class="container">
             <form method="post">
                 <div class="mb-3">
@@ -106,19 +105,18 @@
             <meta http-equiv='refresh' content='0;url=klienci.php'>
         <?php
         }
-    } else if (isset($_GET['pic'])) {
+    }
+    if (isset($_GET['pic'])) {
         $id = $_GET['pic'];
         $zapytanie = $conn->query("SELECT * FROM pictures WHERE 'picture_id'= $id");
-        while($row = $zapytanie->fetch()){
-            echo $row['image_id'];
-        }
+        $row = $zapytanie->fetch();
         ?>
 
         <div class="container">
             <form method="post">
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Podaj nazwę produktu</label>
-                    <input type="text" class="form-control" id="pic_name" name="pic_name" placeholder="Podaj  nazwę produktu">
+                    <input type="text" class="form-control" id="pic_name" name="pic_name" value="" placeholder="Podaj  nazwę produktu">
                 </div>
 
                 <div class="mb-3">
@@ -198,7 +196,8 @@
             <meta http-equiv='refresh' content='0;url=products.php'>
         <?php
         }
-    } else  if (isset($_GET['order'])) {
+    }
+    if (isset($_GET['order'])) {
         $id = $_GET['order'];
         $zapytanie = $conn->query("SELECT * FROM order_info WHERE 'order_id'= $id");
         $row = $zapytanie->fetch();

@@ -8,8 +8,9 @@ na tekst z bazy zeby zmniejszyc ilosc plikow
 ✓ 6. koszyk i ulubione nie dziala navbar
 ✓ 7. zrobic inne wyswietlanie dla klienta i inne dla admina
 ✓ 8. usunac linka ze spodu kazdej strony i wlozyc go w footer
-9. dokonczyc edycje w zarzadzanie.
-10. dodac bootstrap do strona_kategorii
+✓9. dokonczyc edycje w zarzadzanie.
+✓10. dodac bootstrap do strona_kategorii
+11. naprawic edytowanie php zeby wyswietlalo pobrane z bazy elementy do inputow jako value
 
 ✓ 1. Utwórz skrypt tworzący i wprowadzające dane do układu min 4 tabel (np. mam sklep internetowy, więc potrzebuje tabel produkty (15 rekordów), kategorie, klienci (5 rekordów), sprzedaz oraz uzytkownicy (min admin)
 ✓ 2. Zaplecze sklepu jest inne dla klienta i dla admina.

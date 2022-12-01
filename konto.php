@@ -39,7 +39,8 @@
 							<div class="row text-center ">
 								<div class="row">
 									<div class="col-12 text-center">
-										<form class="d-flex justify-content-center my-3" action="newdetails.php">
+										<form class="d-flex justify-content-center my-3" action="newdetails.php" method="POST">
+											<input type="hidden" name="id" value="<?= $row['user_id'] ?>">
 											<button class="btn btn-outline-success w-50" type="submit">Zmień dane</button>
 										</form>
 									</div>

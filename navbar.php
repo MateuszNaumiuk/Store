@@ -15,7 +15,7 @@
                             <a class="nav-link" href="koszyk.php"><i class="bi-cart" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Koszyk</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="strona_kategorii.php"><i class="bi-bag" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Produkty</a>
+                            <a class="nav-link" href="produkty.php"><i class="bi-bag" style="font-size: 30px;margin-left:20px; margin-right:10px;"></i>Produkty</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto" id="navbar-drop">
@@ -36,7 +36,10 @@
                                 <?php
                                 }
                                 ?>
-                                <li><a class="dropdown-item text-white bg-dark" href="logout.php">Wyloguj</a></li>
+                                <li>
+                                    <a class="dropdown-item text-white bg-dark" href="<?php session_destroy()?>">Wyloguj</a>
+
+                                </li>
                             </ul>
                         </li>
                     <?php

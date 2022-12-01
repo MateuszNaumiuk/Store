@@ -20,7 +20,7 @@
 	<section id="image_front_index">
 		<img src="grafiki/1.jpg" alt="1.png">
 		<div class="container">
-			<a href="strona_kategorii.php">Jestesmy nowa firma z Przyszłościa! <br>
+			<a href="produkty.php">Jestesmy nowa firma z Przyszłościa! <br>
 				Przejdz do naszej oferty!</a>
 		</div>
 	</section>
