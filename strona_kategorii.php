@@ -195,7 +195,7 @@
 											<?php
 											if (isset($_SESSION['priv']) && $_SESSION['priv'] == 'admin' && $row['privileges'] == "admin") {
 											?>
-												<a style="font-size: 1em; font-weight: bold; color: grey;"><u><br>niewidoczne dla klienta</u></a>
+												<a style="font-size: 1em; font-weight: bold;" class="text-danger"><u><br>niewidoczne dla klienta</u></a>
 											<?php
 											}
 											?>

@@ -18,7 +18,7 @@
 	<section class="page">
 		<div class="container">
 			<div class="row">
-				<div class="col-4">
+				<div class="col-md-4 col-sm-12">
 					<?php
 					$zapytanie = $conn->query("SELECT * FROM pictures where picture_id = $id");
 					while ($row = $zapytanie->fetch()) {
@@ -28,36 +28,29 @@
 						<?php
 						} else {
 						?>
-							<a style="font-size: 1.6em; font-weight: bold; color: grey; text-align:center;"><u>niewidoczne dla klienta</u></a>
+							<a class="text-danger" style="font-size: 1.6em; font-weight: bold; text-align:center;"><u>niewidoczne dla klienta</u></a>
 							<img src="<?= $row['image_path'] ?>" class="card-img-top" alt="<?= $row['image_path'] ?>">
 						<?php
 						}
 						?>
 				</div>
 
-				<div class="col-8">
-					<div class="row">
-						<div class="col-12">
-							<p style="font-size:2.7vw;" class="fw-light">
-
-						</div>
-					</div>
-
+				<div class="col-md-8 col-sm-12">
 					<div class="row mt-2">
-						<div class="col-4">
+						<div class="col-md-4 col-sm-12">
 							<h2><?= $row['pic_name']; ?></h2><br>
-							<p style="font-size:0.85vw;">Wysokość:
+							<p style="font-size:1em;">Wysokość:
 								<?= $row['height'] ?> px
 							</p>
-							<p style="font-size:0.85vw;">Szerokość:
+							<p style="font-size:1em;">Szerokość:
 								<?= $row['width'] ?> px
 							</p>
 						</div>
 
-						<div class="col-6 border rounded">
+						<div class="col-md-6 col-sm-12 border rounded">
 							<div class="row py-3">
 								<div class="col text-center">
-									<p style='font-size:1.5vw;' class='fw-bold'>
+									<p style='font-size:1.5em;' class='fw-bold'>
 										<?= $row['price'] ?> zl
 									</p>
 								</div>
@@ -90,11 +83,11 @@
 									?>
 											<form method='POST'>
 												<!-- o tu -->
-												<button type="submit" id="visibility" name="visibility" class="btn w-100 btn-outline-dark" value="Zmień widoczność">Zmień widoczność</button>
+												<button type="submit" id="visibility" name="visibility" class="btn w-100 btn-outline-primary" value="Zmień widoczność">Zmień widoczność</button>
 											</form>
 								</div>
 								<div class="col-12">
-									<a href="edytowanie.php?pic=<?= $row['picture_id'] ?>"><button type="button" class="btn mb-3 btn-outline-dark w-100">Edytuj</button></a>
+									<a href="edytowanie.php?pic=<?= $row['picture_id'] ?>"><button type="button" class="btn mb-3 btn-outline-primary w-100">Edytuj</button></a>
 								</div>
 						<?php
 										}
@@ -117,14 +110,11 @@
 
 				</div>
 			</div>
-		</div>
-		<div class="row d-flex justify-content-center">
-			<div class="col-10 mt-4 border rounded text-justify">
-				<p style="font-size:2vw;" class="ms-2 my-3"><i class="bi bi-cpu me-3"></i>Opis</p>
-				<p class="ms-5 me-5" style="font-size:1vw;"><?= $row['description'] ?>
+			<div class="col-12 border rounded mt-3">
+				<p style="font-size:2em;"><i class="bi bi-cpu mx-3"></i>Opis</p>
+				<p class="mx-3" style="font-size:1em;"><?= $row['description'] ?></p>
 			</div>
 		</div>
-
 		</div>
 	<?php
 					}
