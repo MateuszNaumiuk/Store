@@ -106,10 +106,12 @@
             <meta http-equiv='refresh' content='0;url=klienci.php'>
         <?php
         }
-    } else  if (isset($_GET['pic'])) {
+    } else if (isset($_GET['pic'])) {
         $id = $_GET['pic'];
         $zapytanie = $conn->query("SELECT * FROM pictures WHERE 'picture_id'= $id");
-        $row = $zapytanie->fetch();
+        while($row = $zapytanie->fetch()){
+            echo $row['image_id'];
+        }
         ?>
 
         <div class="container">
@@ -141,7 +143,7 @@
 
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Podaj ścieżkę do obrazka</label>
-                    <input type="text" class="form-control" id="image_path" name="image_path" placeholder="Podaj ścieżkę do obrazka">
+                    <input type="text" class="form-control" id="image_path" name="image_path" value="obrazki/asdasd.jpg ">
                 </div>
 
                 <div class="mb-3">
