@@ -8,24 +8,22 @@
 	?>
 
 	<title>BetaShop</title>
-	<style>
-		#nav-section {
-			margin-bottom: 5em !important;
-		}
-	</style>
+
 </head>
 
-<body class="text-center">
+<body >
 	<!-- navbar -->
 	<?php
-	require("navbar.php");
+	include("navbar.php")
 	?>
 
-	<section id="mainImg">
-		<img src="grafiki/1.jpg" alt="Logo" class="logo" />
+	<section id="image_front_index">
+		<img src="grafiki/1.jpg" alt="1.png">
+		<a href="strona_kategorii.php">Jestesmy nowa firma z Przyszłościa! <br>
+		Przejdz do naszej oferty!</a>
 	</section>
 
-	<section>
+	<section  class="text-center">
 		<div class="container-fluid">
 			<div class="row mb-4 ">
 				<h2 class="text-center mb-5 fw-bold border-bottom border-secondary py-2 border-top"> O nas </h2>
@@ -65,24 +63,22 @@
 											</div>
 										</div>
 										<?php
-										$zapytanie = $conn->query("SELECT * FROM pictures");
+										$zapytanie = $conn->query("SELECT picture_id, image_path, description, price FROM pictures WHERE `privileges` = 'user' limit 5");
 										while ($row = $zapytanie->fetch()) {
-											for ($i = 1; $i < 5; $i++) {
 										?>
-												<div class="carousel-item">
-													<div class="col-md-3">
-														<div class="card bg-dark text-light	">
-															<div class="card-img">
-															<a href="strona_produktu.php?id=<?= $i?>"><img src="grafiki/<?= $i ?>.jpg" class="img-fluid img_carousel" alt="img<?= $i ?>"></a>
-																<div class="centeronhover">
-																	<?= $row['description'] . "<br>" . $row['price'] . "zl" ?>
-																</div>
+											<div class="carousel-item">
+												<div class="col-md-3">
+													<div class="card bg-dark text-light	">
+														<div class="card-img">
+															<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>"><img src="<?= $row['image_path'] ?>" class="img-fluid img_carousel" alt="<?= $row['picture_id'] ?>"></a>
+															<div class="centeronhover">
+															<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>"><?= $row['description'] . "<br>" . $row['price'] . "zl" ?></a>
 															</div>
 														</div>
 													</div>
 												</div>
+											</div>
 										<?php
-											}
 										}
 										?>
 									</div> <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> </a> <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> </a>

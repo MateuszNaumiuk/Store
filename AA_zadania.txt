@@ -1,14 +1,15 @@
 X 1. podmienic tekst z
 "O nas", "Regulamin", "Polityka_Prywatnosci", "wspolpraca", "faq", "pomoc techniczna"
 na tekst z bazy zeby zmniejszyc ilosc plikow
-2. zmienic opisy zdjec i inne dane
+✓ 2. zmienic opisy zdjec i inne dane
 ✓ 3. zrobic dzialanie przycisku zmien dane w konto.
 ✓ 4. ogarnac koszyk, ulubione 
 ✓ 5. zrobic filtrowanie
 ✓ 6. koszyk i ulubione nie dziala navbar
-7. zrobic inne wyswietlanie dla klienta i inne dla admina
-8. usunac linka ze spodu kazdej strony i wlozyc go w footer
+✓ 7. zrobic inne wyswietlanie dla klienta i inne dla admina
+✓ 8. usunac linka ze spodu kazdej strony i wlozyc go w footer
 9. dokonczyc edycje w zarzadzanie.
+10. dodac bootstrap do strona_kategorii
 
 ✓ 1. Utwórz skrypt tworzący i wprowadzające dane do układu min 4 tabel (np. mam sklep internetowy, więc potrzebuje tabel produkty (15 rekordów), kategorie, klienci (5 rekordów), sprzedaz oraz uzytkownicy (min admin)
 ✓ 2. Zaplecze sklepu jest inne dla klienta i dla admina.

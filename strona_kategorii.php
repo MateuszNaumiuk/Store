@@ -131,40 +131,42 @@
 							<p class="border-bottom border-secondary fw-bold text-center" style="font-size:1.5em">Produkty z kategorii:</p>
 							<div class="row">
 								<?php
-								// if user is created
+								// if user session is created
 								if (isset($_SESSION['user'])) {
 									// if rozmiar is set
 									if (isset($_POST["rozmiar"])) {
 										$hidden_width = $_POST['hidden_width'];
 										$hidden_height = $_POST['hidden_height'];
 										if ($_SESSION['priv'] == 'admin') {
-											$zapytanie = $conn->query("SELECT * FROM pictures WHERE `width` = $hidden_width AND `height` = $hidden_height");
+										$zapytanie = $conn->query("SELECT * FROM pictures WHERE `width` = $hidden_width AND `height` = $hidden_height");
 										} else {
-											$privs = $_SESSION['priv'];
+										$privs = $_SESSION['priv'];
 											$zapytanie = $conn->query("SELECT * FROM pictures WHERE `width` = $hidden_width AND `height` = $hidden_height AND `privileges` = '$privs'");
 										}
 									} else if (isset($_POST["category"])) {
-										$hidden_category = $_POST['hidden_category'];
+											$hidden_category = $_POST['hidden_category'];
 										if ($_SESSION['priv'] == 'admin') {
-											$zapytanie = $conn->query("SELECT * FROM pictures WHERE `category` = '$hidden_category'");
+										$zapytanie = $conn->query("SELECT * FROM pictures WHERE `category` = '$hidden_category'");
 										} else {
-											$privs = $_SESSION['priv'];
+										$privs = $_SESSION['priv'];
 											$zapytanie = $conn->query("SELECT * FROM pictures WHERE  `category` = '$hidden_category' AND `privileges` = '$privs'");
 										}
 									} else if (isset($_POST["authors"])) {
 										$hidden_authors = $_POST['hidden_authors'];
 										if ($_SESSION['priv'] == 'admin') {
-											$zapytanie = $conn->query("SELECT * FROM pictures WHERE `author_name` = '$hidden_authors'");
+										$zapytanie = $conn->query("SELECT * FROM pictures WHERE `author_name` = '$hidden_authors'");
 										} else {
-											$privs = $_SESSION['priv'];
+										$privs = $_SESSION['priv'];
 											$zapytanie = $conn->query("SELECT * FROM pictures WHERE  `author_name` = '$hidden_authors' AND `privileges` = '$privs'");
 										}
 									} else {
-										if (!$_SESSION['priv'] == 'admin') {
-											$privs = $_SESSION['priv'];
-											$zapytanie = $conn->query("SELECT * FROM pictures WHERE `privileges` = '$privs'");
+										// tu
+										if ($_SESSION['priv'] == 'admin') {
+										$zapytanie = $conn->query("SELECT * FROM pictures");
 										} else {
-											$zapytanie = $conn->query("SELECT * FROM pictures");
+											// tu
+										$privs = $_SESSION['priv'];
+										$zapytanie = $conn->query("SELECT * FROM pictures WHERE `privileges` = '$privs'");
 										}
 									}
 								} else {
