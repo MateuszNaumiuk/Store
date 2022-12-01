@@ -12,13 +12,10 @@
 <body>
 
     <?php
-    if (isset($_GET['id'])) {
-        $id = $_GET['id'];
-        $zapytanie = $conn->query("SELECT * FROM users WHERE 'user_id'= $id");
-        $row = $zapytanie->fetch()
+    if (isset($_POST['addClient'])) {
     ?>
         <div class="container">
-            <form method="post">
+            <form method="POST">
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Podaj imię</label>
                     <input type="text" class="form-control" id="fname" name="fname" placeholder="Podaj imie">
@@ -77,13 +74,14 @@
                     ?>
                 </div>
 
-                <input type="submit" name="Edytuj" class="btn btn-primary" value="Zapisz zmiany" />
-                <input type="submit" name="Cofnij" class="btn btn-danger" value="Wróć" />
+                <button type="submit" name="Dodaj" class="btn btn-primary" value="Dodaj"> </button>
+                <button type="submit" name="Cofnij" class="btn btn-primary" value="Cofnij"> </button>
             </form>
         </div>
         <?php
 
-        if (isset($_POST['Edytuj'])) {
+        if (isset($_POST['Dodaj'])) {
+            echo "123123";
             $fname =  $_REQUEST["fname"];
             $lname =  $_REQUEST["lname"];
             $phoneNumber =  $_REQUEST["phoneNumber"];
@@ -94,9 +92,12 @@
             $house_nr =  $_REQUEST["house_nr"];
             $zipcode =  $_REQUEST["zipcode"];
             $privileges =  $_POST["user_type"];
-            $zapytanie = $conn->prepare("UPDATE users SET fname = '" . $fname . "',  lname = '" . $lname . "',  birthDate = '" . $birthDate . "', phoneNumber = '" . $phoneNumber . "', country = '" . $country . "', town = '" . $town . "', street = '" . $street . "', house_nr = '" . $house_nr . "', zipcode = '" . $zipcode . "', privileges = '" . $privileges . "' WHERE user_id = $id ");
+            $zapytanie = $conn->prepare("INSERT INTO users fname = '" . $fname . "',  lname = '" . $lname . "',  birthDate = '" . $birthDate . "', phoneNumber = '" . $phoneNumber . "', country = '" . $country . "', town = '" . $town . "', street = '" . $street . "', house_nr = '" . $house_nr . "', zipcode = '" . $zipcode . "', privileges = '" . $privileges . "'");
             $zapytanie->execute();
+        
+        
         ?>
+            
             <meta http-equiv='refresh' content='0;url=zarzadzanie.php'>
         <?php
         }
@@ -198,97 +199,7 @@
             }
         }
     }
-    if (isset($_GET['order'])) {
-        $id = $_GET['order'];
-        $zapytanie = $conn->query("SELECT * FROM order_info WHERE 'order_id'= $id");
-        $row = $zapytanie->fetch();
-        ?>
-
-        <div class="container">
-            <form method="post">
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Podaj datę zamówienia</label>
-                    <input type="text" class="form-control" id="order_date" name="order_date" placeholder="Podaj datę zamówienia">
-                </div>
-
-                <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Podaj status zamówienia</label>
-                    <input type="text" class="form-control" id="order_status" name="order_status" placeholder="Podaj status zamówienia">
-                </div>
-
-                <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Podaj imię</label>
-                    <input type="text" class="form-control" id="fname" name="fname" placeholder="Podaj imię">
-                </div>
-
-                <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Podaj nazwisko</label>
-                    <input type="text" class="form-control" id="lname" name="lname" placeholder="Podaj nazwisko">
-                </div>
-
-                <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Podaj telefon</label>
-                    <input type="text" class="form-control" id="phone" name="phone" placeholder="Podaj telefon">
-                </div>
-
-                <div class="mb-3">
-                    <strong>Podaj id użytkownika</strong><br>
-
-                    <?php
-                    $zapytanie = $conn->query("SELECT * FROM users");
-                    while ($row = $zapytanie->fetch()) {
-                    ?>
-                        <input type="radio" id="<?= $row['user_id'] ?>" name="user_id" value="<?= $row['user_id'] ?>" checked>
-                        <label for=""><?= $row['user_id'] ?></label><br>
-
-                    <?php
-                    }
-                    ?>
-                </div>
-
-                <div class="mb-3">
-                    <strong>Podaj id produktu</strong><br>
-                    <?php
-                    $zapytanie = $conn->query("SELECT * FROM pictures");
-                    while ($row = $zapytanie->fetch()) {
-                    ?>
-                        <input type="radio" id="<?= $row['picture_id'] ?>" name="picture_id" value="<?= $row['picture_id'] ?>" checked>
-                        <label for=""><?= $row['picture_id'] ?></label><br>
-
-                    <?php
-                    }
-                    ?>
-                </div>
-
-
-                <input type="submit" name="Edytuj" class="btn btn-primary" value="Zapisz zmiany" />
-                <input type="submit" name="Cofnij" class="btn btn-danger" value="Wróć" />
-            </form>
-        </div>
-        <?php
-
-        if (isset($_POST['Edytuj'])) {
-            $orderDate =  $_REQUEST["order_date"];
-            $orderStatus =  $_REQUEST["order_status"];
-            $fname =  $_REQUEST["fname"];
-            $lname =  $_REQUEST["lname"];
-            $phone =  $_POST["phone"];
-            $userID =  $_REQUEST["user_id"];
-            $pictureID =  $_REQUEST["picture_id"];
-            $zapytanie = $conn->prepare("UPDATE order_info SET order_date = '" . $orderDate . "', order_status = '" . $orderStatus . "', fname = '" . $fname . "', lname = '" . $lname . "', phone = '" . $phone . "',  `user_id` = '" . $userID . "',  picture_id = '" . $pictureID . "' WHERE order_id = $id ");
-            $zapytanie->execute();
-        ?>
-            <meta http-equiv='refresh' content='0;url=zarzadzanie.php'>
-        <?php
-        }
-        if (isset($_POST['Cofnij'])) {
-        ?>
-            <meta http-equiv='refresh' content='0;url=zarzadzanie.php'>
-    <?php
-        }
-    }
     ?>
-
 
     <!-- footer -->
     <?php

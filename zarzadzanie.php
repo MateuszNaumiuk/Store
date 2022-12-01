@@ -64,41 +64,41 @@
                         <div class="col-12">
                             <h3 class="my-3 text-center"><b>Zamówienia</b></h3>
                             <div class="table-responsive">
-                            <table class="table">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col">Id zamówienia</th>
-                                        <th scope="col">Id klienta</th>
-                                        <th scope="col">Id produktu</th>
-                                        <th scope="col">Data zamówienia</th>
-                                        <th scope="col">Status</th>
-                                        <th scope="col">Imię</th>
-                                        <th scope="col">Nazwisko</th>
-                                        <th scope="col">Numer telefonu</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    $zapytanie = $conn->query("SELECT * FROM order_info");
-                                    while ($row = $zapytanie->fetch()) {
-                                    ?>
+                                <table class="table">
+                                    <thead class="thead-dark">
                                         <tr>
-                                            <td> <?= $row['order_id'] ?> </td>
-                                            <td> <?= $row['user_id'] ?> </td>
-                                            <td> <?= $row['picture_id'] ?> </td>
-                                            <td> <?= $row['order_date'] ?> </td>
-                                            <td> <?= $row['order_status'] ?> </td>
-                                            <td> <?= $row['fname'] ?> </td>
-                                            <td> <?= $row['lname'] ?> </td>
-                                            <td> <?= $row['phone'] ?> </td>
-                                            <td><a href="usuwanie.php?order=<?= $row['order_id'] ?>"><button type="button" class="btn btn-danger">Usuń</button></a></td>
-                                            <td><a href="edytowanie.php?order=<?= $row['order_id'] ?>"><button type="button" class="btn btn-primary">Edytuj</button></a></td>
+                                            <th scope="col">Id zamówienia</th>
+                                            <th scope="col">Id klienta</th>
+                                            <th scope="col">Id produktu</th>
+                                            <th scope="col">Data zamówienia</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Imię</th>
+                                            <th scope="col">Nazwisko</th>
+                                            <th scope="col">Numer telefonu</th>
                                         </tr>
-                                    <?php
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $zapytanie = $conn->query("SELECT * FROM order_info");
+                                        while ($row = $zapytanie->fetch()) {
+                                        ?>
+                                            <tr>
+                                                <td> <?= $row['order_id'] ?> </td>
+                                                <td> <?= $row['user_id'] ?> </td>
+                                                <td> <?= $row['picture_id'] ?> </td>
+                                                <td> <?= $row['order_date'] ?> </td>
+                                                <td> <?= $row['order_status'] ?> </td>
+                                                <td> <?= $row['fname'] ?> </td>
+                                                <td> <?= $row['lname'] ?> </td>
+                                                <td> <?= $row['phone'] ?> </td>
+                                                <td><a href="usuwanie.php?order=<?= $row['order_id'] ?>"><button type="button" class="btn btn-danger">Usuń</button></a></td>
+                                                <td><a href="edytowanie.php?order=<?= $row['order_id'] ?>"><button type="button" class="btn btn-primary">Edytuj</button></a></td>
+                                            </tr>
+                                        <?php
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     <?php
@@ -107,96 +107,99 @@
                         <div class="col-12">
                             <h3 class="my-3 text-center"><b>Klienci</b></h3>
                             <div class="table-responsive">
-                            <table class="table">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col">Id klienta</th>
-                                        <th scope="col">Login</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">Imię</th>
-                                        <th scope="col">Nazwisko</th>
-                                        <th scope="col">Data urodzenia</th>
-                                        <th scope="col">Numer telefonu</th>
-                                        <th scope="col">Kraj</th>
-                                        <th scope="col">Miasto</th>
-                                        <th scope="col">Ulica</th>
-                                        <th scope="col">Nr domu</th>
-                                        <th scope="col">Kod pocztowy</th>
-                                        <th scope="col">Upoważnienia</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    $zapytanie = $conn->query("SELECT `user_id`, `login`, email, fname, lname, birthDate, phoneNumber, country, town, street, house_nr, zipcode, privileges FROM users");
-                                    while ($row = $zapytanie->fetch()) {
-                                    ?>
+                                <table class="table">
+                                    <thead class="thead-dark">
                                         <tr>
-                                            <td> <?= $row['user_id'] ?> </td>
-                                            <td> <?= $row['login'] ?> </td>
-                                            <td> <?= $row['email'] ?> </td>
-                                            <td> <?= $row['fname'] ?> </td>
-                                            <td> <?= $row['lname'] ?> </td>
-                                            <td> <?= $row['birthDate'] ?> </td>
-                                            <td> <?= $row['phoneNumber'] ?> </td>
-                                            <td> <?= $row['country'] ?> </td>
-                                            <td> <?= $row['town'] ?> </td>
-                                            <td> <?= $row['street'] ?> </td>
-                                            <td> <?= $row['house_nr'] ?> </td>
-                                            <td> <?= $row['zipcode'] ?> </td>
-                                            <td> <?= $row['privileges'] ?> </td>
-                                            <td><a href="usuwanie.php?id=<?= $row['user_id'] ?>"><button type="button" class="btn btn-danger">Usuń</button></a></td>
-                                            <td><a href="edytowanie.php?id=<?= $row['user_id'] ?>"><button type="button" class="btn btn-primary">Edytuj</button></a></td>
+                                            <th scope="col">Id klienta</th>
+                                            <th scope="col">Login</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Imię</th>
+                                            <th scope="col">Nazwisko</th>
+                                            <th scope="col">Data urodzenia</th>
+                                            <th scope="col">Numer telefonu</th>
+                                            <th scope="col">Kraj</th>
+                                            <th scope="col">Miasto</th>
+                                            <th scope="col">Ulica</th>
+                                            <th scope="col">Nr domu</th>
+                                            <th scope="col">Kod pocztowy</th>
+                                            <th scope="col">Upoważnienia</th>
                                         </tr>
-                                    <?php
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $zapytanie = $conn->query("SELECT `user_id`, `login`, email, fname, lname, birthDate, phoneNumber, country, town, street, house_nr, zipcode, privileges FROM users");
+                                        while ($row = $zapytanie->fetch()) {
+                                        ?>
+                                            <tr>
+                                                <td> <?= $row['user_id'] ?> </td>
+                                                <td> <?= $row['login'] ?> </td>
+                                                <td> <?= $row['email'] ?> </td>
+                                                <td> <?= $row['fname'] ?> </td>
+                                                <td> <?= $row['lname'] ?> </td>
+                                                <td> <?= $row['birthDate'] ?> </td>
+                                                <td> <?= $row['phoneNumber'] ?> </td>
+                                                <td> <?= $row['country'] ?> </td>
+                                                <td> <?= $row['town'] ?> </td>
+                                                <td> <?= $row['street'] ?> </td>
+                                                <td> <?= $row['house_nr'] ?> </td>
+                                                <td> <?= $row['zipcode'] ?> </td>
+                                                <td> <?= $row['privileges'] ?> </td>
+                                                <td><a href="usuwanie.php?id=<?= $row['user_id'] ?>"><button type="button" class="btn btn-danger">Usuń</button></a></td>
+                                                <td><a href="edytowanie.php?id=<?= $row['user_id'] ?>"><button type="button" class="btn btn-primary">Edytuj</button></a></td>
+                                            </tr>
+                                        <?php
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
+                        <form action="dodawanie.php" method="POST">
+                        <input type="submit" id="addClient" name="addClient" class="btn btn-outline-success w-100 my-5" value="Dodaj">
+                        </form>
                     <?php
                     } else if (isset($_POST['products'])) {
                     ?>
                         <div class="col-12">
                             <h3 class="my-3 text-center"><b>Produkty</b></h3>
                             <div class="table-responsive">
-                            <table class="table">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col">Id produktu</th>
-                                        <th scope="col">Nazwa produktu</th>
-                                        <th scope="col">Cena</th>
-                                        <th scope="col">Opis</th>
-                                        <th scope="col">Wysokość</th>
-                                        <th scope="col">Szerokość</th>
-                                        <th scope="col">image_path</th>
-                                        <th scope="col">Uprawnienia</th>
-                                        <th scope="col">Nazwa kategorii</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    $zapytanie = $conn->query("SELECT * FROM pictures");
-                                    while ($row = $zapytanie->fetch()) {
-                                    ?>
+                                <table class="table">
+                                    <thead class="thead-dark">
                                         <tr>
-                                            <td> <?= $row['picture_id'] ?> </td>
-                                            <td> <?= $row['pic_name'] ?> </td>
-                                            <td> <?= $row['price'] ?> </td>
-                                            <td> <?= $row['description'] ?> </td>
-                                            <td> <?= $row['height'] ?> </td>
-                                            <td> <?= $row['width'] ?> </td>
-                                            <td> <?= $row['image_path'] ?> </td>
-                                            <td> <?= $row['privileges'] ?> </td>
-                                            <td> <?= $row['category'] ?> </td>
-                                            <td><a href="usuwanie.php?pic=<?= $row['picture_id'] ?>"><button type="button" class="btn btn-danger">Usuń</button></a></td>
-                                            <td><a href="edytowanie.php?pic=<?= $row['picture_id'] ?>"><button type="button" class="btn btn-primary">Edytuj</button></a></td>
+                                            <th scope="col">Id produktu</th>
+                                            <th scope="col">Nazwa produktu</th>
+                                            <th scope="col">Cena</th>
+                                            <th scope="col">Opis</th>
+                                            <th scope="col">Wysokość</th>
+                                            <th scope="col">Szerokość</th>
+                                            <th scope="col">image_path</th>
+                                            <th scope="col">Uprawnienia</th>
+                                            <th scope="col">Nazwa kategorii</th>
                                         </tr>
-                                    <?php
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $zapytanie = $conn->query("SELECT * FROM pictures");
+                                        while ($row = $zapytanie->fetch()) {
+                                        ?>
+                                            <tr>
+                                                <td> <?= $row['picture_id'] ?> </td>
+                                                <td> <?= $row['pic_name'] ?> </td>
+                                                <td> <?= $row['price'] ?> </td>
+                                                <td> <?= $row['description'] ?> </td>
+                                                <td> <?= $row['height'] ?> </td>
+                                                <td> <?= $row['width'] ?> </td>
+                                                <td> <?= $row['image_path'] ?> </td>
+                                                <td> <?= $row['privileges'] ?> </td>
+                                                <td> <?= $row['category'] ?> </td>
+                                                <td><a href="usuwanie.php?pic=<?= $row['picture_id'] ?>"><button type="button" class="btn btn-danger">Usuń</button></a></td>
+                                                <td><a href="edytowanie.php?pic=<?= $row['picture_id'] ?>"><button type="button" class="btn btn-primary">Edytuj</button></a></td>
+                                            </tr>
+                                        <?php
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     <?php
