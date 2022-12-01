@@ -20,11 +20,11 @@
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         Zamowienia
                                     </button>
                                 </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <button type="submit" name="zamowienia" value="zamowienia" class="btn btn-secondary my-4">Zamowienia</button><br>
                                     </div>
@@ -63,6 +63,7 @@
                     ?>
                         <div class="col-12">
                             <h3 class="my-3 text-center"><b>Zamówienia</b></h3>
+                            <div class="table-responsive">
                             <table class="table">
                                 <thead class="thead-dark">
                                     <tr>
@@ -98,12 +99,14 @@
                                     ?>
                                 </tbody>
                             </table>
+                            </div>
                         </div>
                     <?php
                     } else if (isset($_POST['klienci'])) {
                     ?>
                         <div class="col-12">
                             <h3 class="my-3 text-center"><b>Klienci</b></h3>
+                            <div class="table-responsive">
                             <table class="table">
                                 <thead class="thead-dark">
                                     <tr>
@@ -149,12 +152,14 @@
                                     ?>
                                 </tbody>
                             </table>
+                            </div>
                         </div>
                     <?php
                     } else if (isset($_POST['products'])) {
                     ?>
                         <div class="col-12">
                             <h3 class="my-3 text-center"><b>Produkty</b></h3>
+                            <div class="table-responsive">
                             <table class="table">
                                 <thead class="thead-dark">
                                     <tr>
@@ -192,6 +197,7 @@
                                     ?>
                                 </tbody>
                             </table>
+                            </div>
                         </div>
                     <?php
                     }
