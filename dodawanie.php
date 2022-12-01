@@ -5,17 +5,19 @@
     <?php
     require("bootstrapConnection.php");
     require("connection.php");
-    require("navbar.php");
     ?>
 </head>
 
 <body>
+    <?php
+    require("navbar.php");
+    ?>
 
     <?php
     if (isset($_POST['addClient'])) {
     ?>
         <div class="container">
-            <form method="POST">
+            <form method="POST" action="">
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Podaj imię</label>
                     <input type="text" class="form-control" id="fname" name="fname" placeholder="Podaj imie">
@@ -73,39 +75,35 @@
                     }
                     ?>
                 </div>
-
-                <button type="submit" name="Dodaj" class="btn btn-primary" value="Dodaj"> </button>
-                <button type="submit" name="Cofnij" class="btn btn-primary" value="Cofnij"> </button>
+                <input type="submit" name="Dodaj" class="btn btn-primary" value="Dodaj" />
+                <input type="submit" name="Cofnij" class="btn btn-danger" value="Wróć" />
             </form>
         </div>
-        <?php
+    <?php
+    }
+    if (isset($_POST['Dodaj'])) {
+        $fname =  $_REQUEST["fname"];
+        $lname =  $_REQUEST["lname"];
+        $phoneNumber =  $_REQUEST["phoneNumber"];
+        $birthDate =  $_REQUEST["birthDate"];
+        $country =  $_REQUEST["country"];
+        $town =  $_REQUEST["town"];
+        $street =  $_REQUEST["street"];
+        $house_nr =  $_REQUEST["house_nr"];
+        $zipcode =  $_REQUEST["zipcode"];
+        $privileges =  $_POST["user_type"];
+        // o tu naprawic sql
+        $zapytanie = $conn->prepare("INSERT INTO users VALUES ('$fname', '$lname', '$phonenumber', '$birthDate', '$country', '$town', '$street', '$house_nr', '$zipcode', '$privileges')");
+        $zapytanie->execute();
+    ?>
 
-        if (isset($_POST['Dodaj'])) {
-            echo "123123";
-            $fname =  $_REQUEST["fname"];
-            $lname =  $_REQUEST["lname"];
-            $phoneNumber =  $_REQUEST["phoneNumber"];
-            $birthDate =  $_REQUEST["birthDate"];
-            $country =  $_REQUEST["country"];
-            $town =  $_REQUEST["town"];
-            $street =  $_REQUEST["street"];
-            $house_nr =  $_REQUEST["house_nr"];
-            $zipcode =  $_REQUEST["zipcode"];
-            $privileges =  $_POST["user_type"];
-            $zapytanie = $conn->prepare("INSERT INTO users fname = '" . $fname . "',  lname = '" . $lname . "',  birthDate = '" . $birthDate . "', phoneNumber = '" . $phoneNumber . "', country = '" . $country . "', town = '" . $town . "', street = '" . $street . "', house_nr = '" . $house_nr . "', zipcode = '" . $zipcode . "', privileges = '" . $privileges . "'");
-            $zapytanie->execute();
-        
-        
-        ?>
-            
-            <meta http-equiv='refresh' content='0;url=zarzadzanie.php'>
+        <meta http-equiv='refresh' content='0;url=zarzadzanie.php'>
+    <?php
+    }
+    if (isset($_POST['Cofnij'])) {
+    ?>
+        <meta http-equiv='refresh' content='0;url=zarzadzanie.php'>
         <?php
-        }
-        if (isset($_POST['Cofnij'])) {
-        ?>
-            <meta http-equiv='refresh' content='0;url=zarzadzanie.php'>
-        <?php
-        }
     }
     if (isset($_GET['pic'])) {
         $id = $_GET['pic'];
@@ -114,7 +112,7 @@
         ?>
 
             <div class="container">
-                <form method="post">
+                <form method="POST">
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Podaj nazwę produktu</label>
                         <input type="text" class="form-control" id="pic_name" name="pic_name" value="<?= $row['pic_name'] ?>">
@@ -122,7 +120,7 @@
 
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Podaj Cene</label>
-                        <input type="text" class="form-control" id="price" name="price" value="<?= $row['price']?>">
+                        <input type="text" class="form-control" id="price" name="price" value="<?= $row['price'] ?>">
                     </div>
 
                     <div class="mb-3">
@@ -137,7 +135,7 @@
 
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Podaj szerokość</label>
-                        <input type="text" class="form-control" id="width" name="width" value="<?= $row['width']?>">
+                        <input type="text" class="form-control" id="width" name="width" value="<?= $row['width'] ?>">
                     </div>
 
                     <div class="mb-3">
@@ -195,7 +193,7 @@
             if (isset($_POST['Cofnij'])) {
             ?>
                 <meta http-equiv='refresh' content='0;url=products.php'>
-        <?php
+    <?php
             }
         }
     }

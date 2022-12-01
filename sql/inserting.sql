@@ -32,8 +32,6 @@ inserting values into privileges
     
 insert into all_privileges VALUES 
 ('user'),
-('vip'),
-('super_vip'),
 ('admin');
 
 
