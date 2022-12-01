@@ -37,7 +37,7 @@
                                 }
                                 ?>
                                 <li>
-                                    <a class="dropdown-item text-white bg-dark" href="<?php session_destroy()?>">Wyloguj</a>
+                                    <a class="dropdown-item text-white bg-dark" href="logout.php">Wyloguj</a>
 
                                 </li>
                             </ul>

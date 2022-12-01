@@ -11,6 +11,8 @@ na tekst z bazy zeby zmniejszyc ilosc plikow
 ✓9. dokonczyc edycje w zarzadzanie.
 ✓10. dodac bootstrap do strona_kategorii
 11. naprawic edytowanie php zeby wyswietlalo pobrane z bazy elementy do inputow jako value
+12. jezeli zmieni sie jakas wartosc przyciskiem edytuj w produkcie nadaje mu automatycznie atrybut ukryty w pliku strona_produktu.php, a na stronie wszystich produktow nie pokazuje sie ze plik jest ukryty
+
 
 ✓ 1. Utwórz skrypt tworzący i wprowadzające dane do układu min 4 tabel (np. mam sklep internetowy, więc potrzebuje tabel produkty (15 rekordów), kategorie, klienci (5 rekordów), sprzedaz oraz uzytkownicy (min admin)
 ✓ 2. Zaplecze sklepu jest inne dla klienta i dla admina.
