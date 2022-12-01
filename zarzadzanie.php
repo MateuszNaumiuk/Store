@@ -202,6 +202,9 @@
                                 </table>
                             </div>
                         </div>
+                        <form action="dodawanie.php" method="POST">
+                        <input type="submit" id="addProduct" name="addProduct" class="btn btn-outline-success w-100 my-5" value="Dodaj">
+                        </form>
                     <?php
                     }
                     ?>
