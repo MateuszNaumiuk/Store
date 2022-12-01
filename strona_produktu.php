@@ -90,11 +90,11 @@
 									?>
 											<form method='POST'>
 												<!-- o tu -->
-												<a href="edytowanie.php?pic=<?= $row['picture_id'] ?>"><button type="button" class="btn btn-outline-dark w-100">Edytuj</button></a>
+												<button type="submit" id="visibility" name="visibility" class="btn w-100 btn-outline-dark" value="Zmień widoczność">Zmień widoczność</button>
 											</form>
 								</div>
 								<div class="col-12">
-									<button type="submit" id="visibility" name="visibility" class="btn w-100 mb-3 btn-outline-dark" value="Zmień widoczność">Zmień widoczność</button>
+									<a href="edytowanie.php?pic=<?= $row['picture_id'] ?>"><button type="button" class="btn mb-3 btn-outline-dark w-100">Edytuj</button></a>
 								</div>
 						<?php
 										}
