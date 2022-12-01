@@ -12,4 +12,4 @@ if (isset($_GET['id'])) {
 }
 
 $zapytanie->execute();
-header("Location: zamowienia.php");
+header("Location: zarzadzanie.php");
