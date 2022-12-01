@@ -6,7 +6,6 @@
     <?php
     require_once("bootstrapConnection.php");
     require_once("connection.php");
-    require_once("navbar.php");
     ?>
     <title>Zamówienie</title>
 
@@ -14,6 +13,9 @@
 </head>
 
 <body>
+<?php
+require("navbar.php");
+?>
     <div class="container">
         <div class="row">
             <div class="col-12">
