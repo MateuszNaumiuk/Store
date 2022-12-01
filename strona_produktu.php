@@ -64,15 +64,16 @@
 							</div>
 							<div class="row">
 								<div class="col-12">
-									<form action="koszyk.php" method='POST' class="d-flex me-2 w">
+									<form action="koszyk.php" method='POST' class="d-flex">
 										<input type="hidden" name="hidden_name" value="<?= $row['pic_name'] ?>">
 										<input type="hidden" name="hidden_path" value="<?= $row['image_path'] ?>">
 										<input type="hidden" name="picture_id" value="<?= $row['picture_id'] ?>">
 										<input type="hidden" name="hidden_price" value="<?= $row['price'] ?>">
 										<input type="submit" id="add" name="add" class="btn btn-outline-success w-100" value="Dodaj do koszyka">
 									</form>
-
-									<form action="ulubione.php" method='POST' class="d-flex me-2 w">
+								</div>
+								<div class="col-12">
+									<form action="ulubione.php" method='POST' class="d-flex">
 										<input type="hidden" name="hidden_name" value="<?= $row['pic_name'] ?>">
 										<input type="hidden" name="hidden_path" value="<?= $row['image_path'] ?>">
 										<input type="hidden" name="picture_id" value="<?= $row['picture_id'] ?>">
@@ -81,67 +82,54 @@
 											<i class="bi bi-heart-fill"></i>
 										</button>
 									</form>
+								</div>
+								<div class="col-12 d-flex flex-column">
 									<?php
 									if ((isset($_SESSION['user']))) {
 										if ($_SESSION['priv'] == 'admin') {
 									?>
-											<form method='POST' class="d-flex me-2 w">
+											<form method='POST'>
 												<!-- o tu -->
-												<div class="row d-flex column">
-													<div class="col-12">
-
-														<a href="edytowanie.php?pic=<?= $row['picture_id'] ?>"><button type="button" class="btn btn-outline-dark w-100">Edytuj</button></a>
-
-													</div>
-													<div class="col-12">
-														<button type="submit" id="visibility" name="visibility" class="btn btn-outline-dark w-100" value="Zmień widoczność">Zmień widoczność</button>
-
-													</div>
-												</div>
-
-
+												<a href="edytowanie.php?pic=<?= $row['picture_id'] ?>"><button type="button" class="btn btn-outline-dark w-100">Edytuj</button></a>
 											</form>
-									<?php
-										}
-									}
-									?>
-									<?php
-									if (isset($_POST['visibility'])) {
-										if ($row['privileges'] == 'user') {
-											$zapytanie1 = $conn->query("UPDATE pictures SET privileges = 'admin' where picture_id = $id");
-											echo '<meta http-equiv="refresh" content="0">';
-										} else {
-											$zapytanie1 = $conn->query("UPDATE pictures SET privileges = 'user' where picture_id = $id");
-											echo '<meta http-equiv="refresh" content="0">';
-										}
-									}
-									?>
 								</div>
+								<div class="col-12">
+									<button type="submit" id="visibility" name="visibility" class="btn w-100 mb-3 btn-outline-dark" value="Zmień widoczność">Zmień widoczność</button>
+								</div>
+						<?php
+										}
+									}
+						?>
+						<?php
+						if (isset($_POST['visibility'])) {
+							if ($row['privileges'] == 'user') {
+								$zapytanie1 = $conn->query("UPDATE pictures SET privileges = 'admin' where picture_id = $id");
+								echo '<meta http-equiv="refresh" content="0">';
+							} else {
+								$zapytanie1 = $conn->query("UPDATE pictures SET privileges = 'user' where picture_id = $id");
+								echo '<meta http-equiv="refresh" content="0">';
+							}
+						}
+						?>
 							</div>
 						</div>
-
 					</div>
-					<div class="row my-4">
-						<div class="col-6">
 
-						</div>
-
-					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-12 mt-4 border rounded text-justify">
-					<p style="font-size:2vw;" class="ms-2 my-3"><i class="bi bi-cpu me-3"></i>Opis</p>
-					<p class="ms-5 me-5" style="font-size:1vw;"><?= $row['description'] ?>
-				</div>
+		</div>
+		<div class="row d-flex justify-content-center">
+			<div class="col-10 mt-4 border rounded text-justify">
+				<p style="font-size:2vw;" class="ms-2 my-3"><i class="bi bi-cpu me-3"></i>Opis</p>
+				<p class="ms-5 me-5" style="font-size:1vw;"><?= $row['description'] ?>
 			</div>
+		</div>
 
 		</div>
 	<?php
 					}
 	?>
 	</section>
-	</main>
 	<!-- footer -->
 	<?php
 	include("footer.php");
