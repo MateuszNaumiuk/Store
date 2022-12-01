@@ -1,3 +1,4 @@
+</div>
 <footer>
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <div class="d-none d-lg-block">
