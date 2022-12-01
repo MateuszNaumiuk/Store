@@ -44,7 +44,9 @@ session_start();
                             Zapisz dane do następnych zamówień
                         </label>
                     </div>
-                    <button class="btn btn-outline-success w-50 mt-5" type="submit" name="submit">Zamawiam i płacę</button>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-outline-success w-50 mt-5" type="submit" name="submit">Zamawiam i płacę</button>
+                    </div>
                 </form>
             </div>
             <?php

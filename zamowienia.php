@@ -1,76 +1,65 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang=pl>
 
 <head>
-    <title>Zarzadzanie</title>
     <?php
     require("bootstrapConnection.php");
     require("connection.php");
     ?>
+    <title>Zamówienia</title>
+
 </head>
 
 <body>
-    <?php require("navbar.php"); ?>
-    <div class="container-fluid">
-        <p class="border-bottom border-secondary fw-bold text-center" style="font-size:2.5em">Panel Administratora</p>
-        <div class="container">
-            <div class="row">
-                <div class="col-3 my-5" style="text-align:center">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Zamowienia
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <a href="zamowienia.php"><button type="submit" name="zamowienia" value="zamowienia" class="btn btn-secondary my-4">Zamowienia</button></a><br>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Klienci
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <a href="klienci.php"><button type="submit" name="klienci" value="klienci" class="btn btn-secondary my-4">Klienci</button></a><br>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Produkty
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <a href="products.php"><button type="submit" name="products" value="products" class="btn btn-secondary my-4">Produkty</button></a><br>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-9 mx">
 
-          
-
-                </div>
-            </div>
-
-
-
-        </div>
-
-    </div>
     <?php
-    include("footer.php");
+    require("navbar.php");
     ?>
 
+    <main>
+        <div class="col-12">
+            <h3 class="my-3 text-center"><b>Zamówienia</b></h3>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Id zamówienia</th>
+                        <th scope="col">Id klienta</th>
+                        <th scope="col">Id produktu</th>
+                        <th scope="col">Data zamówienia</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Imię</th>
+                        <th scope="col">Nazwisko</th>
+                        <th scope="col">Numer telefonu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $zapytanie = $conn->query("SELECT * FROM order_info");
+                    while ($row = $zapytanie->fetch()) {
+                    ?>
+                        <tr>
+                            <td> <?= $row['order_id'] ?> </td>
+                            <td> <?= $row['user_id'] ?> </td>
+                            <td> <?= $row['picture_id'] ?> </td>
+                            <td> <?= $row['order_date'] ?> </td>
+                            <td> <?= $row['order_status'] ?> </td>
+                            <td> <?= $row['fname'] ?> </td>
+                            <td> <?= $row['lname'] ?> </td>
+                            <td> <?= $row['phone'] ?> </td>
+                            <td><a href="usuwanie.php?order=<?= $row['order_id'] ?>"><button type="button" class="btn btn-danger">Usuń</button></a></td>
+                            <td><a href="edytowanie.php?order=<?= $row['order_id'] ?>"><button type="button" class="btn btn-primary">Edytuj</button></a></td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+        <!-- footer -->
+        <?php
+        include("footer.php");
+        ?>
+    </main>
 </body>
 
 </html>

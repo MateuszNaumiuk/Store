@@ -86,7 +86,20 @@
 										if ($_SESSION['priv'] == 'admin') {
 									?>
 											<form method='POST' class="d-flex me-2 w">
-												<button type="submit" id="visibility" name="visibility" class="btn btn-outline-dark w-100" value="Zmień widoczność">Zmień widoczność</button>
+												<!-- o tu -->
+												<div class="row d-flex column">
+													<div class="col-12">
+
+														<a href="edytowanie.php?pic=<?= $row['picture_id'] ?>"><button type="button" class="btn btn-outline-dark w-100">Edytuj</button></a>
+
+													</div>
+													<div class="col-12">
+														<button type="submit" id="visibility" name="visibility" class="btn btn-outline-dark w-100" value="Zmień widoczność">Zmień widoczność</button>
+
+													</div>
+												</div>
+
+
 											</form>
 									<?php
 										}

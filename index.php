@@ -11,7 +11,7 @@
 
 </head>
 
-<body >
+<body>
 	<!-- navbar -->
 	<?php
 	include("navbar.php")
@@ -19,11 +19,13 @@
 
 	<section id="image_front_index">
 		<img src="grafiki/1.jpg" alt="1.png">
-		<a href="strona_kategorii.php">Jestesmy nowa firma z Przyszłościa! <br>
-		Przejdz do naszej oferty!</a>
+		<div class="container">
+			<a href="strona_kategorii.php">Jestesmy nowa firma z Przyszłościa! <br>
+				Przejdz do naszej oferty!</a>
+		</div>
 	</section>
 
-	<section  class="text-center">
+	<section class="text-center">
 		<div class="container-fluid">
 			<div class="row mb-4 ">
 				<h2 class="text-center mb-5 fw-bold border-bottom border-secondary py-2 border-top"> O nas </h2>
@@ -72,7 +74,7 @@
 														<div class="card-img">
 															<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>"><img src="<?= $row['image_path'] ?>" class="img-fluid img_carousel" alt="<?= $row['picture_id'] ?>"></a>
 															<div class="centeronhover">
-															<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>"><?= $row['description'] . "<br>" . $row['price'] . "zl" ?></a>
+																<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>"><?= $row['description'] . "<br>" . $row['price'] . "zl" ?></a>
 															</div>
 														</div>
 													</div>
