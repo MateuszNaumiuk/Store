@@ -155,6 +155,7 @@
                         <?php
                         }
                         ?>
+                        
                     </div>
 
                     <div class="mb-3">
@@ -193,7 +194,7 @@
             }
             if (isset($_POST['Cofnij'])) {
             ?>
-                <meta http-equiv='refresh' content='0;url=products.php'>
+                <meta http-equiv='refresh' content='0;url=produkty.php'>
         <?php
             }
         }
