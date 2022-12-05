@@ -6,7 +6,9 @@
 	require("bootstrapConnection.php");
 	require("connection.php");
 	?>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,42 +18,36 @@
 	?>
 
 	<section id="image_front_index">
-	<img src= "grafiki/16.jpg" href="produkty.php" alt="16.png">
+		<img src="grafiki/16.jpg" href="produkty.php" alt="16.png">
 		<div class="containre">
 			<a href="produkty.php" style="text-decoration: none;">Jestesmy nowa firma z Przyszłościa! <br>
 				Przejdz do naszej oferty!</a>
 		</div>
 	</section class>
 
-	<section class="text-center">
+	<section class="text-center py-3">
 		<div class="container mt-5">
-			<!-- <div class="row mb-4">
-				<h2 class="text-center text-light mb-4 fw-bold border-bottom border-secondary py-2 border-top" style="background-color: #1d1f1e;"> O nas </h2>
-				<div class="col-sm">
-					<h3 class="fw-bold"> <i class="bi bi-hourglass-split"></i> Historia</h3>
-					<div class="container" style="max-width: 25em;"><a>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.</a></div>
+			<div class="row pb-5 d-flex justify-content-between">
+				<div class="col-sm-12 col-md-3">
+					<h3 class="fw-bold"> <i class="bi bi-award-fill"></i> O nas</h3>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. At totam, eaque quibusdam consectetur fugit iure. Neque eum eos ea quos voluptatum id laboriosam magni corporis enim laudantium. Fugit, inventore perspiciatis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab modi sunt itaque fugit debitis architecto, eligendi eos quos dignissimos placeat quas esse reiciendis rerum blanditiis beatae nostrum, nesciunt molestias maiores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore dolores inventore doloribus porro, delectus ad vitae cum incidunt tempora! Asperiores molestias, ipsam at minus rem ad nam hic cupiditate!
 				</div>
-				<div class="col-sm">
-					<h3 class="fw-bold"> <i class="bi bi-calendar2-check-fill"></i> Przyszłość</h3>
-					<div class="container" style="max-width: 25em;"><a>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.</a></div>
-				</div>
-				<div class="col-sm">
-					<h3 class="fw-bold"> <i class="bi bi-award-fill"></i> Co cenimy</h3>
-					<div class="container" style="max-width: 25em;"><a>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.</a></div>
-				</div>
-			</div> -->
-			<div class="row">
-				<div class="col-4">
-				<h3 class="fw-bold"> <i class="bi bi-award-fill" ></i> O nas</h3>
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. At totam, eaque quibusdam consectetur fugit iure. Neque eum eos ea quos voluptatum id laboriosam magni corporis enim laudantium. Fugit, inventore perspiciatis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab modi sunt itaque fugit debitis architecto, eligendi eos quos dignissimos placeat quas esse reiciendis rerum blanditiis beatae nostrum, nesciunt molestias maiores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore dolores inventore doloribus porro, delectus ad vitae cum incidunt tempora! Asperiores molestias, ipsam at minus rem ad nam hic cupiditate!
-				</div>
-				<div class="col-8 px-5">
+				<div class="col-sm-12 col-md-8">
 					<div class="rightimg"><img src="grafiki/17.jpg" alt="History"></div>
+				</div>
+			</div>
+			<div class="row pt-5 d-flex justify-content-between">
+				<div class="col-sm-12 col-md-8">
+					<div class="rightimg"><img src="grafiki/17.jpg" alt="History"></div>
+				</div>
+				<div class="col-sm-12 col-md-3">
+					<h3 class="fw-bold"> <i class="bi bi-award-fill"></i> O nas</h3>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. At totam, eaque quibusdam consectetur fugit iure. Neque eum eos ea quos voluptatum id laboriosam magni corporis enim laudantium. Fugit, inventore perspiciatis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab modi sunt itaque fugit debitis architecto, eligendi eos quos dignissimos placeat quas esse reiciendis rerum blanditiis beatae nostrum, nesciunt molestias maiores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore dolores inventore doloribus porro, delectus ad vitae cum incidunt tempora! Asperiores molestias, ipsam at minus rem ad nam hic cupiditate!
 				</div>
 			</div>
 		</div>
 	</section>
-
+	
 	<section>
 		<div class="container-fluid">
 			<div class="row">

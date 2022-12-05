@@ -80,10 +80,6 @@
                 <div class="col d-flex justify-content-center">
                     <form method="POST" action="register.php">
                         <!-- Login input -->
-                        <div class="form-outline mb-4">
-                            <input type="login" name="login" class="form-control" />
-                            <label class="form-label" for="login">Login</label>
-                        </div>
                         <?php
                             if(isset($_SESSION['e_login']))
                             {
@@ -91,6 +87,11 @@
                                 unset($_SESSION['e_login']);
                             }
                         ?>
+                        <div class="form-outline mb-4">
+                            <input type="login" name="login" class="form-control" />
+                            <label class="form-label" for="login">Login</label>
+                        </div>
+ 
 
                         <!-- Email input -->
                         <div class="form-outline mb-4">
@@ -98,11 +99,6 @@
                             <label class="form-label" for="Email">Email</label>
                         </div>
 
-                        <!-- Password input -->
-                        <div class="form-outline mb-4">
-                            <input type="password" name="pass" class="form-control" />
-                            <label class="form-label" for="password">Password</label>
-                        </div>
                         <?php
                             if(isset($_SESSION['e_password']))
                             {
@@ -110,23 +106,18 @@
                                 unset($_SESSION['e_password']);
                             }
                         ?>
-
-                        <!-- Recaptcha api -->
-                        <div class="g-recaptcha my-2" data-sitekey="6Ld_YB0jAAAAAAiL3HbgukBbYGVC_7G07Qth8LAR" data-callback="captchaVerified"></div>
-                        <?php
-                            if(isset($_SESSION['e_bot']))
-                            {
-                                echo '<div style="color:red">'.$_SESSION['e_bot'].' </div>';
-                                unset($_SESSION['e_bot']);
-                            }
-                        ?>
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <input type="password" name="pass" class="form-control" />
+                            <label class="form-label" for="password">Hasło</label>
+                        </div>
 
                         <!-- Submit button -->
-                        <button type="submit" name="register_in" class="btn btn-outline-success btn-block my-2">Create account</button>
+                        <button type="submit" name="register_in" class="btn btn-outline-success btn-block my-2">Stwórz konto</button>
 
                         <!-- Register buttons -->
                         <div class="text-center">
-                            <p>Already a member? <a href="login.php">Login</a></p>
+                            <p>Posiadasz już konto? <a href="login.php">Zaloguj się</a></p>
                         </div>
                     </form>
                 </div>

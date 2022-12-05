@@ -50,16 +50,16 @@
         <?php
                 }
                     } else {
-                        echo "<h3 class='text-center'>Wrong username or password!</h3>";
+                        echo "<h3 class='text-center'>Zła nazwa użytkownika albo hasło!</h3>";
                         header("refresh: 5");
                     }
                 } else {
-                    echo "<h3 class='text-center'>Wrong username or password!</h3>";
+                    echo "<h3 class='text-center'>Zła nazwa użytkownika albo hasło!</h3>";
                     header("refresh: 5");
                 }
             }
         } else {
-            echo "<h3 class='text-center'>Wrong username or password!</h3>";
+            echo "<h3 class='text-center'>Zła nazwa użytkownika albo hasło!</h3>";
             header("refresh: 5");
         }
     }
@@ -73,21 +73,21 @@
                         <!-- Email input -->
                         <div class="form-outline mb-4">
                             <input type="login" name="login" class="form-control" />
-                            <label class="form-label" for="login">Login or email</label>
+                            <label class="form-label" for="login">Login albo email</label>
                         </div>
 
                         <!-- Password input -->
                         <div class="form-outline mb-4">
                             <input type="password" name="pass" class="form-control" />
-                            <label class="form-label" for="pass">Password</label>
+                            <label class="form-label" for="pass">Hasło</label>
                         </div>
 
                         <!-- Submit button -->
-                        <button type="submit" name="sign_in" class="btn btn-outline-success btn-block mb-4">Sign in</button>
+                        <button type="submit" name="sign_in" class="btn btn-outline-success btn-block mb-4">Zaloguj się</button>
 
                         <!-- Register buttons -->
                         <div class="text-center">
-                            <p>Not a member? <a href="register.php">Register</a></p>
+                            <p>Nie posiadasz konta? <a href="register.php">Zarejestruj się</a></p>
                         </div>
                     </form>
                 </div>
