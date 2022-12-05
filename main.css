@@ -1,111 +1,185 @@
-<!DOCTYPE html>
-<html lang="pl">
+/* whole page */
+html{
+	height: 100%;
+}
 
-<head>
-	<?php
-	require("bootstrapConnection.php");
-	require("connection.php");
-	?>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
-</head>
+body {
+	font-family: 'Poppins';
+	height: 100%;
+	display: flex;
+  flex-direction: column;
 
-<body>
-	<!-- navbar -->
-	<?php
-	include("navbar.php")
-	?>
+}
+.content {
+	flex: 1 0 auto;
+}
 
-	<section id="image_front_index">
-	<img src= "grafiki/16.jpg" href="produkty.php" alt="16.png">
-		<div class="containre">
-			<a href="produkty.php" style="text-decoration: none;">Jestesmy nowa firma z Przyszłościa! <br>
-				Przejdz do naszej oferty!</a>
-		</div>
-	</section class>
+.footer{
+	flex-shrink: 0;
+}
 
-	<section class="text-center">
-		<div class="container mt-5">
-			<!-- <div class="row mb-4">
-				<h2 class="text-center text-light mb-4 fw-bold border-bottom border-secondary py-2 border-top" style="background-color: #1d1f1e;"> O nas </h2>
-				<div class="col-sm">
-					<h3 class="fw-bold"> <i class="bi bi-hourglass-split"></i> Historia</h3>
-					<div class="container" style="max-width: 25em;"><a>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.</a></div>
-				</div>
-				<div class="col-sm">
-					<h3 class="fw-bold"> <i class="bi bi-calendar2-check-fill"></i> Przyszłość</h3>
-					<div class="container" style="max-width: 25em;"><a>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.</a></div>
-				</div>
-				<div class="col-sm">
-					<h3 class="fw-bold"> <i class="bi bi-award-fill"></i> Co cenimy</h3>
-					<div class="container" style="max-width: 25em;"><a>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem rem vero soluta dolorem qui aperiam molestiae sed, magnam dignissimos nulla incidunt atque, sequi suscipit expedita unde vitae distinctio neque.</a></div>
-				</div>
-			</div> -->
-			<div class="row">
-				<div class="col-4">
-				<h3 class="fw-bold"> <i class="bi bi-hourglass-split"></i> Historia</h3>
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. At totam, eaque quibusdam consectetur fugit iure. Neque eum eos ea quos voluptatum id laboriosam magni corporis enim laudantium. Fugit, inventore perspiciatis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab modi sunt itaque fugit debitis architecto, eligendi eos quos dignissimos placeat quas esse reiciendis rerum blanditiis beatae nostrum, nesciunt molestias maiores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore dolores inventore doloribus porro, delectus ad vitae cum incidunt tempora! Asperiores molestias, ipsam at minus rem ad nam hic cupiditate!
-				</div>
-				<div class="col-8">
-					<div class="rightimg"><img src="grafiki/17.jpg" alt="History"></div>
-				</div>
-			</div>
-		</div>
-	</section>
+.logo {
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	height: 50em;
+	max-height: 50em;
+}
 
-	<section>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-12">
-					<div class="row">
-						<div class="fw-bold text-light py-4 border-secondary mt-5 border-top text-center" style="font-size:1.8em; background-color:#1d1f1e;">
-							Polecamy!
-						</div>
-						<div class="container text-center pb-3 ">
-							<div class="row mx-auto pb-5 auto justify-content-center">
-								<div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
-									<div class="carousel-inner" role="listbox">
-										<div class="carousel-item active">
-											<div class="col-md-3">
-												<div class="card align-middle  text-dark">
-													<a>Najpopularniejsze wybory!</a>
-												</div>
-											</div>
-										</div>
-										<?php
-										$zapytanie = $conn->query("SELECT picture_id, image_path, description, price FROM pictures WHERE `privileges` = 'user' limit 5");
-										while ($row = $zapytanie->fetch()) {
-										?>
-											<div class="carousel-item">
-												<div class="col-md-3">
-													<div class="card  text-dark	">
-														<div class="card-img">
-															<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>"><img src="<?= $row['image_path'] ?>" class="img-fluid img_carousel" alt="<?= $row['picture_id'] ?>"></a>
-															<div class="centeronhover">
-																<a href="strona_produktu.php?id=<?= $row['picture_id'] ?>"><?= $row['description'] . "<br>" . $row['price'] . "zl" ?></a>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										<?php
-										}
-										?>
-									</div> <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> </a> <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> </a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+/* img under text index */
+#image_front_index {
+	position: relative;
+	text-align: center;
+	color: rgb(54, 69, 79);
+	opacity: 1;
+	transition: opacity 0.5s ease-in-out;
 
-	<!-- footer -->
-	<?php
-	include("footer.php");
-	?>
+}
 
-	<script type="text/javascript" src="carouselScript.js"></script>
-</body>
+#image_front_index img{
+	margin-top: -30px;
+	width: 100%;
+	height: 45vw;
 
-</html>
+}
+
+/* Centered text */
+#image_front_index a {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	/* text */
+	color: rgb(54, 69, 79);
+	transform: translate(-50%,-150%);
+	font-size: 48px;
+	font-style: italic;
+	font-family: 'Amatic SC', cursive;
+
+}
+
+#image_front_index:hover {
+	zoom: 1;
+	opacity: 0.92;
+}
+
+
+
+
+@media (max-width: 991px) {
+	#image_front_index img {
+		width: 100%;
+		height: 70vw;
+		margin-top: -30px;
+	}
+
+	#image_front_index a {
+		color: rgb(54, 69, 79);
+		font-size: 34px;
+	}
+}
+
+@media (max-width: 771px) {
+	#image_front_index a {
+		top: 25%;
+	}
+	#image_front_index a {
+		margin-top: 50px;
+		color: rgb(54, 69, 79);
+		font-size: 18px;
+	}
+}
+
+/* carousel with multiple items */
+.card {
+	min-height: 15em;
+	max-height: 15em;
+}
+
+.card-img img {
+	height: 16vw;
+	width: 100%;
+}
+
+.card-img a {
+	color: #fff;
+}
+
+@media (max-width: 991px) {
+	.card-img img {
+		height: 85vw;
+	}
+}
+
+.img_carousel:hover {
+	opacity: 0.65;
+}
+
+/* medium size */
+@media (min-width: 991px) {
+	.form-control-resposive {
+		width: 400px;
+	}
+}
+
+/* small size */
+@media (max-width: 767px) {
+	.carousel-inner .carousel-item>div {
+		display: none
+	}
+
+	.carousel-inner .carousel-item>div:first-child {
+		display: block
+	}
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+	display: flex
+}
+
+/* small size */
+@media (min-width: 768px) {
+
+	.carousel-inner .carousel-item-end.active,
+	.carousel-inner .carousel-item-next {
+		transform: translateX(25%);
+	}
+
+	.carousel-inner .carousel-item-start.active,
+	.carousel-inner .carousel-item-prev {
+		transform: translateX(-25%);
+	}
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+	transform: translateX(0);
+}
+
+/* text on hover  */
+
+.centeronhover{
+	position: absolute;
+	top: 45%;
+	left: 25%;
+	width: 50%;
+	height: 50%;
+	transform: translateY(0);
+	transform: translateX(0);
+	color: #fff;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .6s, visibility .4s;
+}
+
+.card-img:hover .centeronhover {
+	visibility: visible;
+	opacity: 1;
+}
+
+.rightimg img{
+
+	height: 30em;
+	width: 100%;
+}
