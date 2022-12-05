@@ -38,10 +38,10 @@
 			</div>
 			<div class="row pt-5 d-flex justify-content-between">
 				<div class="col-sm-12 col-md-8">
-					<div class="rightimg"><img src="grafiki/17.jpg" alt="History"></div>
+					<div class="rightimg"><img src="grafiki/18.jpg" alt="Future"></div>
 				</div>
 				<div class="col-sm-12 col-md-3">
-					<h3 class="fw-bold"> <i class="bi bi-award-fill"></i> O nas</h3>
+					<h3 class="fw-bold"> <i class="bi bi-award-fill"></i> Nasze produkty</h3>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. At totam, eaque quibusdam consectetur fugit iure. Neque eum eos ea quos voluptatum id laboriosam magni corporis enim laudantium. Fugit, inventore perspiciatis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab modi sunt itaque fugit debitis architecto, eligendi eos quos dignissimos placeat quas esse reiciendis rerum blanditiis beatae nostrum, nesciunt molestias maiores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore dolores inventore doloribus porro, delectus ad vitae cum incidunt tempora! Asperiores molestias, ipsam at minus rem ad nam hic cupiditate!
 				</div>
 			</div>
@@ -49,11 +49,11 @@
 	</section>
 	
 	<section>
-		<div class="container-fluid">
+		<div class="container-fluid bg-dark">
 			<div class="row">
 				<div class="col-12">
 					<div class="row">
-						<div class="fw-bold text-dark py-4 border-secondary mt-5 text-center" style="font-size:1.8em;">
+						<div class="fw-bold text-light bg-dark py-4 border-secondary my-3 text-center" style="font-size:1.8em;">
 							Polecamy!
 						</div>
 						<div class="container text-center pb-3 ">
