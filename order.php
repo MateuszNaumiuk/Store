@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
-<html lang=pl>
+<html lang= "pl-PL">
 
 <head>
     <?php
-    require_once("bootstrapConnection.php");
-    require_once("connection.php");
+    require("bootstrapConnection.php");
+    require("connection.php");
     ?>
     <title>Zamówienie</title>
 
@@ -13,9 +12,10 @@
 </head>
 
 <body>
-<?php
-require("navbar.php");
-?>
+    <?php
+	include("navbar.php")
+    ?>
+
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -70,6 +70,10 @@ require("navbar.php");
             }
             ?>
         </div>
+    </div>
+    <?php
+    include("footer.php");
+    ?>
 </body>
 
 </html>
