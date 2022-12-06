@@ -15,7 +15,7 @@
         <p class="border-bottom border-secondary fw-bold text-center" style="font-size:2.5em">Panel Administratora</p>
         <div class="container">
             <div class="row">
-                <div class="col-3 my-5" style="text-align:center;">
+                <div class="col-md-3 col-sm-12 my-5" style="text-align:center;">
                     <form method="POST">
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
