@@ -30,8 +30,8 @@
 			<div class="row pb-5 d-flex justify-content-between">
 				<div class="col-sm-12 col-md-3">
 					<h3 class="fw-bold"> <i class="bi bi-award-fill"></i> O nas</h3>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. At totam, eaque quibusdam consectetur fugit iure. Neque eum eos ea quos voluptatum id laboriosam magni corporis enim laudantium. Fugit, inventore perspiciatis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab modi sunt itaque fugit debitis architecto, eligendi eos quos dignissimos placeat quas esse reiciendis rerum blanditiis beatae nostrum, nesciunt molestias maiores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore dolores inventore doloribus porro, delectus ad vitae cum incidunt tempora! Asperiores molestias, ipsam at minus rem ad nam hic cupiditate!
-				</div>
+				Wspomagamy artystów rozpoczynających swoją przygodę w ogromnym świecie wirtualnych projektów. Nasza strona stanowi bezpieczne źródło licencjonowanych projektów. To my zaopatrujemy najważniejsze projekty w nasze grafiki. 
+Skupiamy się na pokazaniu sztuki od strony do tej pory nieznanej szerszemu gronu odbiorców. Planujemy poszerzać nasze horyzonty poprzez wdrażanie jak największej liczby młodych artystów oferując im możliwość, pokazania się światu z innej perspektywy. Jeśli jesteś taką osobą, bądź planujesz rozwijać się zgodnie z przedstawioną przez nas wizją – odezwij się!					</div>
 				<div class="col-sm-12 col-md-8">
 					<div class="rightimg"><img src="grafiki/17.jpg" alt="History"></div>
 				</div>
@@ -41,10 +41,9 @@
 					<div class="rightimg"><img src="grafiki/18.jpg" alt="Future"></div>
 				</div>
 				<div class="col-sm-12 col-md-3">
-					<h3 class="fw-bold"> <i class="bi bi-award-fill"></i> Nasze produkty</h3>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. At totam, eaque quibusdam consectetur fugit iure. Neque eum eos ea quos voluptatum id laboriosam magni corporis enim laudantium. Fugit, inventore perspiciatis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab modi sunt itaque fugit debitis architecto, eligendi eos quos dignissimos placeat quas esse reiciendis rerum blanditiis beatae nostrum, nesciunt molestias maiores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore dolores inventore doloribus porro, delectus ad vitae cum incidunt tempora! Asperiores molestias, ipsam at minus rem ad nam hic cupiditate!
-				</div>
-			</div>
+					<h3 class="fw-bold"> <i class="bi bi-award-fill"></i> Nasze podejście do przyszłości</h3>
+					Wolność jest aspektem, który chcemy przekazać w naszych pracach.
+Zrzeszamy ogromną ilość ludzi pod szyldem naszego sklepu. Aktualnie mamy ponad 300 tys.  zarejestrowanych użytkowników. Ponad milion 1,3 mln. pobrań. Tak dobrze widzicie.  Nasi użytkownicy tworzą bardzo ważną część naszego przedsiębiorstwa. To wy jesteście dla nas najważniejsi. Mamy zaszczyt obsługiwać tak wspaniałą społeczność. Dziękujemy wam, że jesteście.			</div>
 		</div>
 	</section>
 	
