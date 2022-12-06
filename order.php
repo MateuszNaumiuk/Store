@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang=pl>
 
@@ -13,9 +12,9 @@
 </head>
 
 <body>
-<?php
-require("navbar.php");
-?>
+    <?php
+    require("navbar.php");
+    ?>
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -56,16 +55,30 @@ require("navbar.php");
                 $fname = $_POST['fname'];
                 $lname = $_POST['lname'];
                 $phone = $_POST['phone'];
+
+            ?>
+                <div class="alert alert-dark text-center mt-3" role="alert">
+                    Produkt zostal kupiony!
+                </div>
+                <?php
+
                 foreach ($_SESSION["cart"] as $keys => $value) {
                     $p_id = $value["product_id"];
                     $sql = ("INSERT INTO order_info VALUES ('null', '$usr_id', '$p_id','$date','done','$fname','$lname','$phone');");
                     $stmt = $conn->prepare($sql);
                     $stmt->execute();
+
+                    $p_path = $value["image_path"];
+                    $p_name = $value["image_name"];
+                ?>
+                    <div class="alert alert-dark text-center" role="alert">
+                        <a href="grafiki/<?= $p_id . ".jpg" ?>" download="<?= $p_id . ".jpg"?>">
+                            <button type="button" class="btn btn-outline-success">Pobierz <?= $p_name; ?> </button>
+                        </a>
+                    </div>
+                <?php
                 }
-            ?>
-                <div class="alert alert-dark text-center mt-3" role="alert">
-                    Dziękujemy za złożenie zamówienia!
-                </div>
+                ?>
             <?php
             }
             ?>
